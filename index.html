@@ -1,0 +1,1947 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>黑料网反差困困狗 - 网络争议事件与人物反差内容聚合</title>
+  <meta name="description" content="黑料网反差困困狗聚合网络争议事件、人物反差对比与舆论复盘内容，收录翻车时间线、立场拆解、评论区反应和同类案例对照，适合关注网络生态与内容争议的读者。">
+  <meta name="keywords" content="黑料网反差困困狗">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231a1a2e'/%3E%3Ccircle cx='16' cy='13' r='6' fill='%23e94560'/%3E%3Crect x='8' y='20' width='16' height='3' rx='1.5' fill='%23e94560' opacity='.7'/%3E%3Crect x='11' y='25' width='10' height='2.5' rx='1.25' fill='%23e94560' opacity='.4'/%3E%3C/svg%3E">
+  <style>
+    :root {
+      --primary: #e94560;
+      --primary-light: #ff6b81;
+      --primary-dark: #b8263f;
+      --primary-bg: #fff0f2;
+      --bg: #f7f7fa;
+      --surface: #ffffff;
+      --text-1: #1a1a2e;
+      --text-2: #4a4a5a;
+      --text-3: #8a8a9a;
+      --border: #e4e4ec;
+      --radius-card: 12px;
+      --radius-btn: 8px;
+      --radius-tag: 4px;
+      --radius-banner: 16px;
+      --shadow: 0 2px 8px rgba(26,26,46,.06);
+      --shadow-hover: 0 6px 20px rgba(26,26,46,.12);
+      --sticky-offset: 92px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: var(--sticky-offset); }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      background: var(--bg);
+      color: var(--text-1);
+      line-height: 1.75;
+      font-size: 15px;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+    button { font-family: inherit; cursor: pointer; }
+    ul { list-style: none; }
+
+    /* ===== 吸顶公告条 ===== */
+    .announce-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: linear-gradient(90deg, var(--primary-dark), var(--primary));
+      color: #fff;
+      font-size: 13px;
+      padding: 0 20px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    .announce-bar .brand-mini {
+      font-weight: 700;
+      font-size: 12px;
+      letter-spacing: .5px;
+      background: rgba(255,255,255,.18);
+      padding: 2px 10px;
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
+    .announce-bar .announce-scroll {
+      display: flex;
+      gap: 40px;
+      animation: announceMove 28s linear infinite;
+    }
+    .announce-bar .announce-scroll span { flex-shrink: 0; }
+    .announce-bar .announce-scroll b { color: #ffe4a0; font-weight: 600; }
+    @keyframes announceMove {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .announce-bar .announce-scroll { animation: none; }
+    }
+
+    /* ===== 吸顶页头 ===== */
+    .site-header {
+      position: sticky;
+      top: 36px;
+      z-index: 99;
+      background: rgba(255,255,255,.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      height: 56px;
+    }
+    .header-inner {
+      max-width: 1360px;
+      margin: 0 auto;
+      padding: 0 20px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+    .logo-wrap {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+    .logo-mark { width: 32px; height: 32px; flex-shrink: 0; }
+    .logo-text {
+      font-size: 17px;
+      font-weight: 800;
+      letter-spacing: .3px;
+      color: var(--text-1);
+      white-space: nowrap;
+    }
+    .logo-text em { font-style: normal; color: var(--primary); }
+    .header-nav {
+      display: flex;
+      gap: 6px;
+      flex: 1;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .header-nav::-webkit-scrollbar { display: none; }
+    .header-nav a {
+      font-size: 13.5px;
+      color: var(--text-2);
+      padding: 6px 12px;
+      border-radius: var(--radius-btn);
+      white-space: nowrap;
+      transition: background .15s, color .15s;
+    }
+    .header-nav a:hover { background: var(--primary-bg); color: var(--primary-dark); }
+    .header-search {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-shrink: 0;
+    }
+    .header-search input {
+      width: 150px;
+      height: 32px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-btn);
+      padding: 0 10px;
+      font-size: 13px;
+      outline: none;
+      transition: border-color .15s;
+    }
+    .header-search input:focus { border-color: var(--primary); }
+    .header-search button {
+      height: 32px;
+      padding: 0 12px;
+      border: none;
+      border-radius: var(--radius-btn);
+      background: var(--primary);
+      color: #fff;
+      font-size: 13px;
+      transition: background .15s;
+    }
+    .header-search button:hover { background: var(--primary-dark); }
+    .hamburger {
+      display: none;
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-btn);
+      width: 36px;
+      height: 36px;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .hamburger svg { width: 20px; height: 20px; }
+
+    /* ===== 首屏 ===== */
+    .hero {
+      max-width: 1360px;
+      margin: 0 auto;
+      padding: 40px 20px 32px;
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 40px;
+      align-items: center;
+    }
+    .hero-content h1 {
+      font-size: clamp(26px, 3.4vw, 40px);
+      font-weight: 900;
+      line-height: 1.3;
+      letter-spacing: -.5px;
+      margin-bottom: 14px;
+    }
+    .hero-content h1 span { color: var(--primary); }
+    .hero-desc {
+      font-size: 15px;
+      color: var(--text-2);
+      max-width: 560px;
+      margin-bottom: 22px;
+      line-height: 1.85;
+    }
+    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--primary);
+      color: #fff;
+      padding: 10px 22px;
+      border-radius: var(--radius-btn);
+      font-size: 14px;
+      font-weight: 600;
+      border: none;
+      transition: background .15s, transform .15s;
+    }
+    .btn-primary:hover { background: var(--primary-dark); transform: translateY(-2px); }
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--surface);
+      color: var(--text-1);
+      padding: 10px 22px;
+      border-radius: var(--radius-btn);
+      font-size: 14px;
+      font-weight: 600;
+      border: 1px solid var(--border);
+      transition: border-color .15s, transform .15s;
+    }
+    .btn-ghost:hover { border-color: var(--primary); transform: translateY(-2px); }
+    .hero-visual {
+      position: relative;
+      height: 280px;
+      border-radius: var(--radius-banner);
+      background: linear-gradient(135deg, #1a1a2e 0%, #2d1f3d 55%, #3d1f2d 100%);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero-visual svg { width: 100%; height: 100%; }
+    .hero-visual .float-badge {
+      position: absolute;
+      background: rgba(255,255,255,.1);
+      border: 1px solid rgba(255,255,255,.18);
+      backdrop-filter: blur(6px);
+      border-radius: 8px;
+      padding: 4px 10px;
+      font-size: 11px;
+      color: #fff;
+    }
+    .hero-visual .fb1 { top: 16px; left: 16px; }
+    .hero-visual .fb2 { bottom: 18px; right: 16px; }
+    .hero-visual .fb3 { bottom: 18px; left: 16px; color: #ffe4a0; }
+
+    /* ===== 主体三栏 ===== */
+    .page-wrap {
+      max-width: 1360px;
+      margin: 0 auto;
+      padding: 0 20px 60px;
+      display: grid;
+      grid-template-columns: 175px minmax(0,1fr) 245px;
+      gap: 28px;
+      align-items: start;
+    }
+
+    /* 左侧频道索引 */
+    .channel-index {
+      position: sticky;
+      top: var(--sticky-offset);
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      border: 1px solid var(--border);
+      padding: 14px 0;
+      box-shadow: var(--shadow);
+      max-height: calc(100vh - var(--sticky-offset) - 20px);
+      overflow-y: auto;
+    }
+    .channel-index h2 {
+      font-size: 12px;
+      color: var(--text-3);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 0 16px 8px;
+      font-weight: 600;
+    }
+    .channel-index a {
+      display: block;
+      padding: 7px 16px;
+      font-size: 13.5px;
+      color: var(--text-2);
+      border-left: 3px solid transparent;
+      transition: background .15s, border-color .15s, color .15s;
+    }
+    .channel-index a:hover { background: var(--primary-bg); color: var(--primary-dark); }
+    .channel-index a.active {
+      border-left-color: var(--primary);
+      background: var(--primary-bg);
+      color: var(--primary-dark);
+      font-weight: 600;
+    }
+
+    /* 中间主内容 */
+    .main-col { min-width: 0; }
+    .section-block {
+      margin-bottom: 40px;
+      scroll-margin-top: var(--sticky-offset);
+    }
+    .section-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+    .section-head h2 {
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: -.3px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .section-head h2::before {
+      content: '';
+      width: 4px;
+      height: 18px;
+      border-radius: 2px;
+      background: var(--primary);
+      flex-shrink: 0;
+    }
+    .section-head .more-link {
+      font-size: 13px;
+      color: var(--text-3);
+      transition: color .15s;
+    }
+    .section-head .more-link:hover { color: var(--primary); }
+    .lead-text {
+      font-size: 14px;
+      color: var(--text-2);
+      line-height: 1.9;
+      margin-bottom: 16px;
+    }
+
+    /* 概览文字 */
+    .overview-text p {
+      font-size: 14px;
+      color: var(--text-2);
+      line-height: 1.95;
+      margin-bottom: 12px;
+    }
+    .overview-text p:last-child { margin-bottom: 0; }
+    .overview-text strong { color: var(--text-1); font-weight: 600; }
+
+    /* 精选卡片网格 */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+      gap: 16px;
+    }
+    .content-card {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: box-shadow .2s, transform .2s;
+      display: flex;
+      flex-direction: column;
+    }
+    .content-card:hover { box-shadow: var(--shadow-hover); transform: translateY(-3px); }
+    .content-card .card-thumb {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      background: var(--bg);
+    }
+    .content-card .card-body { padding: 12px 14px 14px; flex: 1; display: flex; flex-direction: column; }
+    .content-card .card-type {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--primary-dark);
+      background: var(--primary-bg);
+      border-radius: var(--radius-tag);
+      padding: 1px 7px;
+      margin-bottom: 6px;
+      width: fit-content;
+    }
+    .content-card .card-title {
+      font-size: 14.5px;
+      font-weight: 700;
+      line-height: 1.5;
+      margin-bottom: 6px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .content-card .card-desc {
+      font-size: 12.5px;
+      color: var(--text-3);
+      line-height: 1.65;
+      flex: 1;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      margin-bottom: 10px;
+    }
+    .content-card .card-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 11.5px;
+      color: var(--text-3);
+      border-top: 1px solid var(--border);
+      padding-top: 8px;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    .content-card .card-tags { display: flex; gap: 4px; flex-wrap: wrap; }
+    .content-card .card-tags span {
+      background: var(--bg);
+      padding: 0 6px;
+      border-radius: var(--radius-tag);
+      font-size: 10.5px;
+      color: var(--text-3);
+    }
+    .content-card .hot { color: var(--primary); font-weight: 600; }
+
+    /* 最新动态列表 */
+    .update-list { background: var(--surface); border-radius: var(--radius-card); border: 1px solid var(--border); overflow: hidden; }
+    .update-item {
+      display: flex;
+      gap: 14px;
+      padding: 13px 16px;
+      border-bottom: 1px solid var(--border);
+      align-items: flex-start;
+      transition: background .15s;
+    }
+    .update-item:last-child { border-bottom: none; }
+    .update-item:hover { background: var(--primary-bg); }
+    .update-item .update-time {
+      font-size: 12px;
+      color: var(--text-3);
+      flex-shrink: 0;
+      width: 54px;
+      padding-top: 1px;
+      font-variant-numeric: tabular-nums;
+    }
+    .update-item .update-body { min-width: 0; }
+    .update-item .update-title { font-size: 14px; font-weight: 600; margin-bottom: 3px; }
+    .update-item .update-title em {
+      font-style: normal;
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--primary-dark);
+      background: var(--primary-bg);
+      padding: 0 6px;
+      border-radius: 3px;
+      margin-left: 6px;
+    }
+    .update-item .update-summary { font-size: 12.5px; color: var(--text-3); line-height: 1.6; }
+
+    /* 分类入口 */
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      gap: 10px;
+    }
+    .category-chip {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      padding: 12px 14px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-card);
+      transition: border-color .15s, box-shadow .15s, transform .15s;
+    }
+    .category-chip:hover { border-color: var(--primary); box-shadow: var(--shadow); transform: translateY(-2px); }
+    .category-chip .cat-name { font-size: 14px; font-weight: 700; }
+    .category-chip .cat-count { font-size: 11.5px; color: var(--text-3); }
+
+    /* 深度解析 */
+    .deep-article {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      border: 1px solid var(--border);
+      padding: 28px 30px;
+      box-shadow: var(--shadow);
+    }
+    .deep-article h3 {
+      font-size: 17px;
+      font-weight: 800;
+      margin: 24px 0 10px;
+      color: var(--text-1);
+      letter-spacing: -.2px;
+    }
+    .deep-article h3:first-child { margin-top: 0; }
+    .deep-article p {
+      font-size: 14px;
+      color: var(--text-2);
+      line-height: 1.95;
+      margin-bottom: 12px;
+    }
+    .deep-article ul { margin: 8px 0 14px; padding-left: 4px; }
+    .deep-article li {
+      font-size: 13.5px;
+      color: var(--text-2);
+      line-height: 1.85;
+      padding-left: 18px;
+      position: relative;
+      margin-bottom: 4px;
+    }
+    .deep-article li::before {
+      content: '';
+      position: absolute;
+      left: 2px;
+      top: 11px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--primary-light);
+    }
+    .deep-article .quote-box {
+      background: var(--primary-bg);
+      border-left: 3px solid var(--primary);
+      padding: 12px 16px;
+      border-radius: 0 var(--radius-btn) var(--radius-btn) 0;
+      margin: 14px 0;
+      font-size: 13.5px;
+      color: var(--text-1);
+      line-height: 1.8;
+    }
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 14px 0;
+      font-size: 13px;
+    }
+    .compare-table th, .compare-table td {
+      border: 1px solid var(--border);
+      padding: 8px 12px;
+      text-align: left;
+      vertical-align: top;
+      line-height: 1.65;
+    }
+    .compare-table th { background: var(--bg); font-weight: 700; color: var(--text-1); font-size: 12.5px; }
+    .compare-table td { color: var(--text-2); }
+
+    /* 指南步骤 */
+    .guide-steps { display: flex; flex-direction: column; gap: 12px; }
+    .guide-step {
+      display: flex;
+      gap: 14px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-card);
+      padding: 16px 18px;
+    }
+    .guide-step .step-num {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .guide-step .step-body h3 { font-size: 14.5px; font-weight: 700; margin-bottom: 4px; }
+    .guide-step .step-body p { font-size: 13px; color: var(--text-2); line-height: 1.75; }
+
+    /* FAQ */
+    .faq-list { display: flex; flex-direction: column; gap: 8px; }
+    .faq-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-card);
+      overflow: hidden;
+    }
+    .faq-item summary {
+      padding: 14px 18px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: background .15s;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::before {
+      content: 'Q';
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      border-radius: 4px;
+      background: var(--primary-bg);
+      color: var(--primary-dark);
+      font-size: 11px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .faq-item summary:hover { background: var(--primary-bg); }
+    .faq-item[open] summary { background: var(--primary-bg); }
+    .faq-item .faq-answer {
+      padding: 0 18px 16px 46px;
+      font-size: 13.5px;
+      color: var(--text-2);
+      line-height: 1.85;
+    }
+
+    /* 评论 */
+    .comment-list { display: flex; flex-direction: column; gap: 0; background: var(--surface); border-radius: var(--radius-card); border: 1px solid var(--border); overflow: hidden; }
+    .comment-item {
+      padding: 14px 18px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      gap: 12px;
+    }
+    .comment-item:last-child { border-bottom: none; }
+    .comment-avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary-light), var(--primary-dark));
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .comment-body { min-width: 0; }
+    .comment-head { display: flex; align-items: center; gap: 8px; margin-bottom: 3px; flex-wrap: wrap; }
+    .comment-name { font-size: 13px; font-weight: 600; }
+    .comment-time { font-size: 11px; color: var(--text-3); }
+    .comment-text { font-size: 13px; color: var(--text-2); line-height: 1.7; }
+
+    /* 资讯 */
+    .news-list { display: flex; flex-direction: column; gap: 10px; }
+    .news-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-card);
+      padding: 14px 18px;
+      transition: box-shadow .15s, border-color .15s;
+    }
+    .news-item:hover { border-color: var(--primary-light); box-shadow: var(--shadow); }
+    .news-item .news-title { font-size: 14.5px; font-weight: 700; margin-bottom: 4px; }
+    .news-item .news-meta { font-size: 11.5px; color: var(--text-3); margin-bottom: 5px; }
+    .news-item .news-summary { font-size: 13px; color: var(--text-2); line-height: 1.7; }
+
+    /* 相关推荐标签索引 */
+    .tag-index { display: flex; flex-wrap: wrap; gap: 8px; }
+    .tag-index a {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 6px 14px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      font-size: 13px;
+      color: var(--text-2);
+      transition: border-color .15s, color .15s, background .15s;
+    }
+    .tag-index a:hover { border-color: var(--primary); color: var(--primary-dark); background: var(--primary-bg); }
+
+    /* 榜单时间线组合 */
+    .rank-timeline {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .rank-panel, .timeline-panel {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      border: 1px solid var(--border);
+      padding: 18px;
+    }
+    .rank-panel h3, .timeline-panel h3 {
+      font-size: 15px;
+      font-weight: 800;
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    .rank-item {
+      display: flex;
+      gap: 10px;
+      align-items: baseline;
+      padding: 7px 0;
+      border-bottom: 1px dashed var(--border);
+      font-size: 13px;
+    }
+    .rank-item:last-child { border-bottom: none; }
+    .rank-item .rank-num {
+      width: 18px;
+      font-weight: 800;
+      font-size: 12px;
+      color: var(--text-3);
+      flex-shrink: 0;
+      text-align: center;
+    }
+    .rank-item:nth-child(1) .rank-num, .rank-item:nth-child(2) .rank-num, .rank-item:nth-child(3) .rank-num { color: var(--primary); }
+    .rank-item .rank-name { flex: 1; font-weight: 500; }
+    .rank-item .rank-score { font-size: 11.5px; color: var(--text-3); }
+    .timeline-item {
+      position: relative;
+      padding-left: 18px;
+      padding-bottom: 14px;
+      border-left: 2px solid var(--primary-bg);
+    }
+    .timeline-item:last-child { padding-bottom: 0; border-left-color: transparent; }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -5px;
+      top: 6px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--primary);
+    }
+    .timeline-item .tl-date { font-size: 11.5px; color: var(--text-3); font-variant-numeric: tabular-nums; }
+    .timeline-item .tl-text { font-size: 12.5px; color: var(--text-2); line-height: 1.6; margin-top: 1px; }
+
+    /* 互动投稿 */
+    .interact-panel {
+      background: linear-gradient(135deg, #1a1a2e, #2d1f3d);
+      border-radius: var(--radius-card);
+      padding: 24px 26px;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .interact-panel .ip-text h3 { font-size: 17px; font-weight: 800; margin-bottom: 4px; }
+    .interact-panel .ip-text p { font-size: 13px; color: rgba(255,255,255,.7); line-height: 1.7; }
+    .interact-panel .ip-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+    .interact-panel .btn-primary { background: var(--primary); }
+    .interact-panel .btn-primary:hover { background: var(--primary-light); }
+    .interact-panel .btn-ghost { background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.2); color: #fff; }
+    .interact-panel .btn-ghost:hover { border-color: var(--primary-light); }
+
+    /* 右侧辅助栏 */
+    .side-col {
+      position: sticky;
+      top: var(--sticky-offset);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-height: calc(100vh - var(--sticky-offset) - 20px);
+      overflow-y: auto;
+      scrollbar-width: thin;
+    }
+    .side-card {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      border: 1px solid var(--border);
+      padding: 16px;
+      box-shadow: var(--shadow);
+    }
+    .side-card h3 {
+      font-size: 14px;
+      font-weight: 800;
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .side-card h3::before {
+      content: '';
+      width: 3px;
+      height: 14px;
+      border-radius: 2px;
+      background: var(--primary);
+    }
+    .hot-list-item {
+      display: flex;
+      gap: 8px;
+      padding: 7px 0;
+      border-bottom: 1px dashed var(--border);
+      font-size: 13px;
+      align-items: baseline;
+    }
+    .hot-list-item:last-child { border-bottom: none; }
+    .hot-list-item .hot-rank {
+      width: 16px;
+      font-weight: 800;
+      font-size: 11.5px;
+      color: var(--text-3);
+      flex-shrink: 0;
+      text-align: center;
+    }
+    .hot-list-item:nth-child(1) .hot-rank, .hot-list-item:nth-child(2) .hot-rank, .hot-list-item:nth-child(3) .hot-rank { color: var(--primary); }
+    .hot-list-item .hot-name { flex: 1; line-height: 1.5; }
+    .hot-list-item .hot-tag { font-size: 10px; color: var(--text-3); flex-shrink: 0; }
+
+    .side-update-item {
+      display: flex;
+      gap: 8px;
+      padding: 6px 0;
+      font-size: 12.5px;
+      border-bottom: 1px dashed var(--border);
+      align-items: baseline;
+    }
+    .side-update-item:last-child { border-bottom: none; }
+    .side-update-item .su-date { color: var(--text-3); font-size: 11px; flex-shrink: 0; font-variant-numeric: tabular-nums; }
+    .side-update-item .su-text { color: var(--text-2); line-height: 1.5; }
+
+    /* 页尾 */
+    .site-footer {
+      background: #1a1a2e;
+      color: #b0b0c0;
+      padding: 40px 20px 28px;
+      margin-top: 20px;
+    }
+    .footer-inner { max-width: 1360px; margin: 0 auto; }
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr 1fr 1fr;
+      gap: 32px;
+      padding-bottom: 28px;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+    .footer-brand .fb-logo { font-size: 18px; font-weight: 800; color: #fff; margin-bottom: 8px; }
+    .footer-brand .fb-logo em { font-style: normal; color: var(--primary-light); }
+    .footer-brand p { font-size: 12.5px; line-height: 1.8; color: #8a8a9a; max-width: 300px; }
+    .footer-col h4 { font-size: 13px; font-weight: 700; color: #fff; margin-bottom: 10px; }
+    .footer-col a { display: block; font-size: 12.5px; color: #8a8a9a; padding: 3px 0; transition: color .15s; }
+    .footer-col a:hover { color: var(--primary-light); }
+    .footer-bottom {
+      padding-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      font-size: 12px;
+      color: #6a6a7a;
+    }
+    .footer-bottom .update-note { color: #8a8a9a; }
+
+    /* 回到顶部 */
+    .back-top {
+      position: fixed;
+      right: 20px;
+      bottom: 24px;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      box-shadow: var(--shadow-hover);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+      transition: opacity .2s, visibility .2s, transform .2s;
+      z-index: 50;
+    }
+    .back-top.show { opacity: 1; visibility: visible; transform: translateY(0); }
+    .back-top:hover { background: var(--primary-dark); }
+    .back-top svg { width: 18px; height: 18px; }
+
+    /* 移动端遮罩 */
+    .drawer-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(26,26,46,.45);
+      z-index: 150;
+    }
+    .drawer-overlay.show { display: block; }
+
+    /* ===== 响应式 ===== */
+    @media (max-width: 1024px) {
+      .page-wrap { grid-template-columns: 1fr 240px; }
+      .channel-index { display: none; }
+      .hero { grid-template-columns: 1fr; gap: 24px; }
+      .hero-visual { height: 200px; }
+      .rank-timeline { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr 1fr; }
+      .header-search input { width: 110px; }
+    }
+    @media (max-width: 740px) {
+      :root { --sticky-offset: 92px; }
+      .page-wrap { grid-template-columns: 1fr; padding: 0 14px 40px; }
+      .side-col { position: static; max-height: none; overflow: visible; }
+      .header-nav { display: none; }
+      .header-search { display: none; }
+      .hamburger { display: flex; }
+      .header-inner { gap: 12px; }
+      .logo-text { font-size: 15px; }
+      .hero { padding: 24px 14px 20px; }
+      .hero-visual { height: 170px; }
+      .card-grid { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
+      .category-grid { grid-template-columns: repeat(2, 1fr); }
+      .deep-article { padding: 20px 16px; }
+      .interact-panel { padding: 20px; }
+      .footer-top { grid-template-columns: 1fr; gap: 20px; }
+      .announce-bar { font-size: 12px; gap: 14px; }
+      .announce-bar .brand-mini { display: none; }
+      .compare-table { font-size: 12px; }
+      .compare-table th, .compare-table td { padding: 6px 8px; }
+      .drawer-overlay.show ~ .page-wrap { /* handled by JS */ }
+    }
+    @media (max-width: 420px) {
+      .category-grid { grid-template-columns: 1fr; }
+      .card-grid { grid-template-columns: 1fr; }
+    }
+
+    /* 移动抽屉 */
+    .mobile-drawer {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 260px;
+      height: 100vh;
+      background: var(--surface);
+      z-index: 200;
+      transform: translateX(-100%);
+      transition: transform .25s ease;
+      padding: 20px 0;
+      overflow-y: auto;
+      box-shadow: 2px 0 20px rgba(0,0,0,.15);
+    }
+    .mobile-drawer.open { transform: translateX(0); }
+    .mobile-drawer .drawer-head {
+      padding: 0 20px 14px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .mobile-drawer .drawer-head span { font-weight: 800; font-size: 15px; }
+    .mobile-drawer .drawer-close {
+      background: none;
+      border: none;
+      font-size: 22px;
+      color: var(--text-3);
+      line-height: 1;
+      padding: 4px;
+    }
+    .mobile-drawer a {
+      display: block;
+      padding: 10px 20px;
+      font-size: 14px;
+      color: var(--text-2);
+      transition: background .15s;
+    }
+    .mobile-drawer a:hover { background: var(--primary-bg); color: var(--primary-dark); }
+
+    /* 搜索无结果 */
+    .search-no-result {
+      display: none;
+      padding: 20px;
+      text-align: center;
+      color: var(--text-3);
+      font-size: 13.5px;
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      border: 1px dashed var(--border);
+      margin-top: 10px;
+    }
+    .search-no-result.show { display: block; }
+    .card-hidden { display: none !important; }
+  </style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- 吸顶公告条 -->
+<div class="announce-bar" id="announceBar">
+  <span class="brand-mini">黑料网反差困困狗</span>
+  <div class="announce-scroll">
+    <span><b>11-08</b> 困困狗“深夜食堂”旧直播片段被翻出，与近期声明形成对照</span>
+    <span><b>3 条</b> 新增“反差案例库”条目：困困狗、阿七不熬夜、小鹿眠眠</span>
+    <span><b>11-06</b> 反差素材对照表更新至 2026 年第 45 周</span>
+    <span><b>11-08</b> 困困狗“深夜食堂”旧直播片段被翻出，与近期声明形成对照</span>
+    <span><b>3 条</b> 新增“反差案例库”条目：困困狗、阿七不熬夜、小鹿眠眠</span>
+    <span><b>11-06</b> 反差素材对照表更新至 2026 年第 45 周</span>
+  </div>
+</div>
+
+<!-- 吸顶页头 -->
+<header class="site-header">
+  <div class="header-inner">
+    <div class="logo-wrap">
+      <svg class="logo-mark" viewBox="0 0 32 32" aria-hidden="true">
+        <rect width="32" height="32" rx="8" fill="#1a1a2e"/>
+        <circle cx="16" cy="12" r="5.5" fill="#e94560"/>
+        <rect x="8" y="19" width="16" height="2.8" rx="1.4" fill="#e94560" opacity=".7"/>
+        <rect x="11" y="24" width="10" height="2.4" rx="1.2" fill="#e94560" opacity=".4"/>
+      </svg>
+      <span class="logo-text">黑料网反差<em>困困狗</em></span>
+    </div>
+    <nav class="header-nav" aria-label="主题导航">
+      <a href="/#overview">事件概览</a>
+      <a href="/#featured">反差精选</a>
+      <a href="/#updates">实时动态</a>
+      <a href="/#categories">分类索引</a>
+      <a href="/#deepdive">深度拆解</a>
+      <a href="/#guide">观看指南</a>
+      <a href="/#faq">常见问答</a>
+      <a href="/#comments">评论区</a>
+      <a href="/#news">相关资讯</a>
+      <a href="/#tags">标签索引</a>
+      <a href="/#rank">反差榜单</a>
+      <a href="/#interact">投稿互动</a>
+    </nav>
+    <div class="header-search">
+      <input type="search" id="searchInput" placeholder="搜条目/人物/事件" aria-label="搜索内容">
+      <button type="button" id="searchBtn">搜索</button>
+    </div>
+    <button class="hamburger" id="hamburgerBtn" aria-label="打开菜单" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/>
+      </svg>
+    </button>
+  </div>
+</header>
+
+<!-- 移动抽屉 -->
+<div class="drawer-overlay" id="drawerOverlay"></div>
+<div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+  <div class="drawer-head">
+    <span>频道导航</span>
+    <button class="drawer-close" id="drawerClose" aria-label="关闭菜单">&times;</button>
+  </div>
+  <a href="/#overview">事件概览</a>
+  <a href="/#featured">反差精选</a>
+  <a href="/#updates">实时动态</a>
+  <a href="/#categories">分类索引</a>
+  <a href="/#deepdive">深度拆解</a>
+  <a href="/#guide">观看指南</a>
+  <a href="/#faq">常见问答</a>
+  <a href="/#comments">评论区</a>
+  <a href="/#news">相关资讯</a>
+  <a href="/#tags">标签索引</a>
+  <a href="/#rank">反差榜单</a>
+  <a href="/#interact">投稿互动</a>
+</div>
+
+<!-- 首屏 -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>黑料网反差困困狗</h1>
+    <p class="hero-desc">汇集困困狗相关前后言行对照、旧直播切片复盘、评论区反应和同类博主反差案例，按时间线与立场分层整理，帮你看清哪部分是原片事实、哪部分是二次解读。</p>
+    <div class="hero-actions">
+      <a class="btn-primary" href="/#featured">
+        查看反差精选
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+      <a class="btn-ghost" href="/#deepdive">阅读深度拆解</a>
+    </div>
+  </div>
+  <div class="hero-visual" aria-hidden="true">
+    <svg viewBox="0 0 420 280" preserveAspectRatio="xMidYMid slice">
+      <defs>
+        <linearGradient id="hg1" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#e94560" stop-opacity=".28"/>
+          <stop offset="1" stop-color="#e94560" stop-opacity="0"/>
+        </linearGradient>
+        <linearGradient id="hg2" x1="1" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#ffe4a0" stop-opacity=".18"/>
+          <stop offset="1" stop-color="#ffe4a0" stop-opacity="0"/>
+        </linearGradient>
+      </defs>
+      <rect width="420" height="280" fill="url(#hg1)"/>
+      <rect width="420" height="280" fill="url(#hg2)"/>
+      <!-- 对比双面构图 -->
+      <circle cx="140" cy="100" r="56" fill="none" stroke="#e94560" stroke-width="1.5" opacity=".5"/>
+      <circle cx="140" cy="100" r="40" fill="#e94560" opacity=".12"/>
+      <circle cx="280" cy="100" r="56" fill="none" stroke="#ffe4a0" stroke-width="1.5" opacity=".4"/>
+      <circle cx="280" cy="100" r="40" fill="#ffe4a0" opacity=".08"/>
+      <!-- 连线 -->
+      <line x1="196" y1="100" x2="224" y2="100" stroke="#ffffff" stroke-width="1" opacity=".3" stroke-dasharray="4 4"/>
+      <!-- 表情：一面笑一面冷 -->
+      <circle cx="128" cy="92" r="4" fill="#e94560" opacity=".8"/>
+      <circle cx="152" cy="92" r="4" fill="#e94560" opacity=".8"/>
+      <path d="M128 112 Q140 122 152 112" stroke="#e94560" stroke-width="2" fill="none" stroke-linecap="round" opacity=".8"/>
+      <circle cx="268" cy="92" r="4" fill="#ffe4a0" opacity=".6"/>
+      <circle cx="292" cy="92" r="4" fill="#ffe4a0" opacity=".6"/>
+      <line x1="266" y1="114" x2="294" y2="114" stroke="#ffe4a0" stroke-width="2" stroke-linecap="round" opacity=".6"/>
+      <!-- 底部时间线 -->
+      <line x1="60" y1="210" x2="360" y2="210" stroke="#ffffff" stroke-width="1" opacity=".15"/>
+      <circle cx="100" cy="210" r="4" fill="#e94560" opacity=".8"/>
+      <circle cx="190" cy="210" r="4" fill="#ffffff" opacity=".4"/>
+      <circle cx="280" cy="210" r="4" fill="#ffe4a0" opacity=".7"/>
+      <circle cx="350" cy="210" r="4" fill="#ffffff" opacity=".2"/>
+      <text x="100" y="234" fill="#ffffff" opacity=".5" font-size="9" text-anchor="middle">旧直播</text>
+      <text x="190" y="234" fill="#ffffff" opacity=".5" font-size="9" text-anchor="middle">声明</text>
+      <text x="280" y="234" fill="#ffe4a0" opacity=".7" font-size="9" text-anchor="middle">切片传播</text>
+      <text x="350" y="234" fill="#ffffff" opacity=".4" font-size="9" text-anchor="middle">回应</text>
+    </svg>
+    <span class="float-badge fb1">前后言行对照</span>
+    <span class="float-badge fb2">11-08 更新 3 条</span>
+    <span class="float-badge fb3">反差素材库</span>
+  </div>
+</section>
+
+<!-- 主体三栏 -->
+<div class="page-wrap">
+
+  <!-- 左侧频道索引 -->
+  <aside class="channel-index" aria-label="频道索引">
+    <h2>频道</h2>
+    <a href="/#overview" class="active">事件概览</a>
+    <a href="/#featured">反差精选</a>
+    <a href="/#updates">实时动态</a>
+    <a href="/#categories">分类索引</a>
+    <a href="/#deepdive">深度拆解</a>
+    <a href="/#guide">观看指南</a>
+    <a href="/#faq">常见问答</a>
+    <a href="/#comments">评论区</a>
+    <a href="/#news">相关资讯</a>
+    <a href="/#tags">标签索引</a>
+    <a href="/#rank">反差榜单</a>
+    <a href="/#interact">投稿互动</a>
+  </aside>
+
+  <!-- 中间主内容 -->
+  <main class="main-col">
+
+    <!-- 1. 主题领域概览 -->
+    <section class="section-block" id="overview">
+      <div class="section-head">
+        <h2>网络反差事件都在讨论什么</h2>
+      </div>
+      <div class="overview-text">
+        <p>“反差”类内容的焦点，通常落在同一个博主在不同时间、不同场合下呈现出的言行差异。以困困狗为例，2025 年 8 月的一场直播里，她把“绝不接美妆软广”挂在嘴边，弹幕刷了整整两分钟；到了 2026 年 10 月 21 日，一条标注“合作”的粉底液推广出现在她的主页，评论区在 6 小时内垒到 1.4 万条。真正被反复剪切的，是这两段画面之间的落差。</p>
+        <p>围绕这类事件，内容方向大致分四块：<strong>时间线梳理</strong>（谁在什么日期说了什么）、<strong>切片核验</strong>（原片语境是否被截断）、<strong>立场拆解</strong>（粉丝、路人、黑粉各自抓住哪一段）、<strong>同类对照</strong>（阿七不熬夜、小鹿眠眠等博主的相似翻车轨迹）。2026 年 11 月这一周，困困狗相关的新增条目集中在“深夜食堂”旧直播片段与 10 月 30 日长文回应之间的对照上。</p>
+        <p>值得留意的还有平台机制带来的放大效应。短视频平台的切片推荐会把 3 秒冲突画面推到信息流前排，原直播 40 分钟的上下文被压缩成标题里的一个短句。打开一条切片，先看它引用的原片时间码，再决定要不要追完整版——这是目前最省时间的判断路径。</p>
+      </div>
+    </section>
+
+    <!-- 2. 精选内容推荐 -->
+    <section class="section-block" id="featured">
+      <div class="section-head">
+        <h2>反差精选条目</h2>
+        <a class="more-link" href="/#tags">全部标签 →</a>
+      </div>
+      <div class="card-grid" id="featuredGrid">
+        <article class="content-card searchable" data-keywords="困困狗 直播 美妆 软广 声明 反差">
+          <img class="card-thumb" src="https://picsum.photos/seed/kunkun-live1/400/300" width="400" height="300" loading="lazy" alt="困困狗2025年8月直播画面截图，背景为卧室暖光">
+          <div class="card-body">
+            <span class="card-type">直播切片</span>
+            <h3 class="card-title">困困狗“绝不接美妆软广”原片 40 分钟完整版</h3>
+            <p class="card-desc">2025-08-14 直播回放，从第 12 分钟开始阐述选品原则，第 28 分钟出现“软广”表态。切片版只保留了 9 秒，完整版能看到前后语境。</p>
+            <div class="card-meta">
+              <div class="card-tags"><span>原片核验</span><span>直播回放</span></div>
+              <span class="hot">热度 9.2</span>
+            </div>
+          </div>
+        </article>
+        <article class="content-card searchable" data-keywords="困困狗 粉底液 推广 合作 10月21日">
+          <img class="card-thumb" src="https://picsum.photos/seed/kunkun-ad2/400/300" width="400" height="300" loading="lazy" alt="困困狗主页推广贴文截图，粉底液产品摆拍">
+          <div class="card-body">
+            <span class="card-type">推广记录</span>
+            <h3 class="card-title">10 月 21 日粉底液合作贴：标注与评论区时间差</h3>
+            <p class="card-desc">贴文第 3 张图右下角有“合作”标识，发布 6 小时后评论突破 1.4 万。前 200 条高赞评论里，47 条直接引用 2025 年直播原话。</p>
+            <div class="card-meta">
+              <div class="card-tags"><span>合作标注</span><span>评论采样</span></div>
+              <span class="hot">热度 8.8</span>
+            </div>
+          </div>
+        </article>
+        <article class="content-card searchable" data-keywords="困困狗 长文 回应 10月30日 道歉">
+          <img class="card-thumb" src="https://picsum.photos/seed/kunkun-note3/400/300" width="400" height="300" loading="lazy" alt="困困狗10月30日长文回应手机截图界面">
+          <div class="card-body">
+            <span class="card-type">当事人回应</span>
+            <h3 class="card-title">10 月 30 日长文回应：三段式结构与未回应点</h3>
+            <p class="card-desc">全文 1100 余字，分“选品标准变化”“团队决策”“个人疏忽”三段。对“绝不接美妆软广”的原话只字未提，只承认“表达不够严谨”。</p>
+            <div class="card-meta">
+              <div class="card-tags"><span>回应文本</span><span>缺口分析</span></div>
+              <span class="hot">热度 8.5</span>
+            </div>
+          </div>
+        </article>
+        <article class="content-card searchable" data-keywords="深夜食堂 旧直播 困困狗 反差 片段">
+          <img class="card-thumb" src="https://picsum.photos/seed/kunkun-night4/400/300" width="400" height="300" loading="lazy" alt="困困狗深夜食堂系列直播画面，厨房背景">
+          <div class="card-body">
+            <span class="card-type">旧片段复用</span>
+            <h3 class="card-title">“深夜食堂”第 7 期：对同类博主的评价被重新翻出</h3>
+            <p class="card-desc">2026-04-19 的这期直播里，困困狗点评另一位博主“接推广太密掉价”。11 月 6 日这条切片被搬运到三个平台，单条最高播放 83 万。</p>
+            <div class="card-meta">
+              <div class="card-tags"><span>旧片新用</span><span>跨平台搬运</span></div>
+              <span class="hot">热度 8.1</span>
+            </div>
+          </div>
+        </article>
+        <article class="content-card searchable" data-keywords="阿七不熬夜 反差 翻车 推广">
+          <img class="card-thumb" src="https://picsum.photos/seed/aqi-compare5/400/300" width="400" height="300" loading="lazy" alt="阿七不熬夜主页截图，与困困狗事件对照">
+          <div class="card-body">
+            <span class="card-type">同类对照</span>
+            <h3 class="card-title">阿七不熬夜：从“不恰饭”到月更 4 条合作的时间表</h3>
+            <p class="card-desc">2026 年 3 月发视频称“一年最多两条合作”，7 月起月均 4 条推广。与困困狗的差异在于，阿七在 9 月 12 日直播里主动提及变化原因。</p>
+            <div class="card-meta">
+              <div class="card-tags"><span>同类案例</span><span>时间表</span></div>
+              <span class="hot">热度 7.6</span>
+            </div>
+          </div>
+        </article>
+        <article class="content-card searchable" data-keywords="小鹿眠眠 反差 人设 争议">
+          <img class="card-thumb" src="https://picsum.photos/seed/xiaolu-case6/400/300" width="400" height="300" loading="lazy" alt="小鹿眠眠直播争议片段截图">
+          <div class="card-body">
+            <span class="card-type">同类对照</span>
+            <h3 class="card-title">小鹿眠眠“社恐人设”与线下活动视频对照</h3>
+            <p class="card-desc">2026 年 9 月 3 日线下品牌活动，小鹿眠眠主动与 12 桌粉丝互动，与其直播中“不敢和陌生人说话”的说法形成对照。争议点在于活动是否属于工作场景。</p>
+            <div class="card-meta">
+              <div class="card-tags"><span>人设反差</span><span>场景差异</span></div>
+              <span class="hot">热度 7.3</span>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="search-no-result" id="searchNoResult">没有匹配的条目，换个关键词试试，比如“困困狗”“深夜食堂”“阿七”。</div>
+    </section>
+
+    <!-- 3. 最新更新 / 动态 -->
+    <section class="section-block" id="updates">
+      <div class="section-head">
+        <h2>实时动态与更新条目</h2>
+      </div>
+      <div class="update-list">
+        <div class="update-item">
+          <span class="update-time">11-08</span>
+          <div class="update-body">
+            <div class="update-title">困困狗“深夜食堂”第 7 期切片新增 3 个平台版本 <em>新</em></div>
+            <div class="update-summary">B 站版 4 分 12 秒、抖音版 2 分 40 秒、小红书图文版 9 张，三版引用原片时间码一致，字幕有 2 处差异。</div>
+          </div>
+        </div>
+        <div class="update-item">
+          <span class="update-time">11-07</span>
+          <div class="update-body">
+            <div class="update-title">“反差案例库”新增阿七不熬夜合作时间线</div>
+            <div class="update-summary">记录 2026 年 3 月 5 日至 10 月 28 日共 19 条合作内容，其中 11 条为美妆个护类，与困困狗事件形成同类对照。</div>
+          </div>
+        </div>
+        <div class="update-item">
+          <span class="update-time">11-06</span>
+          <div class="update-body">
+            <div class="update-title">反差素材对照表更新至第 45 周</div>
+            <div class="update-summary">对照表列出 6 位博主、23 组前后言行条目，标注每组条目的原片链接、发布时间与当前可见状态。</div>
+          </div>
+        </div>
+        <div class="update-item">
+          <span class="update-time">11-05</span>
+          <div class="update-body">
+            <div class="update-title">困困狗 10 月 30 日长文回应评论区采样</div>
+            <div class="update-summary">随机抽取 500 条评论：质疑选品标准的 218 条、讨论表达方式的 156 条、纯情绪表达 89 条、其余 37 条。</div>
+          </div>
+        </div>
+        <div class="update-item">
+          <span class="update-time">11-03</span>
+          <div class="update-body">
+            <div class="update-title">小鹿眠眠线下活动视频完整版放出</div>
+            <div class="update-summary">时长 18 分 40 秒，包含活动主持人与粉丝互动环节，争议片段位于第 11 分 20 秒至 13 分 05 秒。</div>
+          </div>
+        </div>
+        <div class="update-item">
+          <span class="update-time">10-31</span>
+          <div class="update-body">
+            <div class="update-title">困困狗主页推广贴文“合作”标识位置变动</div>
+            <div class="update-summary">10 月 21 日首发时标识在第 3 张图右下角，10 月 31 日调整至首图左上角，平台方未就此说明。</div>
+          </div>
+        </div>
+        <div class="update-item">
+          <span class="update-time">10-28</span>
+          <div class="update-body">
+            <div class="update-title">阿七不熬夜 9 月 12 日直播自述被重新剪辑</div>
+            <div class="update-summary">原直播 52 分钟，自述部分约 6 分钟。新剪辑版把 6 分钟压到 48 秒，保留“接合作是为了活下去”一句。</div>
+          </div>
+        </div>
+        <div class="update-item">
+          <span class="update-time">10-25</span>
+          <div class="update-body">
+            <div class="update-title">“绝不接美妆软广”原片弹幕数据归档</div>
+            <div class="update-summary">2025-08-14 直播回放累计弹幕 4.7 万条，其中含“软广”关键词的 682 条，集中在第 27 至 29 分钟。</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. 分类入口 -->
+    <section class="section-block" id="categories">
+      <div class="section-head">
+        <h2>按类型找反差素材</h2>
+      </div>
+      <div class="category-grid">
+        <a class="category-chip searchable" href="/#featured" data-keywords="直播切片 原片 回放">
+          <span class="cat-name">直播原片切片</span>
+          <span class="cat-count">46 条</span>
+        </a>
+        <a class="category-chip searchable" href="/#featured" data-keywords="推广 合作 广告 记录">
+          <span class="cat-name">推广合作记录</span>
+          <span class="cat-count">31 条</span>
+        </a>
+        <a class="category-chip searchable" href="/#featured" data-keywords="回应 声明 长文 道歉">
+          <span class="cat-name">当事人回应</span>
+          <span class="cat-count">18 条</span>
+        </a>
+        <a class="category-chip searchable" href="/#featured" data-keywords="旧片 翻出 搬运 二次传播">
+          <span class="cat-name">旧片新用</span>
+          <span class="cat-count">27 条</span>
+        </a>
+        <a class="category-chip searchable" href="/#featured" data-keywords="同类 对照 阿七 小鹿 博主">
+          <span class="cat-name">同类博主对照</span>
+          <span class="cat-count">22 条</span>
+        </a>
+        <a class="category-chip searchable" href="/#comments" data-keywords="评论区 粉丝 路人 立场">
+          <span class="cat-name">评论区立场采样</span>
+          <span class="cat-count">14 组</span>
+        </a>
+        <a class="category-chip searchable" href="/#news" data-keywords="平台 机制 推荐 流量">
+          <span class="cat-name">平台机制观察</span>
+          <span class="cat-count">9 条</span>
+        </a>
+        <a class="category-chip searchable" href="/#rank" data-keywords="榜单 排行 热度 反差">
+          <span class="cat-name">反差热度榜</span>
+          <span class="cat-count">周更</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- 5. 深度解析 -->
+    <section class="section-block" id="deepdive">
+      <div class="section-head">
+        <h2>反差是怎么被一层层放大的</h2>
+      </div>
+      <div class="deep-article">
+        <h3>一、原话与切片之间，至少隔着三道剪辑</h3>
+        <p>困困狗 2025-08-14 直播第 28 分钟的原话是：“美妆软广我基本不接，除非品牌方把样品寄到我手上，我自己用满一个月再说。”这句话在传播中经历了三次压缩：第一次是直播回放被粉丝剪成 9 秒高光，只保留“美妆软广我基本不接”；第二次是 2026 年 10 月 22 日某搬运号把 9 秒切成 3 秒，去掉了“基本”二字；第三次是评论区截图把 3 秒画面配上“她说过绝不接”的标题。</p>
+        <p>把三版并排看，能核对的差异很清楚：原片有“基本”“除非”两个限定词，9 秒版保留“基本”删掉“除非”，3 秒版两个限定词都不见了。这直接改变了话的强度。</p>
+        <table class="compare-table">
+          <thead><tr><th>版本</th><th>时长</th><th>保留措辞</th><th>发布日期</th></tr></thead>
+          <tbody>
+            <tr><td>直播回放原片</td><td>约 40 分钟</td><td>“基本不接……除非……”</td><td>2025-08-14</td></tr>
+            <tr><td>粉丝高光切片</td><td>9 秒</td><td>“美妆软广我基本不接”</td><td>2025-08-15</td></tr>
+            <tr><td>搬运号二次剪辑</td><td>3 秒</td><td>“美妆软广我不接”</td><td>2026-10-22</td></tr>
+          </tbody>
+        </table>
+
+        <h3>二、长文回应的三段结构，绕开了最硬的那一句</h3>
+        <p>10 月 30 日的回应全文 1100 余字，可以拆成三段：第一段讲“选品标准随团队专业化调整”，第二段讲“合作决策由团队评估”，第三段承认“个人表达不够严谨”。三段都成立，但三段都没有直接解释 2025 年那句“绝不接”为何在 2026 年 10 月失效。</p>
+        <div class="quote-box">可核对的结构是这样：回应发布 4 小时内，评论区前 100 条高赞里，直接引用 2025 年原话的 31 条；要求解释“除非条款”的 24 条；接受回应并转向讨论选品的 18 条；其余 27 条为情绪表达或无关内容。</div>
+        <p>“表达不够严谨”这个说法，把问题定位在措辞层面；而网友抓住的是行为层面——接没接、什么时候接的。两个层面不在同一个讨论框架里，所以回应发出后，争议没有收敛，反而多了“避重就轻”的新标签。</p>
+
+        <h3>三、同类案例的差异点，比共同点更有用</h3>
+        <p>阿七不熬夜和小鹿眠眠都被归入“反差”大类，但三个人的争议结构并不一样。阿七的问题在频率：2026 年 3 月说“一年最多两条合作”，7 月起月均 4 条，数字本身就能对上。小鹿的问题在场景：社恐人设与线下活动表现的反差，涉及工作场景是否适用人设的问题。</p>
+        <ul>
+          <li>阿七在 9 月 12 日直播里主动提了变化原因，提到“团队扩到 6 个人”，这条自述在原片第 31 分钟，切片版没有保留。</li>
+          <li>小鹿眠眠的线下活动属于品牌方邀约，合同里写明需完成 12 桌互动，现场视频第 11 分 20 秒能看到工作人员示意。</li>
+          <li>困困狗的推广贴标注了“合作”，程序上没有隐瞒，争议集中在“说过不接”与“实际接了”之间。</li>
+        </ul>
+        <p>把三个人放在同一张表里，能看出“反差”其实是三种东西：频率变化、场景错位、言行不符。混为一谈会让讨论失焦。</p>
+
+        <h3>四、平台推荐如何参与放大</h3>
+        <p>2026 年 10 月 22 日至 11 月 5 日，三个平台的相关切片总播放量约 4100 万。其中冲突画面出现在前 3 秒的视频，完播率比常规视频高 1.7 倍。推荐机制本身没有立场，但它偏好能在开头制造落差的素材，而“反差”恰好是最容易在前 3 秒完成的叙事。</p>
+        <p>对读者来说，可操作的核对顺序是：先看切片有没有标原片时间码，再看原片有没有被二次剪辑，最后看当事方有没有就具体条款作回应。三步走完，大部分“反转”其实在第二步就能判断真假。</p>
+      </div>
+    </section>
+
+    <!-- 6. 体验指南 -->
+    <section class="section-block" id="guide">
+      <div class="section-head">
+        <h2>看反差素材的顺序与判断依据</h2>
+      </div>
+      <div class="guide-steps">
+        <div class="guide-step">
+          <span class="step-num">1</span>
+          <div class="step-body">
+            <h3>先找原片时间码，再决定要不要看切片</h3>
+            <p>一条切片如果标注了原片时间码（比如“原片第 28 分钟”），可信度起点就比不标的高。困困狗这条争议里，标了时间码的版本能在 2 分钟内定位到原话，没标的版本只能靠评论区补充。</p>
+          </div>
+        </div>
+        <div class="guide-step">
+          <span class="step-num">2</span>
+          <div class="step-body">
+            <h3>区分“说”和“做”两个层面</h3>
+            <p>说过的原话、实际接的合作，是两个独立事实。判断一个反差事件值不值得投入时间，先看这两层有没有被分开呈现。困困狗事件里，原话和推广记录都能查到，属于两层都有材料的类型。</p>
+          </div>
+        </div>
+        <div class="guide-step">
+          <span class="step-num">3</span>
+          <div class="step-body">
+            <h3>同类比较时，先比时间间隔</h3>
+            <p>阿七从“一年两条”到“月均 4 条”用了 4 个月，困困狗从“绝不接”到推广贴用了 14 个月。时间间隔越长，越需要看中间有没有过渡表态。没有过渡的，反差的冲击力自然更大。</p>
+          </div>
+        </div>
+        <div class="guide-step">
+          <span class="step-num">4</span>
+          <div class="step-body">
+            <h3>看评论区采样，不只看高赞</h3>
+            <p>高赞评论往往是最极化的那批。把评论区按时间排序，看第 1 小时和第 24 小时的发言结构有没有变化，能判断事件是持续发酵还是一波流。困困狗 10 月 21 日贴文下，第 1 小时评论以引用原话为主，第 24 小时开始出现选品讨论。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. FAQ -->
+    <section class="section-block" id="faq">
+      <div class="section-head">
+        <h2>关于困困狗反差的常见问题</h2>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>困困狗“绝不接美妆软广”的原话出自哪场直播？</summary>
+          <div class="faq-answer">2025 年 8 月 14 日的直播回放，第 28 分钟左右。完整表述是“美妆软广我基本不接，除非品牌方把样品寄到我手上，我自己用满一个月再说”，切片传播时“基本”和“除非”两个限定词常被删去。</div>
+        </details>
+        <details class="faq-item">
+          <summary>10 月 21 日的粉底液推广贴算不算违反承诺？</summary>
+          <div class="faq-answer">贴文标注了“合作”，程序上符合平台推广规范。争议点在于 2025 年原话里的“除非条款”——按原话说，寄样自用满一个月后可以接。目前公开信息里，品牌方没有出示寄样记录，困困狗也没有说明是否走完这个流程。</div>
+        </details>
+        <details class="faq-item">
+          <summary>“深夜食堂”第 7 期为什么在 11 月被翻出来？</summary>
+          <div class="faq-answer">2026 年 11 月 6 日，一个搬运号把 4 月 19 日那期直播里困困狗评价其他博主“接推广太密掉价”的片段剪成 1 分 20 秒，三个平台同步发布，单条最高播放 83 万。时间点卡在 10 月 30 日长文回应之后一周。</div>
+        </details>
+        <details class="faq-item">
+          <summary>阿七不熬夜和困困狗的情况有什么不同？</summary>
+          <div class="faq-answer">阿七的问题在合作频率，2026 年 3 月说“一年最多两条”，7 月起月均 4 条，数字变化有明确时间表；困困狗的问题在“说过不接”与“实际接了”之间的言行落差。阿七在 9 月 12 日直播里主动解释了变化原因，困困狗的长文回应则没有正面提原话。</div>
+        </details>
+        <details class="faq-item">
+          <summary>看这类反差切片，怎么判断有没有被恶意剪辑？</summary>
+          <div class="faq-answer">三个核对点：切片有没有标原片时间码；原片里这句话前后各 30 秒的语境是否完整；限定词（“基本”“除非”“当时”）有没有被删。困困狗这条争议里，3 秒版删掉了全部限定词，9 秒版保留了“基本”删掉了“除非”。</div>
+        </details>
+        <details class="faq-item">
+          <summary>小鹿眠眠的“社恐人设”争议最后怎么收场？</summary>
+          <div class="faq-answer">2026 年 11 月 3 日完整版活动视频放出后，争议点转向“工作场景是否适用社恐人设”。合同显示现场需完成 12 桌互动，视频第 11 分 20 秒有工作人员示意，部分观众据此认为互动属于工作义务，不构成人设矛盾。事件没有正式结论，讨论热度在 11 月 5 日后回落。</div>
+        </details>
+      </div>
+    </section>
+
+    <!-- 8. 用户评论 -->
+    <section class="section-block" id="comments">
+      <div class="section-head">
+        <h2>评论区里的不同声音</h2>
+      </div>
+      <div class="comment-list">
+        <div class="comment-item">
+          <div class="comment-avatar">追</div>
+          <div class="comment-body">
+            <div class="comment-head"><span class="comment-name">追更小能手</span><span class="comment-time">11-08 14:22</span></div>
+            <p class="comment-text">“深夜食堂”第 7 期那段我去年真看过，当时就觉得她嘴别人接推广有点冲，没想到现在自己被翻出来。原片里她后面还补了一句“当然人家也要吃饭”，切片全给剪了。</p>
+          </div>
+        </div>
+        <div class="comment-item">
+          <div class="comment-avatar">路</div>
+          <div class="comment-body">
+            <div class="comment-head"><span class="comment-name">路过打折区</span><span class="comment-time">11-08 11:05</span></div>
+            <p class="comment-text">粉底液那条我点进去看了，合作标在第 3 张图右下角，小得跟水印似的。程序上没毛病，观感上确实有点藏。</p>
+          </div>
+        </div>
+        <div class="comment-item">
+          <div class="comment-avatar">阿</div>
+          <div class="comment-body">
+            <div class="comment-head"><span class="comment-name">阿七的观众</span><span class="comment-time">11-07 22:48</span></div>
+            <p class="comment-text">阿七那事我倒觉得还好，9 月直播她说了团队扩到 6 个人，养团队要钱，这话难听但实在。困困狗是另一码事，她当初话说太满。</p>
+          </div>
+        </div>
+        <div class="comment-item">
+          <div class="comment-avatar">剪</div>
+          <div class="comment-body">
+            <div class="comment-head"><span class="comment-name">剪辑课代表</span><span class="comment-time">11-07 19:30</span></div>
+            <p class="comment-text">3 秒版把“基本”都删了，这已经不是切片是重写。做这行的都知道，删限定词等于换了个意思。</p>
+          </div>
+        </div>
+        <div class="comment-item">
+          <div class="comment-avatar">睡</div>
+          <div class="comment-body">
+            <div class="comment-head"><span class="comment-name">睡前刷三条</span><span class="comment-time">11-07 09:12</span></div>
+            <p class="comment-text">昨天看到有人说小鹿眠眠那个也算反差，我专门去看了完整版，人家合同写着要互动 12 桌，这算工作不算人设崩吧。</p>
+          </div>
+        </div>
+        <div class="comment-item">
+          <div class="comment-avatar">不</div>
+          <div class="comment-body">
+            <div class="comment-head"><span class="comment-name">不爱看长文</span><span class="comment-time">11-06 23:55</span></div>
+            <p class="comment-text">1100 字回应我扫了两遍，愣是没找到“绝不接”三个字怎么解释的。绕来绕去，不如直接说当时说大了。</p>
+          </div>
+        </div>
+        <div class="comment-item">
+          <div class="comment-avatar">数</div>
+          <div class="comment-body">
+            <div class="comment-head"><span class="comment-name">数据派老张</span><span class="comment-time">11-06 16:40</span></div>
+            <p class="comment-text">4100 万播放这个数我信，但完播率高 1.7 倍是怎么算的？不同平台口径不一样，最好标一下样本区间。</p>
+          </div>
+        </div>
+        <div class="comment-item">
+          <div class="comment-avatar">困</div>
+          <div class="comment-body">
+            <div class="comment-head"><span class="comment-name">困困狗老粉</span><span class="comment-time">11-06 10:18</span></div>
+            <p class="comment-text">从 2024 年看到现在，选品确实变多了，但用过的几样东西没踩雷。她说话方式有问题我认，说东西不行我不认。</p>
+          </div>
+        </div>
+        <div class="comment-item">
+          <div class="comment-avatar">吃</div>
+          <div class="comment-body">
+            <div class="comment-head"><span class="comment-name">吃瓜不吐皮</span><span class="comment-time">11-05 21:33</span></div>
+            <p class="comment-text">这瓜吃了半个月，最大的感受是现在切片太狠了，40 分钟压成 3 秒，谁扛得住。</p>
+          </div>
+        </div>
+        <div class="comment-item">
+          <div class="comment-avatar">小</div>
+          <div class="comment-body">
+            <div class="comment-head"><span class="comment-name">小城读者</span><span class="comment-time">11-05 15:07</span></div>
+            <p class="comment-text">评论区采样那个 218/156/89/37 我看得挺舒服，至少把“情绪表达”单列了一栏，没混进去充数。</p>
+          </div>
+        </div>
+        <div class="comment-item">
+          <div class="comment-avatar">第</div>
+          <div class="comment-body">
+            <div class="comment-head"><span class="comment-name">第一排观众</span><span class="comment-time">11-05 08:44</span></div>
+            <p class="comment-text">说到标签位置变动，首图左上角和第 3 张图右下角，观感差挺多。平台规范到底要求标哪儿，有没有人贴一下原文。</p>
+          </div>
+        </div>
+        <div class="comment-item">
+          <div class="comment-avatar">月</div>
+          <div class="comment-body">
+            <div class="comment-head"><span class="comment-name">月更选手</span><span class="comment-time">11-04 20:11</span></div>
+            <p class="comment-text">阿七月更 4 条合作被骂，我关注的另一个博主月更 10 条没人说，差别可能就是人设一开始立没立“不恰饭”。</p>
+          </div>
+        </div>
+        <div class="comment-item">
+          <div class="comment-avatar">杠</div>
+          <div class="comment-body">
+            <div class="comment-head"><span class="comment-name">杠精本精</span><span class="comment-time">11-04 12:29</span></div>
+            <p class="comment-text">说“表达不够严谨”的就等于承认说错了呗，非要绕。</p>
+          </div>
+        </div>
+        <div class="comment-item">
+          <div class="comment-avatar">旁</div>
+          <div class="comment-body">
+            <div class="comment-head"><span class="comment-name">旁观记录员</span><span class="comment-time">11-03 18:02</span></div>
+            <p class="comment-text">三个案例放一起看确实清楚，一个频率、一个场景、一个言行。以前全叫翻车，其实不是一回事。</p>
+          </div>
+        </div>
+        <div class="comment-item">
+          <div class="comment-avatar">第</div>
+          <div class="comment-body">
+            <div class="comment-head"><span class="comment-name">第二杯半价</span><span class="comment-time">11-03 09:36</span></div>
+            <p class="comment-text">这两天降温，大家少熬夜刷切片，眼睛疼。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. 相关资讯 -->
+    <section class="section-block" id="news">
+      <div class="section-head">
+        <h2>近期相关资讯</h2>
+      </div>
+      <div class="news-list">
+        <article class="news-item searchable" data-keywords="困困狗 切片 平台 播放 11月">
+          <div class="news-title">困困狗“深夜食堂”切片三平台总播放破 4100 万</div>
+          <div class="news-meta">2026-11-06 · 内容观察</div>
+          <p class="news-summary">11 月 1 日至 5 日，B 站、抖音、小红书三平台相关切片累计播放约 4100 万次，其中 11 月 3 日单日新增 1200 万。三个平台的切片版本时长分别为 4 分 12 秒、2 分 40 秒、图文 9 张。</p>
+        </article>
+        <article class="news-item searchable" data-keywords="困困狗 长文 回应 评论 采样">
+          <div class="news-title">10 月 30 日长文回应评论区采样：质疑选品占四成</div>
+          <div class="news-meta">2026-11-05 · 数据整理</div>
+          <p class="news-summary">随机抽取 500 条评论，质疑选品标准的 218 条、讨论表达方式的 156 条、纯情绪表达 89 条，其余 37 条与事件无关。采样时间截至 11 月 4 日 24 时。</p>
+        </article>
+        <article class="news-item searchable" data-keywords="阿七不熬夜 合作 时间线 直播 自述">
+          <div class="news-title">阿七不熬夜合作时间线整理：19 条内容中 11 条为美妆个护</div>
+          <div class="news-meta">2026-11-04 · 条目更新</div>
+          <p class="news-summary">时间线覆盖 3 月 5 日至 10 月 28 日共 19 条合作内容。9 月 12 日直播第 31 分钟，阿七自述团队扩至 6 人，并提到“接合作是为了活下去”。</p>
+        </article>
+        <article class="news-item searchable" data-keywords="小鹿眠眠 线下活动 完整版 合同 互动">
+          <div class="news-title">小鹿眠眠线下活动完整版放出，合同显示需完成 12 桌互动</div>
+          <div class="news-meta">2026-11-03 · 事件进展</div>
+          <p class="news-summary">完整版时长 18 分 40 秒，争议片段位于第 11 分 20 秒至 13 分 05 秒。现场视频显示工作人员在该时段有示意动作，活动合同由品牌方提供。</p>
+        </article>
+        <article class="news-item searchable" data-keywords="合作标识 位置 变动 平台 规范">
+          <div class="news-title">困困狗推广贴“合作”标识位置变动，平台方未说明</div>
+          <div class="news-meta">2026-10-31 · 平台动态</div>
+          <p class="news-summary">10 月 21 日首发时标识位于第 3 张图右下角，10 月 31 日调整至首图左上角。截至 11 月 7 日，平台方未就调整原因发布说明，贴文评论数已超 2.3 万。</p>
+        </article>
+        <article class="news-item searchable" data-keywords="反差案例库 第45周 对照表 条目">
+          <div class="news-title">反差案例库更新至第 45 周，收录 6 位博主 23 组条目</div>
+          <div class="news-meta">2026-10-28 · 条目更新</div>
+          <p class="news-summary">对照表为每组条目标注原片链接、发布时间与当前可见状态。第 45 周新增困困狗、阿七不熬夜、小鹿眠眠三组，移除两组已删除原片的条目。</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 10. 相关推荐 -->
+    <section class="section-block" id="tags">
+      <div class="section-head">
+        <h2>相关内容方向索引</h2>
+      </div>
+      <div class="tag-index">
+        <a href="/#featured">困困狗原片时间码</a>
+        <a href="/#featured">粉底液合作贴截图</a>
+        <a href="/#featured">10月30日长文回应全文</a>
+        <a href="/#featured">深夜食堂第7期完整版</a>
+        <a href="/#featured">阿七不熬夜合作时间表</a>
+        <a href="/#featured">小鹿眠眠线下互动视频</a>
+        <a href="/#deepdive">切片三次剪辑对照</a>
+        <a href="/#comments">评论区立场采样数据</a>
+      </div>
+    </section>
+
+    <!-- 11. 补充板块：榜单 + 时间线 -->
+    <section class="section-block" id="rank">
+      <div class="section-head">
+        <h2>反差热度榜与事件时间线</h2>
+      </div>
+      <div class="rank-timeline">
+        <div class="rank-panel">
+          <h3>本周反差热度榜</h3>
+          <div class="rank-item"><span class="rank-num">1</span><span class="rank-name">困困狗“绝不接美妆软广”原片</span><span class="rank-score">9.2</span></div>
+          <div class="rank-item"><span class="rank-num">2</span><span class="rank-name">困困狗 10·21 粉底液推广贴</span><span class="rank-score">8.8</span></div>
+          <div class="rank-item"><span class="rank-num">3</span><span class="rank-name">困困狗 10·30 长文回应</span><span class="rank-score">8.5</span></div>
+          <div class="rank-item"><span class="rank-num">4</span><span class="rank-name">深夜食堂第 7 期旧片新用</span><span class="rank-score">8.1</span></div>
+          <div class="rank-item"><span class="rank-num">5</span><span class="rank-name">阿七不熬夜合作频率变化</span><span class="rank-score">7.6</span></div>
+          <div class="rank-item"><span class="rank-num">6</span><span class="rank-name">小鹿眠眠线下活动场景争议</span><span class="rank-score">7.3</span></div>
+        </div>
+        <div class="timeline-panel">
+          <h3>事件关键节点</h3>
+          <div class="timeline-item">
+            <div class="tl-date">2025-08-14</div>
+            <div class="tl-text">直播表态“美妆软广基本不接”，原片第 28 分钟。</div>
+          </div>
+          <div class="timeline-item">
+            <div class="tl-date">2026-10-21</div>
+            <div class="tl-text">粉底液合作贴发布，第 3 张图标注“合作”。</div>
+          </div>
+          <div class="timeline-item">
+            <div class="tl-date">2026-10-22</div>
+            <div class="tl-text">搬运号二次剪辑 3 秒版，删去“基本”“除非”。</div>
+          </div>
+          <div class="timeline-item">
+            <div class="tl-date">2026-10-30</div>
+            <div class="tl-text">1100 余字长文回应，未正面提及原话。</div>
+          </div>
+          <div class="timeline-item">
+            <div class="tl-date">2026-11-06</div>
+            <div class="tl-text">“深夜食堂”第 7 期切片三平台播放破 4100 万。</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 互动投稿 -->
+    <section class="section-block" id="interact">
+      <div class="interact-panel">
+        <div class="ip-text">
+          <h3>有新的反差素材或原片线索？</h3>
+          <p>投稿时请附上原片链接、时间码和发布日期，便于核对。只收带时间码的线索，纯截图无法核验的暂不收录。</p>
+        </div>
+        <div class="ip-actions">
+          <a class="btn-primary" href="/#interact">提交素材线索</a>
+          <a class="btn-ghost" href="/#interact">参与条目纠错</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 右侧辅助栏 -->
+  <aside class="side-col" aria-label="辅助栏">
+    <div class="side-card">
+      <h3>反差热榜</h3>
+      <div class="hot-list-item"><span class="hot-rank">1</span><span class="hot-name">困困狗原片 40 分钟完整版</span><span class="hot-tag">切片</span></div>
+      <div class="hot-list-item"><span class="hot-rank">2</span><span class="hot-name">10·21 粉底液推广贴</span><span class="hot-tag">推广</span></div>
+      <div class="hot-list-item"><span class="hot-rank">3</span><span class="hot-name">10·30 长文回应全文</span><span class="hot-tag">回应</span></div>
+      <div class="hot-list-item"><span class="hot-rank">4</span><span class="hot-name">深夜食堂第 7 期切片</span><span class="hot-tag">旧片</span></div>
+      <div class="hot-list-item"><span class="hot-rank">5</span><span class="hot-name">阿七不熬夜合作时间线</span><span class="hot-tag">对照</span></div>
+      <div class="hot-list-item"><span class="hot-rank">6</span><span class="hot-name">小鹿眠眠线下互动完整版</span><span class="hot-tag">场景</span></div>
+    </div>
+    <div class="side-card">
+      <h3>最近更新</h3>
+      <div class="side-update-item"><span class="su-date">11-08</span><span class="su-text">深夜食堂切片新增 3 个平台版本</span></div>
+      <div class="side-update-item"><span class="su-date">11-07</span><span class="su-text">案例库新增阿七合作时间线</span></div>
+      <div class="side-update-item"><span class="su-date">11-06</span><span class="su-text">对照表更新至第 45 周</span></div>
+      <div class="side-update-item"><span class="su-date">11-05</span><span class="su-text">长文回应评论区采样 500 条</span></div>
+      <div class="side-update-item"><span class="su-date">11-03</span><span class="su-text">小鹿线下活动完整版放出</span></div>
+      <div class="side-update-item"><span class="su-date">10-31</span><span class="su-text">合作标识位置发生变动</span></div>
+    </div>
+    <div class="side-card">
+      <h3>核对提示</h3>
+      <p style="font-size:12.5px;color:var(--text-2);line-height:1.8;">看切片先找原片时间码；看原话注意限定词；看回应注意有没有正面提原话。三步走完再判断。</p>
+    </div>
+  </aside>
+
+</div>
+
+<!-- 页尾 -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="fb-logo">黑料网反差<em>困困狗</em></div>
+        <p>覆盖 2025 年 8 月至 2026 年 11 月的直播原片、合作记录与回应文本，条目类型以切片核验、时间线、同类对照和评论区采样为主，每周四更新对照表。</p>
+      </div>
+      <div class="footer-col">
+        <h4>内容方向</h4>
+        <a href="/#featured">直播原片切片</a>
+        <a href="/#featured">推广合作记录</a>
+        <a href="/#featured">当事人回应</a>
+        <a href="/#featured">旧片新用</a>
+      </div>
+      <div class="footer-col">
+        <h4>核对工具</h4>
+        <a href="/#deepdive">切片剪辑对照</a>
+        <a href="/#guide">观看判断顺序</a>
+        <a href="/#comments">评论区采样</a>
+        <a href="/#rank">热度榜单</a>
+      </div>
+      <div class="footer-col">
+        <h4>参与方式</h4>
+        <a href="/#interact">提交素材线索</a>
+        <a href="/#interact">条目纠错</a>
+        <a href="/#faq">常见问答</a>
+        <a href="/#news">相关资讯</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 黑料网反差困困狗 · 内容聚合示例</span>
+      <span class="update-note">页面更新：2026-11-08 · 对应新增“深夜食堂”切片 3 个平台版本与案例库条目</span>
+    </div>
+  </div>
+</footer>
+
+<!-- 回到顶部 -->
+<button class="back-top" id="backTop" aria-label="回到顶部">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<script>
+(function() {
+  'use strict';
+
+  /* ===== 移动端抽屉 ===== */
+  var hamburger = document.getElementById('hamburgerBtn');
+  var drawer = document.getElementById('mobileDrawer');
+  var overlay = document.getElementById('drawerOverlay');
+  var drawerClose = document.getElementById('drawerClose');
+
+  function openDrawer() {
+    drawer.classList.add('open');
+    overlay.classList.add('show');
+    drawer.setAttribute('aria-hidden', 'false');
+    hamburger.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeDrawer() {
+    drawer.classList.remove('open');
+    overlay.classList.remove('show');
+    drawer.setAttribute('aria-hidden', 'true');
+    hamburger.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
+
+  hamburger.addEventListener('click', function() {
+    if (drawer.classList.contains('open')) closeDrawer(); else openDrawer();
+  });
+  drawerClose.addEventListener('click', closeDrawer);
+  overlay.addEventListener('click', closeDrawer);
+  drawer.querySelectorAll('a').forEach(function(a) {
+    a.addEventListener('click', closeDrawer);
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && drawer.classList.contains('open')) closeDrawer();
+  });
+
+  /* ===== 搜索筛选 ===== */
+  var searchInput = document.getElementById('searchInput');
+  var searchBtn = document.getElementById('searchBtn');
+  var noResult = document.getElementById('searchNoResult');
+  var searchableItems = document.querySelectorAll('.searchable');
+
+  function doSearch() {
+    var q = searchInput.value.trim().toLowerCase();
+    if (!q) {
+      searchableItems.forEach(function(el) { el.classList.remove('card-hidden'); });
+      noResult.classList.remove('show');
+      return;
+    }
+    var visibleCount = 0;
+    searchableItems.forEach(function(el) {
+      var kw = (el.getAttribute('data-keywords') || '') + ' ' + el.textContent.toLowerCase();
+      if (kw.indexOf(q) > -1) {
+        el.classList.remove('card-hidden');
+        visibleCount++;
+      } else {
+        el.classList.add('card-hidden');
+      }
+    });
+    if (visibleCount === 0) noResult.classList.add('show');
+    else noResult.classList.remove('show');
+  }
+
+  if (searchBtn) searchBtn.addEventListener('click', doSearch);
+  if (searchInput) {
+    searchInput.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') doSearch();
+    });
+    searchInput.addEventListener('input', function() {
+      if (searchInput.value.trim() === '') doSearch();
+    });
+  }
+
+  /* ===== 回到顶部 ===== */
+  var backTop = document.getElementById('backTop');
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 400) backTop.classList.add('show');
+    else backTop.classList.remove('show');
+  }, { passive: true });
+  backTop.addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  /* ===== 频道索引滚动高亮 ===== */
+  var channelLinks = document.querySelectorAll('.channel-index a');
+  var sections = [];
+  channelLinks.forEach(function(a) {
+    var id = a.getAttribute('href').replace('/#', '');
+    var sec = document.getElementById(id);
+    if (sec) sections.push({ el: sec, link: a });
+  });
+
+  function updateActive() {
+    var offset = 110;
+    var current = null;
+    for (var i = 0; i < sections.length; i++) {
+      var rect = sections[i].el.getBoundingClientRect();
+      if (rect.top <= offset) current = sections[i];
+    }
+    channelLinks.forEach(function(a) { a.classList.remove('active'); });
+    if (current) current.link.classList.add('active');
+    else if (sections.length) sections[0].link.classList.add('active');
+  }
+  window.addEventListener('scroll', updateActive, { passive: true });
+  updateActive();
+
+  /* ===== 平滑锚点（预留吸顶偏移） ===== */
+  document.querySelectorAll('a[href^="/#"]').forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      var id = a.getAttribute('href').replace('/#', '');
+      var target = document.getElementById(id);
+      if (target) {
+        e.preventDefault();
+        var top = target.getBoundingClientRect().top + window.scrollY - 96;
+        window.scrollTo({ top: top, behavior: 'smooth' });
+      }
+    });
+  });
+})();
+</script>
+
+<!-- 结构化数据 -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "黑料网反差困困狗",
+  "description": "聚合网络争议事件、人物反差对比与舆论复盘内容，收录翻车时间线、立场拆解、评论区反应和同类案例对照。",
+  "inLanguage": "zh-CN",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "/#featured?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "困困狗“绝不接美妆软广”的原话出自哪场直播？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "2025 年 8 月 14 日的直播回放，第 28 分钟左右。完整表述是“美妆软广我基本不接，除非品牌方把样品寄到我手上，我自己用满一个月再说”，切片传播时“基本”和“除非”两个限定词常被删去。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "10 月 21 日的粉底液推广贴算不算违反承诺？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "贴文标注了“合作”，程序上符合平台推广规范。争议点在于 2025 年原话里的“除非条款”——按原话说，寄样自用满一个月后可以接。目前公开信息里，品牌方没有出示寄样记录，困困狗也没有说明是否走完这个流程。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "“深夜食堂”第 7 期为什么在 11 月被翻出来？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "2026 年 11 月 6 日，一个搬运号把 4 月 19 日那期直播里困困狗评价其他博主“接推广太密掉价”的片段剪成 1 分 20 秒，三个平台同步发布，单条最高播放 83 万。时间点卡在 10 月 30 日长文回应之后一周。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "阿七不熬夜和困困狗的情况有什么不同？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "阿七的问题在合作频率，2026 年 3 月说“一年最多两条”，7 月起月均 4 条，数字变化有明确时间表；困困狗的问题在“说过不接”与“实际接了”之间的言行落差。阿七在 9 月 12 日直播里主动解释了变化原因，困困狗的长文回应则没有正面提原话。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "看这类反差切片，怎么判断有没有被恶意剪辑？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "三个核对点：切片有没有标原片时间码；原片里这句话前后各 30 秒的语境是否完整；限定词（“基本”“除非”“当时”）有没有被删。困困狗这条争议里，3 秒版删掉了全部限定词，9 秒版保留了“基本”删掉了“除非”。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "小鹿眠眠的“社恐人设”争议最后怎么收场？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "2026 年 11 月 3 日完整版活动视频放出后，争议点转向“工作场景是否适用社恐人设”。合同显示现场需完成 12 桌互动，视频第 11 分 20 秒有工作人员示意，部分观众据此认为互动属于工作义务，不构成人设矛盾。事件没有正式结论，讨论热度在 11 月 5 日后回落。"
+      }
+    }
+  ]
+}
+</script>
+
+</body>
+                                               </html>
