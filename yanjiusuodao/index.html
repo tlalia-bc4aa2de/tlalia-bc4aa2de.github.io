@@ -1,0 +1,1222 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>研究所导航入口 - 科研机构与实验室资源索引</title>
+<meta name="description" content="研究所导航入口汇集国家重点实验室、中科院院所、高校研究院与产业研究院的官网入口、研究方向与开放课题信息，供科研人员、考研学生和项目申报者按学科检索。">
+<meta name="keywords" content="研究所导航入口">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230e3a5f'/%3E%3Ccircle cx='32' cy='27' r='11' fill='none' stroke='%237fd1c1' stroke-width='4'/%3E%3Cpath d='M22 50h20M26 44h12' stroke='%237fd1c1' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+:root{
+  --brand:#0e3a5f;
+  --brand-2:#155e8a;
+  --brand-3:#1f7fa8;
+  --accent:#1f9c86;
+  --accent-soft:#e3f4f0;
+  --bg:#f4f6f8;
+  --panel:#ffffff;
+  --ink-1:#12202b;
+  --ink-2:#3c4d5c;
+  --ink-3:#6b7c8c;
+  --line:#dde4ea;
+  --line-soft:#eaf0f4;
+  --r-card:12px;
+  --r-btn:8px;
+  --r-tag:6px;
+  --r-banner:16px;
+  --sh-1:0 1px 2px rgba(16,40,60,.06),0 4px 14px rgba(16,40,60,.05);
+  --sh-2:0 6px 22px rgba(16,40,60,.12);
+  --stick:112px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:var(--stick)}
+body{
+  margin:0;background:var(--bg);color:var(--ink-1);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",sans-serif;
+  font-size:15px;line-height:1.75;-webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4{margin:0;line-height:1.35;font-weight:700}
+p{margin:0}
+ul,ol{margin:0;padding:0;list-style:none}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--brand-3);outline-offset:2px;border-radius:4px}
+
+/* ---------- 吸顶公告 + 页头 ---------- */
+.stickwrap{position:sticky;top:0;z-index:60}
+.notice{
+  background:linear-gradient(90deg,#0b2c49,#12496e 60%,#155e8a);
+  color:#dff0f6;font-size:13px;
+}
+.notice-inner{
+  max-width:1360px;margin:0 auto;padding:7px 20px;
+  display:flex;gap:14px;align-items:center;flex-wrap:wrap;
+}
+.notice-brand{font-weight:700;color:#8fe3d2;letter-spacing:.5px;white-space:nowrap}
+.notice-list{display:flex;gap:18px;flex-wrap:wrap;overflow:hidden}
+.notice-list li{display:flex;gap:7px;align-items:baseline;white-space:nowrap}
+.notice-list time{color:#9ed7e6;font-variant-numeric:tabular-nums}
+.notice-list span{color:#fff}
+
+header.site{
+  background:rgba(255,255,255,.93);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+  box-shadow:0 1px 0 rgba(255,255,255,.6) inset;
+}
+.head-inner{
+  max-width:1360px;margin:0 auto;padding:10px 20px;
+  display:flex;align-items:center;gap:18px;
+}
+.logo{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.logo-mark{width:38px;height:38px;flex-shrink:0}
+.logo-txt{font-size:18px;font-weight:800;letter-spacing:.4px;color:var(--brand)}
+.logo-txt small{display:block;font-size:10px;font-weight:500;letter-spacing:2px;color:var(--ink-3)}
+.mainnav{display:flex;gap:4px;flex-wrap:wrap;margin-left:8px}
+.mainnav a{
+  padding:6px 11px;border-radius:var(--r-btn);font-size:14px;color:var(--ink-2);
+  transition:background .18s,color .18s;
+}
+.mainnav a:hover{background:var(--accent-soft);color:var(--brand)}
+.mainnav a.on{background:var(--brand);color:#fff}
+.head-tools{margin-left:auto;display:flex;gap:8px;align-items:center}
+.searchbox{display:flex;align-items:center;background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:4px 6px 4px 12px}
+.searchbox input{
+  border:0;background:transparent;outline:none;width:150px;font-size:13.5px;color:var(--ink-1);
+}
+.searchbox input::placeholder{color:var(--ink-3)}
+.searchbox button{
+  border:0;background:var(--brand);color:#fff;border-radius:999px;
+  padding:5px 12px;font-size:13px;
+}
+.btn-ghost{
+  border:1px solid var(--line);background:#fff;border-radius:var(--r-btn);
+  padding:7px 13px;font-size:13.5px;color:var(--ink-2);
+}
+.btn-ghost:hover{border-color:var(--brand-3);color:var(--brand)}
+.hamburger{display:none;border:1px solid var(--line);background:#fff;border-radius:var(--r-btn);padding:7px 10px}
+.hamburger span{display:block;width:18px;height:2px;background:var(--brand);margin:4px 0;border-radius:2px}
+
+/* 移动抽屉 */
+.drawer-mask{
+  position:fixed;inset:0;background:rgba(10,26,40,.45);z-index:80;
+  opacity:0;pointer-events:none;transition:opacity .2s;
+}
+.drawer-mask.open{opacity:1;pointer-events:auto}
+.drawer{
+  position:fixed;top:0;left:0;bottom:0;width:min(300px,84vw);background:#fff;z-index:81;
+  transform:translateX(-102%);transition:transform .24s ease;padding:18px 16px;overflow:auto;
+  box-shadow:var(--sh-2);
+}
+.drawer.open{transform:translateX(0)}
+.drawer h3{font-size:14px;color:var(--ink-3);letter-spacing:1px;margin-bottom:10px}
+.drawer nav{display:flex;flex-direction:column;gap:2px;margin-bottom:18px}
+.drawer nav a{padding:9px 10px;border-radius:var(--r-btn);font-size:14.5px;color:var(--ink-2)}
+.drawer nav a:hover{background:var(--accent-soft)}
+.drawer .close-drawer{position:absolute;top:12px;right:12px;border:0;background:var(--bg);border-radius:8px;padding:6px 10px;font-size:14px}
+
+/* ---------- 首屏 ---------- */
+.hero{
+  position:relative;overflow:hidden;
+  background:
+    radial-gradient(900px 380px at 88% -10%,rgba(31,156,134,.20),transparent 70%),
+    radial-gradient(700px 300px at 4% 110%,rgba(31,127,168,.18),transparent 70%),
+    linear-gradient(160deg,#0b2c49 0%,#123f60 46%,#0e3a5f 100%);
+  color:#e8f2f7;
+}
+.hero-grid{
+  max-width:1360px;margin:0 auto;padding:44px 20px 48px;
+  display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);gap:36px;align-items:center;
+}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:8px;font-size:12.5px;letter-spacing:1px;
+  background:rgba(143,227,210,.14);border:1px solid rgba(143,227,210,.4);
+  color:#9fe8d8;padding:5px 12px;border-radius:999px;margin-bottom:16px;
+}
+.hero-badge i{width:6px;height:6px;border-radius:50%;background:#6fe0c6;display:block;animation:pulse 2.6s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.45;transform:scale(.72)}}
+.hero h1{font-size:clamp(28px,3.2vw,42px);letter-spacing:1px;color:#fff;margin-bottom:14px}
+.hero p.lead{font-size:15.5px;line-height:1.85;color:#c4dce8;max-width:560px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+.btn-primary{
+  background:#6fe0c6;color:#0b2c49;font-weight:700;padding:11px 22px;border-radius:var(--r-btn);
+  border:0;font-size:14.5px;transition:transform .18s,box-shadow .18s;
+}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(111,224,198,.28)}
+.btn-line{
+  border:1px solid rgba(196,220,232,.45);color:#d8e9f1;padding:11px 20px;border-radius:var(--r-btn);
+  font-size:14.5px;background:transparent;transition:background .18s,border-color .18s;
+}
+.btn-line:hover{background:rgba(196,220,232,.12);border-color:#9fe8d8}
+.hero-stats{display:flex;gap:26px;margin-top:28px;flex-wrap:wrap}
+.hero-stats div{font-size:12.5px;color:#9dbfd1;letter-spacing:.5px}
+.hero-stats b{display:block;font-size:22px;color:#fff;font-variant-numeric:tabular-nums;letter-spacing:.5px}
+.hero-art{position:relative;min-height:280px}
+.hero-art svg{width:100%;height:auto;filter:drop-shadow(0 12px 30px rgba(0,0,0,.25))}
+.hero-art .tagfloat{
+  position:absolute;background:rgba(255,255,255,.1);border:1px solid rgba(159,232,216,.35);
+  color:#cdeee6;font-size:11.5px;padding:4px 9px;border-radius:999px;backdrop-filter:blur(4px);
+}
+
+/* ---------- 三栏布局 ---------- */
+.container{max-width:1360px;margin:0 auto;padding:0 20px}
+.layout{
+  display:grid;grid-template-columns:180px minmax(0,1fr) 250px;gap:26px;
+  padding:30px 0 10px;align-items:start;
+}
+.rail{position:sticky;top:calc(var(--stick) + 16px);align-self:start}
+.rail-card{background:var(--panel);border:1px solid var(--line);border-radius:var(--r-card);padding:14px;box-shadow:var(--sh-1)}
+.rail-title{font-size:12px;letter-spacing:1.6px;color:var(--ink-3);font-weight:600;margin-bottom:10px}
+.channels{display:flex;flex-direction:column;gap:2px}
+.channels a{
+  display:flex;justify-content:space-between;gap:6px;align-items:center;
+  padding:7px 9px;border-radius:var(--r-btn);font-size:13.5px;color:var(--ink-2);
+  transition:background .16s,color .16s;
+}
+.channels a span.n{font-size:11px;color:var(--ink-3);font-variant-numeric:tabular-nums}
+.channels a:hover{background:var(--accent-soft);color:var(--brand)}
+.channels a.cur{background:var(--brand);color:#fff}
+.channels a.cur span.n{color:#a8d4e4}
+
+/* 主内容区 */
+main{min-width:0}
+.sec{margin-bottom:36px;scroll-margin-top:calc(var(--stick) + 12px)}
+.sec-head{display:flex;align-items:baseline;gap:12px;margin-bottom:14px;flex-wrap:wrap}
+.sec-head h2{font-size:20px;letter-spacing:.4px}
+.sec-head h2 em{font-style:normal;color:var(--accent);font-size:13px;font-weight:600;margin-left:8px;letter-spacing:1px}
+.sec-head .more{margin-left:auto;font-size:13px;color:var(--ink-3)}
+.sec-head .more:hover{color:var(--brand)}
+.sec-sub{font-size:13.5px;color:var(--ink-3);margin:-6px 0 16px}
+
+/* 概览 */
+.overview{background:var(--panel);border:1px solid var(--line);border-radius:var(--r-card);padding:22px 24px;box-shadow:var(--sh-1)}
+.overview p{font-size:14.8px;line-height:1.95;color:var(--ink-2);margin-bottom:12px}
+.overview p:last-child{margin-bottom:0}
+.overview strong{color:var(--brand)}
+
+/* 卡片网格 */
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px}
+.card{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--r-card);
+  overflow:hidden;display:flex;flex-direction:column;box-shadow:var(--sh-1);
+  transition:transform .18s,box-shadow .18s,border-color .18s;
+}
+.card:hover{transform:translateY(-3px);box-shadow:var(--sh-2);border-color:#c6dbe8}
+.card-thumb{aspect-ratio:4/3;overflow:hidden;background:var(--line-soft)}
+.card-thumb img{width:100%;height:100%;object-fit:cover;transition:transform .35s}
+.card:hover .card-thumb img{transform:scale(1.04)}
+.card-body{padding:13px 14px 15px;display:flex;flex-direction:column;gap:8px;flex:1}
+.card-body h3{font-size:15.5px;line-height:1.45}
+.card-body h3 a:hover{color:var(--brand-3)}
+.type-tag{
+  align-self:flex-start;font-size:11.5px;letter-spacing:.5px;padding:2px 8px;border-radius:var(--r-tag);
+  background:var(--accent-soft);color:#15705f;font-weight:600;
+}
+.card p.desc{font-size:13.2px;line-height:1.7;color:var(--ink-2)}
+.tagrow{display:flex;gap:6px;flex-wrap:wrap;margin-top:auto;padding-top:6px}
+.tagrow span{font-size:11.5px;color:var(--ink-3);background:var(--bg);border:1px solid var(--line-soft);padding:1px 7px;border-radius:var(--r-tag)}
+.card-meta{display:flex;gap:12px;font-size:12px;color:var(--ink-3);border-top:1px dashed var(--line);padding-top:8px;margin-top:4px;font-variant-numeric:tabular-nums}
+.card-meta b{color:var(--brand);font-weight:700}
+
+/* 更新流 */
+.feed{background:var(--panel);border:1px solid var(--line);border-radius:var(--r-card);overflow:hidden;box-shadow:var(--sh-1)}
+.feed li{display:flex;gap:14px;padding:13px 18px;border-bottom:1px solid var(--line-soft);align-items:flex-start}
+.feed li:last-child{border-bottom:0}
+.feed li:hover{background:#fafcfd}
+.feed time{font-size:12.5px;color:var(--ink-3);flex-shrink:0;width:64px;font-variant-numeric:tabular-nums;padding-top:2px}
+.feed .fc{min-width:0}
+.feed .fc b{font-size:14.5px;display:block;margin-bottom:2px}
+.feed .fc b:hover{color:var(--brand-3)}
+.feed .fc p{font-size:13.2px;color:var(--ink-2);line-height:1.65}
+.feed .pill{font-size:11px;padding:1px 7px;border-radius:var(--r-tag);background:#eaf3fa;color:#1d5f8a;margin-left:6px;white-space:nowrap}
+
+/* 分类入口 */
+.cats{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}
+.cat{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--r-card);padding:14px 15px;
+  box-shadow:var(--sh-1);transition:transform .16s,border-color .16s,background .16s;display:block;
+}
+.cat:hover{transform:translateY(-2px);border-color:#bcd8e6;background:#fbfeff}
+.cat b{display:block;font-size:14.5px;margin-bottom:4px;color:var(--brand)}
+.cat span{font-size:12.3px;color:var(--ink-3);line-height:1.6}
+
+/* 深度解析 */
+.deep{background:var(--panel);border:1px solid var(--line);border-radius:var(--r-card);padding:26px 28px;box-shadow:var(--sh-1)}
+.deep h3{font-size:17px;margin:22px 0 10px;padding-left:12px;border-left:4px solid var(--accent);line-height:1.3}
+.deep h3:first-of-type{margin-top:6px}
+.deep p{font-size:14.6px;line-height:1.95;color:var(--ink-2);margin-bottom:12px}
+.deep ul{margin:0 0 14px;padding-left:2px}
+.deep ul li{font-size:14.4px;line-height:1.85;color:var(--ink-2);padding-left:16px;position:relative;margin-bottom:6px}
+.deep ul li::before{content:"";position:absolute;left:0;top:.72em;width:6px;height:6px;border-radius:2px;background:var(--accent);opacity:.65}
+.deep .callout{
+  background:#f3f9f8;border:1px solid #cfe9e3;border-radius:10px;padding:14px 16px;margin:14px 0;
+  font-size:14.2px;line-height:1.85;color:#155e56;
+}
+.deep .callout b{color:#0f4a44}
+.checks{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin:8px 0 16px}
+.check{background:var(--bg);border:1px solid var(--line-soft);border-radius:10px;padding:12px 14px}
+.check h4{font-size:13.5px;color:var(--brand);margin-bottom:6px}
+.check p{font-size:13px;line-height:1.7;margin:0;color:var(--ink-2)}
+
+/* 指南步骤 */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+.step{background:var(--panel);border:1px solid var(--line);border-radius:var(--r-card);padding:16px 17px;box-shadow:var(--sh-1);position:relative}
+.step .num{font-size:12px;font-weight:700;letter-spacing:1px;color:#fff;background:var(--brand-2);border-radius:6px;padding:2px 8px;display:inline-block;margin-bottom:8px;font-variant-numeric:tabular-nums}
+.step h4{font-size:14.6px;margin-bottom:6px}
+.step p{font-size:13.2px;line-height:1.72;color:var(--ink-2)}
+.step em{font-style:normal;color:var(--accent);font-weight:600}
+
+/* FAQ */
+.faq{background:var(--panel);border:1px solid var(--line);border-radius:var(--r-card);padding:6px 8px;box-shadow:var(--sh-1)}
+.faq details{border-bottom:1px solid var(--line-soft)}
+.faq details:last-child{border-bottom:0}
+.faq summary{
+  list-style:none;cursor:pointer;padding:14px 12px;font-size:14.8px;font-weight:600;color:var(--ink-1);
+  display:flex;gap:10px;align-items:flex-start;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::before{
+  content:"Q";flex-shrink:0;width:20px;height:20px;border-radius:5px;background:var(--accent-soft);color:#15705f;
+  font-size:11.5px;font-weight:800;display:flex;align-items:center;justify-content:center;margin-top:3px;
+}
+.faq details[open] summary{color:var(--brand)}
+.faq .ans{padding:0 12px 16px 42px;font-size:13.9px;line-height:1.85;color:var(--ink-2)}
+.faq .ans p{margin-bottom:8px}
+.faq .ans p:last-child{margin-bottom:0}
+
+/* 评论 */
+.comments{display:grid;grid-template-columns:repeat(auto-fill,minmax(255px,1fr));gap:12px}
+.cmt{background:var(--panel);border:1px solid var(--line);border-radius:var(--r-card);padding:13px 15px;box-shadow:var(--sh-1)}
+.cmt-head{display:flex;align-items:center;gap:8px;margin-bottom:6px}
+.avatar{width:26px;height:26px;border-radius:50%;background:linear-gradient(135deg,#155e8a,#1f9c86);color:#fff;font-size:12px;display:flex;align-items:center;justify-content:center;font-weight:700;flex-shrink:0}
+.cmt-head b{font-size:13px;color:var(--brand)}
+.cmt-head time{font-size:11.5px;color:var(--ink-3);margin-left:auto;font-variant-numeric:tabular-nums}
+.cmt p{font-size:13.2px;line-height:1.72;color:var(--ink-2)}
+.cmt p + p{margin-top:6px}
+
+/* 资讯 */
+.news{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+.news-item{background:var(--panel);border:1px solid var(--line);border-radius:var(--r-card);overflow:hidden;box-shadow:var(--sh-1);display:flex;flex-direction:column;transition:transform .18s,box-shadow .18s}
+.news-item:hover{transform:translateY(-3px);box-shadow:var(--sh-2)}
+.news-item img{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover}
+.news-body{padding:14px 16px 16px}
+.news-body time{font-size:12px;color:var(--accent);font-variant-numeric:tabular-nums;letter-spacing:.4px}
+.news-body h3{font-size:15.5px;margin:5px 0 7px;line-height:1.45}
+.news-body h3:hover{color:var(--brand-3)}
+.news-body p{font-size:13.2px;line-height:1.72;color:var(--ink-2)}
+
+/* 推荐标签 */
+.recs{display:flex;flex-wrap:wrap;gap:9px}
+.recs a{
+  background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:7px 15px;
+  font-size:13.3px;color:var(--ink-2);box-shadow:var(--sh-1);transition:all .16s;
+}
+.recs a:hover{background:var(--brand);color:#fff;border-color:var(--brand);transform:translateY(-1px)}
+
+/* 榜单 + 时间线 */
+.two-col{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:18px}
+.panelbox{background:var(--panel);border:1px solid var(--line);border-radius:var(--r-card);padding:18px 20px;box-shadow:var(--sh-1)}
+.rank li{display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-bottom:1px dashed var(--line-soft)}
+.rank li:last-child{border-bottom:0}
+.rank .rn{width:22px;height:22px;border-radius:6px;background:var(--bg);color:var(--ink-3);font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;font-variant-numeric:tabular-nums}
+.rank li:nth-child(-n+3) .rn{background:var(--brand);color:#fff}
+.rank .rt b{font-size:14px;display:block}
+.rank .rt span{font-size:12.3px;color:var(--ink-3);line-height:1.6}
+.timeline{position:relative;padding-left:18px}
+.timeline::before{content:"";position:absolute;left:4px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.timeline li{position:relative;padding:0 0 14px 6px}
+.timeline li:last-child{padding-bottom:0}
+.timeline li::before{content:"";position:absolute;left:-18px;top:7px;width:9px;height:9px;border-radius:50%;background:#fff;border:2px solid var(--accent)}
+.timeline time{font-size:12px;color:var(--accent);font-variant-numeric:tabular-nums}
+.timeline b{display:block;font-size:13.8px;margin:2px 0 2px}
+.timeline p{font-size:12.6px;color:var(--ink-3);line-height:1.65}
+
+/* 投稿互动 */
+.submit{background:linear-gradient(135deg,#0f3d61,#155e8a 55%,#1a7a94);color:#e6f2f6;border-radius:var(--r-banner);padding:26px 28px;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);gap:22px;align-items:center;box-shadow:var(--sh-2)}
+.submit h2{font-size:19px;color:#fff;margin-bottom:10px}
+.submit p{font-size:13.8px;line-height:1.85;color:#c3dde8;margin-bottom:6px}
+.submit ul{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+.submit ul li{font-size:12px;background:rgba(255,255,255,.12);border:1px solid rgba(159,232,216,.35);padding:4px 11px;border-radius:999px;color:#cfeee6}
+.submit .btns{display:flex;flex-direction:column;gap:10px}
+.submit .btns a{text-align:center;padding:11px 16px;border-radius:var(--r-btn);font-size:14px;font-weight:700}
+.submit .btns a.p{background:#6fe0c6;color:#0b2c49}
+.submit .btns a.s{border:1px solid rgba(196,220,232,.5);color:#d8e9f1}
+
+/* 右栏 */
+.aside-card{background:var(--panel);border:1px solid var(--line);border-radius:var(--r-card);padding:15px 16px;box-shadow:var(--sh-1);margin-bottom:18px}
+.aside-card h3{font-size:13px;letter-spacing:1.4px;color:var(--ink-3);margin-bottom:11px;font-weight:600}
+.hotlist li{padding:8px 0;border-bottom:1px dashed var(--line-soft);display:flex;gap:9px;align-items:baseline}
+.hotlist li:last-child{border-bottom:0}
+.hotlist .hi{font-size:11.5px;color:#fff;background:var(--brand-2);border-radius:4px;padding:0 5px;font-variant-numeric:tabular-nums;flex-shrink:0}
+.hotlist li:nth-child(n+4) .hi{background:#c9d6df;color:var(--ink-2)}
+.hotlist a{font-size:13.3px;line-height:1.55}
+.hotlist a:hover{color:var(--brand-3)}
+.mini-news li{padding:7px 0;border-bottom:1px dashed var(--line-soft);font-size:13px;line-height:1.6;color:var(--ink-2)}
+.mini-news li:last-child{border-bottom:0}
+.mini-news time{display:block;font-size:11.5px;color:var(--ink-3);font-variant-numeric:tabular-nums}
+.mini-news a:hover{color:var(--brand-3)}
+.aside-card .tagcloud{display:flex;flex-wrap:wrap;gap:7px}
+.aside-card .tagcloud a{font-size:12.2px;background:var(--bg);border:1px solid var(--line-soft);padding:3px 9px;border-radius:var(--r-tag);color:var(--ink-2)}
+.aside-card .tagcloud a:hover{background:var(--accent-soft);border-color:#bfe3da;color:#15705f}
+
+/* 搜索结果提示 */
+.no-result{display:none;background:#fff7ec;border:1px solid #f3d9b3;color:#8a5a12;padding:12px 16px;border-radius:10px;font-size:13.5px;margin-bottom:16px}
+.no-result.show{display:block}
+
+/* 回到顶部 */
+.totop{
+  position:fixed;right:20px;bottom:24px;z-index:70;width:44px;height:44px;border-radius:50%;
+  background:var(--brand);color:#fff;border:0;box-shadow:var(--sh-2);font-size:17px;
+  opacity:0;pointer-events:none;transform:translateY(8px);transition:opacity .22s,transform .22s;
+}
+.totop.show{opacity:1;pointer-events:auto;transform:translateY(0)}
+
+/* 页尾 */
+footer.site{
+  background:#0b2438;color:#a9c3d3;margin-top:38px;padding:40px 0 26px;font-size:13.5px;
+}
+.foot-inner{max-width:1360px;margin:0 auto;padding:0 20px;display:grid;grid-template-columns:minmax(0,1.4fr) repeat(2,minmax(0,.8fr));gap:30px}
+.foot-brand b{font-size:17px;color:#fff;letter-spacing:.5px;display:block;margin-bottom:10px}
+.foot-brand p{line-height:1.85;color:#8fadc0;margin-bottom:10px}
+.foot-brand .meta{font-size:12.3px;color:#6e8ea3;line-height:1.9}
+.foot-col h4{font-size:13px;color:#dff0f6;letter-spacing:1.2px;margin-bottom:11px;font-weight:600}
+.foot-col ul{display:flex;flex-direction:column;gap:6px}
+.foot-col a{font-size:13px;color:#94b2c5}
+.foot-col a:hover{color:#8fe3d2}
+.foot-bottom{max-width:1360px;margin:26px auto 0;padding:16px 20px 0;border-top:1px solid rgba(255,255,255,.08);font-size:12.2px;color:#6e8ea3;display:flex;gap:14px;flex-wrap:wrap;justify-content:space-between}
+
+@media (max-width:1024px){
+  :root{--stick:108px}
+  .layout{grid-template-columns:190px minmax(0,1fr);gap:20px}
+  .layout .rail-aside{grid-column:1/-1;display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+  .layout .rail-aside .aside-card{margin-bottom:0}
+  .mainnav{display:none}
+  .hamburger{display:block}
+  .hero-grid{grid-template-columns:1fr;gap:26px}
+  .hero-art{min-height:0;max-width:520px}
+  .two-col{grid-template-columns:1fr}
+  .submit{grid-template-columns:1fr}
+  .foot-inner{grid-template-columns:1fr 1fr}
+}
+@media (max-width:740px){
+  :root{--stick:104px}
+  body{font-size:14.5px}
+  .searchbox{display:none}
+  .head-tools .btn-ghost{display:none}
+  .notice-inner{padding:6px 14px;font-size:12px}
+  .notice-list{gap:12px}
+  .layout{grid-template-columns:1fr;padding-top:18px}
+  .layout .rail{position:static}
+  .rail .channels{flex-direction:row;overflow-x:auto;gap:6px;padding-bottom:4px;scrollbar-width:thin}
+  .rail .channels a{white-space:nowrap;flex-shrink:0;border:1px solid var(--line)}
+  .rail .channels a span.n{display:none}
+  .container{padding:0 14px}
+  .hero-grid{padding:30px 14px 34px}
+  .hero-stats{gap:18px}
+  .sec-head h2{font-size:18px}
+  .overview,.deep{padding:18px 16px}
+  .deep{padding:20px 16px}
+  .cards{grid-template-columns:1fr 1fr;gap:12px}
+  .card-body{padding:11px 11px 13px}
+  .card-body h3{font-size:14px}
+  .comments{grid-template-columns:1fr}
+  .news{grid-template-columns:1fr}
+  .foot-inner{grid-template-columns:1fr;gap:22px}
+  .submit{padding:20px 18px}
+  .totop{right:14px;bottom:16px;width:40px;height:40px}
+  .faq .ans{padding-left:12px}
+}
+@media (max-width:400px){
+  .cards{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="stickwrap">
+  <div class="notice" aria-label="更新公告">
+    <div class="notice-inner">
+      <span class="notice-brand">研究所导航入口</span>
+      <ul class="notice-list">
+        <li><time datetime="2026-11-08">11-08</time><span>新增「怀柔综合极端条件实验装置」用户课题申报入口</span></li>
+        <li><time datetime="2026-11-06">11-06</time><span>中国科学院 2027 年院级科研装备研制项目指南上线</span></li>
+        <li><time datetime="2026-11-03">11-03</time><span>收录院所总数 1 286 家，涉及 14 个学科门类</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <header class="site">
+    <div class="head-inner">
+      <a class="logo" href="/#top" aria-label="研究所导航入口 首页">
+        <svg class="logo-mark" viewBox="0 0 64 64" role="img" aria-label="研究所导航入口标志">
+          <rect width="64" height="64" rx="14" fill="#0e3a5f"/>
+          <circle cx="32" cy="26" r="10.5" fill="none" stroke="#7fd1c1" stroke-width="4"/>
+          <path d="M32 36.5V50M22 50h20M26.5 43.5h11" stroke="#7fd1c1" stroke-width="4" stroke-linecap="round"/>
+          <circle cx="32" cy="26" r="3" fill="#8fe3d2"/>
+        </svg>
+        <span class="logo-txt">研究所导航入口<small>RESEARCH INSTITUTE INDEX</small></span>
+      </a>
+      <nav class="mainnav" aria-label="主导航">
+        <a href="/#overview" class="on">院所概览</a>
+        <a href="/#featured">重点实验室</a>
+        <a href="/#updates">开放课题</a>
+        <a href="/#cats">学科分类</a>
+        <a href="/#deep">申报解析</a>
+        <a href="/#guide">检索路径</a>
+        <a href="/#faq">常见问题</a>
+      </nav>
+      <div class="head-tools">
+        <form class="searchbox" id="searchForm" role="search">
+          <input type="search" id="searchInput" placeholder="搜院所 / 实验室 / 课题" aria-label="站内搜索">
+          <button type="submit">查找</button>
+        </form>
+        <a class="btn-ghost" href="/#submit">提交收录</a>
+        <button class="hamburger" id="hamburger" aria-label="打开导航菜单" aria-expanded="false" aria-controls="drawer">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+</div>
+
+<div class="drawer-mask" id="drawerMask" hidden></div>
+<aside class="drawer" id="drawer" aria-label="移动端导航" aria-hidden="true">
+  <button class="close-drawer" id="closeDrawer" aria-label="关闭导航">✕ 关闭</button>
+  <h3>渠道导航</h3>
+  <nav>
+    <a href="/#overview">院所概览</a>
+    <a href="/#featured">重点实验室</a>
+    <a href="/#updates">开放课题</a>
+    <a href="/#cats">学科分类</a>
+    <a href="/#deep">申报解析</a>
+    <a href="/#guide">检索路径</a>
+    <a href="/#faq">常见问题</a>
+    <a href="/#comments">同行评论</a>
+    <a href="/#news">院所动态</a>
+    <a href="/#submit">投稿与共建</a>
+  </nav>
+  <h3>热门学科</h3>
+  <nav>
+    <a href="/#cats">材料科学</a>
+    <a href="/#cats">人工智能</a>
+    <a href="/#cats">生物医学</a>
+    <a href="/#cats">能源与动力</a>
+    <a href="/#cats">空间科学</a>
+  </nav>
+</aside>
+
+<section class="hero" id="top">
+  <div class="hero-grid">
+    <div>
+      <span class="hero-badge"><i></i>2026 年 11 月 8 日 数据版</span>
+      <h1>研究所导航入口</h1>
+      <p class="lead">把散落在不同系统中的院所、实验室、大科学装置和开放课题入口归到一处：按学科找机构、按机构找课题组、按课题组找近三年开放课题与申请窗口。</p>
+      <div class="hero-actions">
+        <a class="btn-primary" href="/#featured">浏览重点实验室</a>
+        <a class="btn-line" href="/#updates">查看开放课题</a>
+      </div>
+      <div class="hero-stats">
+        <div><b>1 286</b>收录院所与实验室</div>
+        <div><b>342</b>在招开放课题</div>
+        <div><b>14</b>学科门类</div>
+        <div><b>11-08</b>最近一次更新</div>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 520 340" role="img" aria-label="院所节点与学科连接示意图">
+        <defs>
+          <linearGradient id="lg1" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#6fe0c6" stop-opacity=".9"/>
+            <stop offset="1" stop-color="#1f7fa8" stop-opacity=".55"/>
+          </linearGradient>
+          <radialGradient id="rg1" cx=".5" cy=".5" r=".5">
+            <stop offset="0" stop-color="#8fe3d2" stop-opacity=".55"/>
+            <stop offset="1" stop-color="#8fe3d2" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <circle cx="260" cy="170" r="150" fill="url(#rg1)"/>
+        <g stroke="#5fb9d8" stroke-opacity=".45" stroke-width="1.2">
+          <path d="M100 90 L260 170 L420 96"/>
+          <path d="M90 240 L260 170 L430 238"/>
+          <path d="M170 60 L260 170 L180 290"/>
+          <path d="M350 56 L260 170 L346 288"/>
+        </g>
+        <g fill="url(#lg1)" stroke="#9fe8d8" stroke-width="1.4">
+          <circle cx="260" cy="170" r="34"/>
+          <circle cx="100" cy="90" r="15"/>
+          <circle cx="420" cy="96" r="17"/>
+          <circle cx="90" cy="240" r="14"/>
+          <circle cx="430" cy="238" r="16"/>
+          <circle cx="170" cy="60" r="12"/>
+          <circle cx="180" cy="290" r="13"/>
+          <circle cx="350" cy="56" r="12"/>
+          <circle cx="346" cy="288" r="14"/>
+        </g>
+        <g fill="#0b2c49" font-size="11" font-family="system-ui,sans-serif" text-anchor="middle">
+          <text x="260" y="174">院所库</text>
+          <text x="100" y="94">材料</text>
+          <text x="420" y="100">AI</text>
+          <text x="90" y="244">生医</text>
+          <text x="430" y="242">能源</text>
+          <text x="170" y="64">空间</text>
+          <text x="180" y="294">海洋</text>
+          <text x="350" y="60">化学</text>
+          <text x="346" y="292">环境</text>
+        </g>
+      </svg>
+      <span class="tagfloat" style="top:6%;left:2%">大科学装置</span>
+      <span class="tagfloat" style="top:38%;right:0">开放课题</span>
+      <span class="tagfloat" style="bottom:8%;left:12%">课题组主页</span>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <div class="layout">
+
+    <!-- 左频道 -->
+    <aside class="rail" aria-label="频道索引">
+      <div class="rail-card">
+        <p class="rail-title">学科频道</p>
+        <nav class="channels" id="channelNav">
+          <a href="/#overview" class="cur">院所概览<span class="n">1 286</span></a>
+          <a href="/#featured">材料科学<span class="n">214</span></a>
+          <a href="/#featured">人工智能<span class="n">168</span></a>
+          <a href="/#featured">生物医学<span class="n">203</span></a>
+          <a href="/#featured">能源与动力<span class="n">142</span></a>
+          <a href="/#featured">空间科学<span class="n">76</span></a>
+          <a href="/#featured">化学化工<span class="n">158</span></a>
+          <a href="/#featured">生态环境<span class="n">121</span></a>
+          <a href="/#featured">海洋与极地<span class="n">58</span></a>
+          <a href="/#featured">信息与通信<span class="n">146</span></a>
+        </nav>
+      </div>
+    </aside>
+
+    <!-- 主内容 -->
+    <main>
+
+      <div class="no-result" id="noResult" role="status" aria-live="polite"></div>
+
+      <section class="sec" id="overview">
+        <div class="sec-head">
+          <h2>院所分布与当前研究重心<em>OVERVIEW</em></h2>
+        </div>
+        <div class="overview">
+          <p>国内的科研机构大体分四层：<strong>中国科学院下属的百余家研究所</strong>、<strong>国家重点实验室与全国重点实验室</strong>、<strong>高校下设的研究院与交叉研究院</strong>，以及近几年扩张较快的<strong>企业中央研究院和新型研发机构</strong>。四层之间的差别不只在主管单位，更在于课题从哪里来、经费怎么走、设备能不能共用。</p>
+          <p>中科院系统院所普遍承担院级部署项目与先导专项，学科方向相对稳定，一个研究所往往对应一到两个一级学科。全国重点实验室在 2022 年重组后数量收敛到约 500 家，其中材料、信息、生命科学三个方向占比接近六成，重组后不少实验室把对外合作窗口统一挂到了“开放课题”栏目下。</p>
+          <p>高校研究院更看重交叉，像清华的交叉信息研究院、上海交大的变革性分子前沿科学中心，招人时常常不按传统院系走。企业研究院（华为 2012 实验室、阿里达摩院、宁德时代 21C 创新实验室）则把设备与数据放在内部，对外开放的多是联合培养和短期访问。</p>
+          <p>2026 年下半年值得关注的动向集中在三处：怀柔综合极端条件实验装置开始对外接收用户课题；合肥先进光源部分线站进入调试；粤港澳大湾区脑解析与脑模拟设施开放第二批机时申请。三者的截止时间都落在 11 月下旬到 12 月初，需要提前准备安全培训与设备操作考核。</p>
+        </div>
+      </section>
+
+      <section class="sec" id="featured">
+        <div class="sec-head">
+          <h2>重点实验室与研究院精选<em>FEATURED</em></h2>
+          <a class="more" href="/#cats">按学科筛选 →</a>
+        </div>
+        <p class="sec-sub">以下条目按学科分布挑选，含研究方向、依托单位与近一年开放情况。</p>
+        <div class="cards">
+          <article class="card">
+            <div class="card-thumb"><img src="https://picsum.photos/seed/labmat01/400/300" width="400" height="300" loading="lazy" alt="材料科学实验室的样品制备与表征场景"></div>
+            <div class="card-body">
+              <span class="type-tag">全国重点实验室</span>
+              <h3><a href="/#featured">先进金属材料国家重点实验室</a></h3>
+              <p class="desc">依托北京科技大学，主攻高温合金与轻质高强合金。2026 年开放课题 17 项，单项资助 8 万至 25 万元，要求申请人在站内提交近三年代表作两篇。</p>
+              <div class="tagrow"><span>高温合金</span><span>轻量化</span><span>开放课题</span></div>
+              <div class="card-meta"><span>热度 <b>9 240</b></span><span>更新 11-05</span></div>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-thumb"><img src="https://picsum.photos/seed/labai02/400/300" width="400" height="300" loading="lazy" alt="人工智能实验室的多屏算法调试工作台"></div>
+            <div class="card-body">
+              <span class="type-tag">高校研究院</span>
+              <h3><a href="/#featured">清华大学交叉信息研究院</a></h3>
+              <p class="desc">量子信息与理论计算机两条主线并行。姚班与智班的教学实验室不对外，但每学期会放出 10 至 15 个访问学生名额，需导师推荐信与编程测试。</p>
+              <div class="tagrow"><span>量子计算</span><span>理论计算机</span><span>访问学生</span></div>
+              <div class="card-meta"><span>热度 <b>18 760</b></span><span>更新 11-04</span></div>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-thumb"><img src="https://picsum.photos/seed/labbio03/400/300" width="400" height="300" loading="lazy" alt="生物医学实验室的细胞培养与显微观察设备"></div>
+            <div class="card-body">
+              <span class="type-tag">中科院研究所</span>
+              <h3><a href="/#featured">中国科学院分子细胞科学卓越创新中心</a></h3>
+              <p class="desc">原生化与细胞所，位于上海岳阳路。RNA 剪接与细胞命运决定方向积累较深，每年 3 月和 9 月两次集中招收联合培养研究生。</p>
+              <div class="tagrow"><span>RNA剪接</span><span>细胞命运</span><span>联合培养</span></div>
+              <div class="card-meta"><span>热度 <b>11 380</b></span><span>更新 11-02</span></div>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-thumb"><img src="https://picsum.photos/seed/labenergy04/400/300" width="400" height="300" loading="lazy" alt="能源动力实验台的燃烧与传热测试装置"></div>
+            <div class="card-body">
+              <span class="type-tag">新型研发机构</span>
+              <h3><a href="/#featured">怀柔综合极端条件实验装置</a></h3>
+              <p class="desc">集成极低温、强磁场、超高压三类实验条件。2026 年 10 月起对外接收用户课题，普通课题每轮机时 5 至 15 天，需先通过安全培训线上考试。</p>
+              <div class="tagrow"><span>极低温</span><span>强磁场</span><span>机时申请</span></div>
+              <div class="card-meta"><span>热度 <b>7 610</b></span><span>更新 11-08</span></div>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-thumb"><img src="https://picsum.photos/seed/labspace05/400/300" width="400" height="300" loading="lazy" alt="空间科学实验室的卫星载荷测试舱"></div>
+            <div class="card-body">
+              <span class="type-tag">中科院研究所</span>
+              <h3><a href="/#featured">中国科学院国家空间科学中心</a></h3>
+              <p class="desc">承担空间科学先导专项的地面支撑，子午工程二期数据在 2026 年 6 月完成全网联调。空间天气预报业务对高校开放数据接口申请。</p>
+              <div class="tagrow"><span>子午工程</span><span>空间天气</span><span>数据接口</span></div>
+              <div class="card-meta"><span>热度 <b>6 420</b></span><span>更新 10-29</span></div>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-thumb"><img src="https://picsum.photos/seed/labchem06/400/300" width="400" height="300" loading="lazy" alt="化学化工实验室的催化反应评价装置"></div>
+            <div class="card-body">
+              <span class="type-tag">全国重点实验室</span>
+              <h3><a href="/#featured">催化基础国家重点实验室</a></h3>
+              <p class="desc">依托中科院大连化物所，甲醇制烯烃与单原子催化是两条主线。开放课题偏重原位表征方法，鼓励带自研装置进场，需提前 30 天报备。</p>
+              <div class="tagrow"><span>单原子催化</span><span>原位表征</span><span>甲醇制烯烃</span></div>
+              <div class="card-meta"><span>热度 <b>8 950</b></span><span>更新 11-01</span></div>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-thumb"><img src="https://picsum.photos/seed/labeco07/400/300" width="400" height="300" loading="lazy" alt="生态环境研究站的野外样地监测设备"></div>
+            <div class="card-body">
+              <span class="type-tag">野外台站</span>
+              <h3><a href="/#featured">中国生态系统研究网络 CERN 台站</a></h3>
+              <p class="desc">44 个野外台站的长序列监测数据，覆盖农田、森林、草地、水体四类。数据申请按台站分别审批，单次可申请 5 年以内的日尺度记录。</p>
+              <div class="tagrow"><span>长序列监测</span><span>样地数据</span><span>野外台站</span></div>
+              <div class="card-meta"><span>热度 <b>5 180</b></span><span>更新 10-26</span></div>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-thumb"><img src="https://picsum.photos/seed/labocean08/400/300" width="400" height="300" loading="lazy" alt="海洋科考船的甲板作业与采样设备"></div>
+            <div class="card-body">
+              <span class="type-tag">科考平台</span>
+              <h3><a href="/#featured">中国科学院海洋研究所科考船队</a></h3>
+              <p class="desc">“科学”号与“创新”一队在 2026 年执行西太平洋与冲绳海槽航次。船时申请按航段分配，共享航次优先支持青年基金负责人。</p>
+              <div class="tagrow"><span>共享航次</span><span>西太平洋</span><span>船时申请</span></div>
+              <div class="card-meta"><span>热度 <b>4 730</b></span><span>更新 10-22</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="sec" id="updates">
+        <div class="sec-head">
+          <h2>开放课题与申报窗口动态<em>UPDATES</em></h2>
+          <a class="more" href="/#news">院所资讯 →</a>
+        </div>
+        <ul class="feed">
+          <li><time datetime="2026-11-08">11-08</time><div class="fc"><b>怀柔综合极端条件实验装置 2026 年第四轮普通课题</b><span class="pill">11-30 截止</span><p>本轮放出 62 个机时包，极低温—强磁场联合测量占 27 个。申请人需在系统内上传安全培训合格证明，否则初审直接退回。</p></div></li>
+          <li><time datetime="2026-11-06">11-06</time><div class="fc"><b>中科院 2027 年科研装备研制项目指南</b><span class="pill">12-12 截止</span><p>指南新增“关键部件自主化”方向，单项支持额度 200 万至 800 万元，要求依托院属单位申报并附技术指标对照表。</p></div></li>
+          <li><time datetime="2026-11-05">11-05</time><div class="fc"><b>先进金属材料国家重点实验室开放课题</b><p>共 17 项，其中 6 项面向 35 岁以下青年。申请书模板从 2026 版起改为在线填写，不再接收 Word 附件。</p></div></li>
+          <li><time datetime="2026-11-03">11-03</time><div class="fc"><b>合肥先进光源首批线站用户课题征集</b><span class="pill">12-05 截止</span><p>首批开放 7 条光束线站，软 X 射线谱学与相干衍射成像优先。申请前须完成 4 学时线上安全课程并考试合格。</p></div></li>
+          <li><time datetime="2026-10-31">10-31</time><div class="fc"><b>粤港澳大湾区脑解析与脑模拟设施第二批机时</b><p>本轮聚焦灵长类模型与神经环路成像，单课题最多申请 20 个工作日，动物伦理批件需在申请时同步提交。</p></div></li>
+          <li><time datetime="2026-10-28">10-28</time><div class="fc"><b>国家自然科学基金 2027 年项目申请时间安排</b><p>集中接收期定为 2027 年 3 月 1 日至 3 月 20 日，依托单位注册与个人信息维护须在 2 月底前完成，逾期系统不再开放。</p></div></li>
+          <li><time datetime="2026-10-24">10-24</time><div class="fc"><b>催化基础国家重点实验室原位表征课题</b><p>鼓励自带原位池与反应器，实验室提供同步辐射机时对接。申请材料需附装置技术参数表和辐射安全说明。</p></div></li>
+          <li><time datetime="2026-10-20">10-20</time><div class="fc"><b>CERN 台站数据申请新增在线审批</b><p>44 个台站的样地数据改为统一在线审批，平均处理周期从 21 个工作日压缩到 9 个工作日，涉密样地仍需线下会签。</p></div></li>
+          <li><time datetime="2026-10-16">10-16</time><div class="fc"><b>“科学”号 2027 年西太平洋航次船时申请</b><p>共享航次计划分两段执行，第一段 2027 年 4 月出航。申请者需提交采样方案与设备清单，船载实验室工位按人数配额。</p></div></li>
+          <li><time datetime="2026-10-12">10-12</time><div class="fc"><b>子午工程二期空间天气数据接口开通</b><p>提供电离层 TEC、地磁台链、中高层大气风场三类数据，高校用户走教育网专线可免流量费，需签署数据使用承诺书。</p></div></li>
+        </ul>
+      </section>
+
+      <section class="sec" id="cats">
+        <div class="sec-head">
+          <h2>按学科门类定位研究所<em>CATEGORIES</em></h2>
+        </div>
+        <p class="sec-sub">每个分类对应一组可检索的院所与实验室，点击进入该方向的条目列表。</p>
+        <div class="cats">
+          <a class="cat" href="/#featured"><b>材料科学</b><span>金属、陶瓷、高分子与复合材料，含 214 家院所与实验室</span></a>
+          <a class="cat" href="/#featured"><b>人工智能</b><span>机器学习、计算机视觉、智能语音，含 168 家高校与企业研究院</span></a>
+          <a class="cat" href="/#featured"><b>生物医学</b><span>分子细胞、神经科学、临床转化，含 203 家院所与医院研究机构</span></a>
+          <a class="cat" href="/#featured"><b>能源与动力</b><span>燃烧、储能、核能与动力工程，含 142 家重点实验室</span></a>
+          <a class="cat" href="/#featured"><b>空间科学</b><span>卫星载荷、空间天气、深空探测，含 76 家研究单位</span></a>
+          <a class="cat" href="/#featured"><b>化学化工</b><span>催化、分离、精细化工，含 158 家院所与工程中心</span></a>
+          <a class="cat" href="/#featured"><b>生态环境</b><span>野外台站、生态监测、环境工程，含 121 家台站与研究所</span></a>
+          <a class="cat" href="/#featured"><b>海洋与极地</b><span>物理海洋、海洋生物、极地科考，含 58 家单位与科考平台</span></a>
+        </div>
+      </section>
+
+      <section class="sec" id="deep">
+        <div class="sec-head">
+          <h2>同一学科内，怎么选一个真正合适的院所<em>DEEP DIVE</em></h2>
+        </div>
+        <div class="deep">
+          <h3>方向名称相同，实际做的事可能差很远</h3>
+          <p>以“人工智能”为例，挂这个牌子的机构至少有三类。第一类做基础模型与理论，如清华交叉信息研究院、上海人工智能实验室的部分团队，产出以顶会论文和开源模型为主；第二类做行业落地，如中科院自动化所的模式识别团队与一些企业研究院，交付物是专利、系统与工程验收报告；第三类名义上做 AI，实际主体仍是传统自动化或遥感，AI 只是方法之一。</p>
+          <p>辨别办法很直接：翻该机构近三年在研项目清单，看国家自然科学基金项目代码。F06 开头是人工智能，F03 是自动化，D01 是地理学。项目代码结构比机构简介可靠得多。</p>
+
+          <h3>开放课题的资助额度，要和机时成本一起算</h3>
+          <p>2026 年多数实验室的开放课题单项在 5 万至 30 万元之间。看着不高，但如果课题绑定了大科学装置的机时，实际价值要另算。以怀柔综合极端条件实验装置为例，极低温—强磁场联合测量一个机时包市值约 1.8 万元，一个 15 万元课题若附带 10 个机时包，实际资源接近 33 万元。</p>
+          <div class="callout"><b>核对清单：</b>资助金额是否含机时？机时是否单独计费？样品制备与测试耗材由谁承担？三项在申请书里通常写得含糊，必须邮件问清并保留书面回复。</div>
+
+          <h3>联合培养和访问学生，门槛比招聘低但规则更细</h3>
+          <p>高校研究院的访问学生名额通常不公开挂网，走导师之间的推荐。中科院院所相对规范，每年 3 月与 9 月两次集中受理，需提交本科成绩单、导师推荐信和一份 2000 字以内的研究计划。分子细胞卓越创新中心 2026 年春季批次的录取比例约为 4∶1，申请者中本校保研边缘人群占多数。</p>
+          <ul>
+            <li>访问学生一般不发学位，需确认原单位学籍是否保留</li>
+            <li>联合培养的论文署名顺序要在入站前书面约定</li>
+            <li>涉密课题不接受短期访问人员，报名前问清课题密级</li>
+          </ul>
+
+          <h3>设备共享的四道关，卡在哪一道最常见</h3>
+          <p>大科学装置的用户课题从提交到上机，通常要过四道关：形式审查、技术评审、安全培训、排期。据合肥先进光源 2026 年 9 月的用户通报，首批申请中形式审查退回率约 18%，主要原因是安全培训证明缺失和技术指标表填写不完整；技术评审通过率约 61%，被否的多是样品与线站能量范围不匹配。</p>
+          <div class="checks">
+            <div class="check"><h4>形式审查</h4><p>安全培训证明、单位盖章、伦理批件（涉生物）三项齐全，缺一项即退回。</p></div>
+            <div class="check"><h4>技术评审</h4><p>看样品体系与线站参数是否匹配，能量范围、光斑尺寸、探测极限三项要对得上。</p></div>
+            <div class="check"><h4>安全培训</h4><p>线上课程加考试，一般 4 学时，成绩 80 分以上通过，有效期两年。</p></div>
+            <div class="check"><h4>排期</h4><p>按评审分数排序，同分看申请时间。旺季（3—5 月、9—11 月）排队可达 2 个月。</p></div>
+          </div>
+
+          <h3>院所主页上的三个数字，比简介更有参考价值</h3>
+          <p>一是固定人员与流动人员比例。比例低于 1∶1.5 的机构，说明博士后与访问人员占比高，课题组轮换快，适合短期合作；比例高于 1∶3 的，往往行政与支撑人员臃肿，办事流程长。二是近三年新增主持项目数，看国家自然科学基金委的公开查询即可核对。三是大型设备开放机时，全国重点实验室按要求公示，公示表里有机时单价和预约方式。</p>
+          <p>这三个数字能筛掉一部分名不副实的机构。简介写得再漂亮，设备开放机时为零，说明对外合作基本停在纸面。</p>
+        </div>
+      </section>
+
+      <section class="sec" id="guide">
+        <div class="sec-head">
+          <h2>从零开始找一家对口院所的顺序<em>GUIDE</em></h2>
+        </div>
+        <div class="steps">
+          <div class="step"><span class="num">STEP 01</span><h4>先定一级学科，再定二级方向</h4><p>在学科分类里选一个门类，然后看该门类下哪些机构在近三年有 <em>国家自然科学基金面上项目</em> 立项。立项清单比招生简章更能反映真实研究方向。</p></div>
+          <div class="step"><span class="num">STEP 02</span><h4>用项目代码核对方向</h4><p>基金委申请代码到二级即可判断，如 B01 是无机化学，B02 是有机化学。代码对不上，说明机构简介里的方向词只是包装。</p></div>
+          <div class="step"><span class="num">STEP 03</span><h4>看设备开放公示表</h4><p>全国重点实验室每年公示大型设备开放机时。机时为零或长期不更新，说明对外合作意愿低，访问申请大概率石沉大海。</p></div>
+          <div class="step"><span class="num">STEP 04</span><h4>比对开放课题的截止节奏</h4><p>不同机构节奏差别大。中科院院所多集中在 3 月和 9 月，大科学装置按机时轮次滚动，企业研究院常年开放但名额少。提前两个月准备材料。</p></div>
+          <div class="step"><span class="num">STEP 05</span><h4>写一封能落地的一页邮件</h4><p>正文三段：自己的数据与对方方向的交集、希望使用的设备或方法、能提供的样品或算力。附一页 CV，不要群发模板。回复率通常在 20% 到 30%。</p></div>
+          <div class="step"><span class="num">STEP 06</span><h4>确认署名与数据归属</h4><p>联合培养或访问前谈清论文署名顺序、原始数据归属、后续专利申请权。口头约定在多数院所不算数，需写入进站协议。</p></div>
+        </div>
+      </section>
+
+      <section class="sec" id="faq">
+        <div class="sec-head">
+          <h2>申报与访问中的常见问题<em>FAQ</em></h2>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>全国重点实验室的开放课题，评审主要看什么？</summary>
+            <div class="ans"><p>看三样：申请人近三年的代表作与课题方向是否连续、拟用设备与实验室现有装置是否匹配、经费预算是否合理。材料科学方向的实验室尤其看重样品体系是否已有初步数据，纯方案设计通过率偏低。</p></div>
+          </details>
+          <details>
+            <summary>中科院院所的联合培养研究生，学籍和学位归谁？</summary>
+            <div class="ans"><p>学位由合作高校授予，学籍保留在原高校，中科院院所提供导师、课题与实验条件。毕业要求按高校标准执行，但论文工作在中科院完成。入站前需签三方协议，明确署名与成果归属。</p></div>
+          </details>
+          <details>
+            <summary>大科学装置的用户课题，一年能申请几次？</summary>
+            <div class="ans"><p>多数装置按机时轮次受理，一年两到四轮。怀柔综合极端条件实验装置 2026 年安排四轮，合肥先进光源首批只开放一轮。同一申请人同一轮只能提交一项，上一轮未结题的不能再申请。</p></div>
+          </details>
+          <details>
+            <summary>国家重点实验室重组后，原来的实验室名称还能用吗？</summary>
+            <div class="ans"><p>2022 年重组后，多数原国家重点实验室已更名为全国重点实验室，旧名称在论文致谢和项目申报中不再被认可。投稿或申报前应到科技部公开名单核对现名，写错名称可能导致形式审查退回。</p></div>
+          </details>
+          <details>
+            <summary>企业研究院的访问学者，和高校院所比有什么不同？</summary>
+            <div class="ans"><p>差别在数据与设备。华为 2012 实验室、阿里达摩院这类机构提供的是真实业务数据和算力，但对外访问名额少，且成果发表需经内部审核，周期通常 1 到 3 个月。高校院所发表自由度高，设备和数据反而不如企业新。</p></div>
+          </details>
+          <details>
+            <summary>同一个方向有两家机构，怎么比较哪家更适合合作？</summary>
+            <div class="ans"><p>比三项：近三年该方向的国家自然科学基金立项数、大型设备开放机时、开放课题的结题率。结题率一般不公开，可通过已发表论文的致谢部分反推，致谢中出现该实验室名称的论文数量，比任何简介都直接。</p></div>
+          </details>
+        </div>
+      </section>
+
+      <section class="sec" id="comments">
+        <div class="sec-head">
+          <h2>申请过的人怎么说<em>COMMENTS</em></h2>
+        </div>
+        <div class="comments">
+          <div class="cmt"><div class="cmt-head"><span class="avatar">林</span><b>林工_材料</b><time datetime="2026-11-07">11-07</time></div><p>先进金属材料那个开放课题，申请书改成在线填写之后反而更麻烦，附件只能传 10M，表征图压缩得看不清。</p></div>
+          <div class="cmt"><div class="cmt-head"><span class="avatar">周</span><b>周舟在合肥</b><time datetime="2026-11-06">11-06</time></div><p>合肥光源首批线站，安全培训考试 80 分才算过，我考了两次。第二次把辐射防护那章重新看了一遍才过。</p></div>
+          <div class="cmt"><div class="cmt-head"><span class="avatar">陈</span><b>陈默_量子</b><time datetime="2026-11-06">11-06</time></div><p>交叉信息研究院的访问学生名额是真少，我们组今年就一个。导师推荐信比成绩单重要。</p></div>
+          <div class="cmt"><div class="cmt-head"><span class="avatar">吴</span><b>吴老师的组</b><time datetime="2026-11-05">11-05</time></div><p>怀柔那个装置，机时包折算下来确实划算。但排期排到明年一月了，急着出数据的别指望。</p></div>
+          <div class="cmt"><div class="cmt-head"><span class="avatar">赵</span><b>赵四不加班</b><time datetime="2026-11-04">11-04</time></div><p>分子细胞那边联合培养，3 月和 9 月两批，我去年 9 月投的，11 月才面试。流程慢，但导师是真的肯带。</p></div>
+          <div class="cmt"><div class="cmt-head"><span class="avatar">孙</span><b>孙工_催化</b><time datetime="2026-11-03">11-03</time></div><p>催化基础实验室要求提前 30 天报备自研装置，这个时间卡得死。我们上次差点没赶上，后来是打电话催的。</p></div>
+          <div class="cmt"><div class="cmt-head"><span class="avatar">何</span><b>何处是岸</b><time datetime="2026-11-02">11-02</time></div><p>说实话，简介里写的方向有一半是十年前的。看基金立项清单准得多，F06 和 F03 差一个字，做的事完全两码事。</p></div>
+          <div class="cmt"><div class="cmt-head"><span class="avatar">郑</span><b>郑同学_生态</b><time datetime="2026-11-01">11-01</time></div><p>CERN 台站数据改成在线审批之后快多了，9 个工作日就下来了。以前寄纸质材料来回要一个月。</p></div>
+          <div class="cmt"><div class="cmt-head"><span class="avatar">冯</span><b>冯工_海洋</b><time datetime="2026-10-30">10-30</time></div><p>“科学”号船时申请，工位按人头配额，我们 4 个人只给了 3 个工位。采样方案要提前算好，船上改不了。</p></div>
+          <div class="cmt"><div class="cmt-head"><span class="avatar">许</span><b>许一鸣</b><time datetime="2026-10-28">10-28</time></div><p>企业研究院访问学者听着体面，成果发表要内部审核，一轮下来三个月。评职称等不起。</p></div>
+          <div class="cmt"><div class="cmt-head"><span class="avatar">邓</span><b>邓工_空间</b><time datetime="2026-10-25">10-25</time></div><p>子午工程的数据接口挺全，电离层 TEC 和中高层大气风场都有。教育网免流量费这条省了不少。</p></div>
+          <div class="cmt"><div class="cmt-head"><span class="avatar">曹</span><b>曹老师</b><time datetime="2026-10-23">10-23</time></div><p>脑解析那个设施第二批机时，伦理批件必须同步交，我们组因为批件晚了三天，错过一轮。教训。</p></div>
+          <div class="cmt"><div class="cmt-head"><span class="avatar">韩</span><b>韩梅梅_在读</b><time datetime="2026-10-21">10-21</time></div><p>想找做 RNA 剪接的组，翻了三家机构的招生简章都没写清楚，最后还是靠基金立项清单搜出来的。</p></div>
+          <div class="cmt"><div class="cmt-head"><span class="avatar">马</span><b>马工_设备</b><time datetime="2026-10-19">10-19</time></div><p>设备开放公示表这个真有用。有两家实验室简介写得漂亮，公示表上机时三年没更新，直接排除。</p></div>
+          <div class="cmt"><div class="cmt-head"><span class="avatar">唐</span><b>唐突的唐</b><time datetime="2026-10-17">10-17</time></div><p>邮件模板别群发，我收到过一封明显是群发的，连收件人名字都没改，直接不回。</p></div>
+          <div class="cmt"><div class="cmt-head"><span class="avatar">袁</span><b>袁野</b><time datetime="2026-10-15">10-15</time></div><p>今年基金申请时间提前了，2 月底前要维护完个人信息，别拖到最后一天，系统必崩。</p></div>
+        </div>
+      </section>
+
+      <section class="sec" id="news">
+        <div class="sec-head">
+          <h2>院所与平台近期动态<em>NEWS</em></h2>
+        </div>
+        <div class="news">
+          <article class="news-item">
+            <img src="https://picsum.photos/seed/newslight01/600/400" width="600" height="400" loading="lazy" alt="同步辐射光源实验大厅内的光束线站">
+            <div class="news-body">
+              <time datetime="2026-11-07">2026-11-07</time>
+              <h3>合肥先进光源首批 7 条光束线站进入用户调试</h3>
+              <p>首批线站包含软 X 射线谱学与相干衍射成像两条主线，11 月 7 日起按评审分数分批上机。用户需在首次上机前完成 4 学时线上课程。</p>
+            </div>
+          </article>
+          <article class="news-item">
+            <img src="https://picsum.photos/seed/newsdevice02/600/400" width="600" height="400" loading="lazy" alt="极低温强磁场实验装置内部结构">
+            <div class="news-body">
+              <time datetime="2026-11-05">2026-11-05</time>
+              <h3>怀柔综合极端条件装置第四轮课题放出 62 个机时包</h3>
+              <p>极低温—强磁场联合测量占 27 个，超高压方向 19 个。本轮截止 11 月 30 日，形式审查退回率上一轮为 14%，主要集中在安全培训证明缺失。</p>
+            </div>
+          </article>
+          <article class="news-item">
+            <img src="https://picsum.photos/seed/newsfund03/600/400" width="600" height="400" loading="lazy" alt="科研项目申报材料与文件归档">
+            <div class="news-body">
+              <time datetime="2026-11-02">2026-11-02</time>
+              <h3>中科院 2027 年装备研制项目新增关键部件自主化方向</h3>
+              <p>单项额度 200 万至 800 万元，要求附技术指标对照表与国产化替代方案。申报截止 12 月 12 日，依托院属单位统一报送。</p>
+            </div>
+          </article>
+          <article class="news-item">
+            <img src="https://picsum.photos/seed/newsbrain04/600/400" width="600" height="400" loading="lazy" alt="脑科学成像实验室的神经环路分析设备">
+            <div class="news-body">
+              <time datetime="2026-10-29">2026-10-29</time>
+              <h3>脑解析与脑模拟设施第二批机时申请启动</h3>
+              <p>聚焦灵长类模型与神经环路成像，单课题最多 20 个工作日。动物伦理批件须在申请时同步提交，本轮截止 11 月 25 日。</p>
+            </div>
+          </article>
+          <article class="news-item">
+            <img src="https://picsum.photos/seed/newsocean05/600/400" width="600" height="400" loading="lazy" alt="海洋科考船停靠码头与船载实验室">
+            <div class="news-body">
+              <time datetime="2026-10-24">2026-10-24</time>
+              <h3>“科学”号 2027 年西太平洋共享航次开始征集船时</h3>
+              <p>分两段执行，第一段 2027 年 4 月出航。申请者需提交采样方案与设备清单，船载实验室工位按人数配额发放。</p>
+            </div>
+          </article>
+          <article class="news-item">
+            <img src="https://picsum.photos/seed/newsdata06/600/400" width="600" height="400" loading="lazy" alt="生态监测数据中心的服务器与监测大屏">
+            <div class="news-body">
+              <time datetime="2026-10-20">2026-10-20</time>
+              <h3>CERN 台站数据申请改为在线审批，周期缩短至 9 个工作日</h3>
+              <p>44 个野外台站的长序列监测数据统一走线上流程，原平均处理周期 21 个工作日。涉密样地仍需线下会签，审批环节不变。</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="sec" id="related">
+        <div class="sec-head">
+          <h2>相关方向与条目索引<em>RELATED</em></h2>
+        </div>
+        <div class="recs">
+          <a href="/#featured">单原子催化原位表征</a>
+          <a href="/#featured">高温合金开放课题</a>
+          <a href="/#featured">量子信息访问学生</a>
+          <a href="/#featured">极低温强磁场机时</a>
+          <a href="/#featured">子午工程数据接口</a>
+          <a href="/#featured">RNA 剪接联合培养</a>
+          <a href="/#featured">共享航次船时申请</a>
+          <a href="/#featured">野外台站长序列数据</a>
+        </div>
+      </section>
+
+      <section class="sec" id="board">
+        <div class="sec-head">
+          <h2>热门条目与时间节点<em>BOARD</em></h2>
+        </div>
+        <div class="two-col">
+          <div class="panelbox">
+            <h3 style="font-size:15px;margin-bottom:12px;color:var(--brand)">本周检索热度榜</h3>
+            <ol class="rank">
+              <li><span class="rn">1</span><div class="rt"><b>清华大学交叉信息研究院</b><span>访问学生名额与量子计算方向</span></div></li>
+              <li><span class="rn">2</span><div class="rt"><b>怀柔综合极端条件实验装置</b><span>第四轮机时包与安全培训要求</span></div></li>
+              <li><span class="rn">3</span><div class="rt"><b>先进金属材料国家重点实验室</b><span>开放课题 17 项，青年专项 6 项</span></div></li>
+              <li><span class="rn">4</span><div class="rt"><b>合肥先进光源</b><span>首批 7 条光束线站用户调试</span></div></li>
+              <li><span class="rn">5</span><div class="rt"><b>催化基础国家重点实验室</b><span>原位表征课题与自研装置报备</span></div></li>
+              <li><span class="rn">6</span><div class="rt"><b>中国科学院分子细胞科学卓越创新中心</b><span>3 月与 9 月两次联合培养招收</span></div></li>
+              <li><span class="rn">7</span><div class="rt"><b>粤港澳大湾区脑解析与脑模拟设施</b><span>第二批机时与伦理批件要求</span></div></li>
+              <li><span class="rn">8</span><div class="rt"><b>“科学”号科考船</b><span>2027 年西太平洋共享航次</span></div></li>
+            </ol>
+          </div>
+          <div class="panelbox">
+            <h3 style="font-size:15px;margin-bottom:12px;color:var(--brand)">2026 年 11 月申报节点</h3>
+            <ul class="timeline">
+              <li><time datetime="2026-11-25">11-25</time><b>脑解析设施第二批机时截止</b><p>伦理批件需同步提交，逾期不补。</p></li>
+              <li><time datetime="2026-11-30">11-30</time><b>怀柔装置第四轮普通课题截止</b><p>安全培训合格证明为形式审查必查项。</p></li>
+              <li><time datetime="2026-12-05">12-05</time><b>合肥先进光源首批用户课题截止</b><p>软 X 射线谱学与相干衍射成像优先。</p></li>
+              <li><time datetime="2026-12-12">12-12</time><b>中科院装备研制项目申报截止</b><p>需附技术指标对照表与国产化替代方案。</p></li>
+              <li><time datetime="2027-02-28">2027-02-28</time><b>基金委个人信息维护截止</b><p>依托单位注册同步关闭，逾期不再开放。</p></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="sec" id="submit">
+        <div class="submit">
+          <div>
+            <h2>补充一家院所，或报一条课题信息</h2>
+            <p>收录范围包括中科院院所、全国重点实验室、高校研究院、企业中央研究院、大科学装置与野外台站。每条需附官网地址、研究方向、主管单位。</p>
+            <p>开放课题类信息请注明截止日期、资助额度、申请入口，以及是否需要安全培训或伦理批件。</p>
+            <ul>
+              <li>院所收录</li><li>课题信息</li><li>机时轮次</li><li>勘误反馈</li>
+            </ul>
+          </div>
+          <div class="btns">
+            <a class="p" href="/#submit">提交院所收录</a>
+            <a class="s" href="/#submit">报一条开放课题</a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- 右栏 -->
+    <aside class="rail rail-aside" aria-label="辅助信息">
+      <div class="aside-card">
+        <h3>热点条目</h3>
+        <ul class="hotlist">
+          <li><span class="hi">01</span><a href="/#featured">交叉信息研究院访问学生</a></li>
+          <li><span class="hi">02</span><a href="/#featured">怀柔装置机时包</a></li>
+          <li><span class="hi">03</span><a href="/#featured">先进金属材料开放课题</a></li>
+          <li><span class="hi">04</span><a href="/#featured">合肥光源首批线站</a></li>
+          <li><span class="hi">05</span><a href="/#featured">催化基础原位表征</a></li>
+          <li><span class="hi">06</span><a href="/#featured">分子细胞联合培养</a></li>
+          <li><span class="hi">07</span><a href="/#featured">“科学”号航次</a></li>
+        </ul>
+      </div>
+      <div class="aside-card">
+        <h3>近期更新</h3>
+        <ul class="mini-news">
+          <li><time datetime="2026-11-08">11-08</time><a href="/#updates">怀柔装置第四轮普通课题开放</a></li>
+          <li><time datetime="2026-11-06">11-06</time><a href="/#updates">2027 年装备研制项目指南</a></li>
+          <li><time datetime="2026-11-05">11-05</time><a href="/#updates">先进金属材料开放课题 17 项</a></li>
+          <li><time datetime="2026-11-03">11-03</time><a href="/#updates">合肥光源首批线站征集</a></li>
+          <li><time datetime="2026-10-31">10-31</time><a href="/#updates">脑解析设施第二批机时</a></li>
+        </ul>
+      </div>
+      <div class="aside-card">
+        <h3>高频检索词</h3>
+        <div class="tagcloud">
+          <a href="/#cats">全国重点实验室</a>
+          <a href="/#cats">开放课题</a>
+          <a href="/#cats">联合培养</a>
+          <a href="/#cats">机时申请</a>
+          <a href="/#cats">访问学者</a>
+          <a href="/#cats">野外台站</a>
+          <a href="/#cats">基金申请代码</a>
+          <a href="/#cats">设备共享</a>
+        </div>
+      </div>
+    </aside>
+
+  </div>
+</div>
+
+<footer class="site">
+  <div class="foot-inner">
+    <div class="foot-brand">
+      <b>研究所导航入口</b>
+      <p>覆盖 2023 年至 2026 年的院所页面与开放课题记录，条目类型包括院所主页、课题组主页、大科学装置用户入口、野外台站数据申请与联合培养公告。申报窗口类信息每周一、周四两次核对更新。</p>
+      <p class="meta">收录口径：中科院院所、全国重点实验室、高校研究院、企业中央研究院、大科学装置与野外台站。条目信息为示例整理，正式申报以各机构公告为准。</p>
+    </div>
+    <div class="foot-col">
+      <h4>学科频道</h4>
+      <ul>
+        <li><a href="/#cats">材料科学</a></li>
+        <li><a href="/#cats">人工智能</a></li>
+        <li><a href="/#cats">生物医学</a></li>
+        <li><a href="/#cats">能源与动力</a></li>
+        <li><a href="/#cats">空间科学</a></li>
+        <li><a href="/#cats">生态环境</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h4>常用入口</h4>
+      <ul>
+        <li><a href="/#featured">重点实验室</a></li>
+        <li><a href="/#updates">开放课题</a></li>
+        <li><a href="/#deep">申报解析</a></li>
+        <li><a href="/#guide">检索路径</a></li>
+        <li><a href="/#faq">常见问题</a></li>
+        <li><a href="/#submit">投稿与共建</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>研究所导航入口 · 内容索引示例站</span>
+    <span>最近核对：2026-11-08 · 条目与额度均为示例，申报请以机构官方公告为准</span>
+  </div>
+</footer>
+
+<button class="totop" id="toTop" aria-label="回到顶部">↑</button>
+
+<script>
+(function(){
+  var drawer = document.getElementById('drawer');
+  var mask = document.getElementById('drawerMask');
+  var burger = document.getElementById('hamburger');
+  var closeBtn = document.getElementById('closeDrawer');
+  var lastFocus = null;
+
+  function openDrawer(){
+    lastFocus = document.activeElement;
+    drawer.classList.add('open');
+    mask.hidden = false;
+    requestAnimationFrame(function(){ mask.classList.add('open'); });
+    drawer.setAttribute('aria-hidden','false');
+    burger.setAttribute('aria-expanded','true');
+    closeBtn.focus();
+    document.body.style.overflow = 'hidden';
+  }
+  function closeDrawer(){
+    drawer.classList.remove('open');
+    mask.classList.remove('open');
+    drawer.setAttribute('aria-hidden','true');
+    burger.setAttribute('aria-expanded','false');
+    document.body.style.overflow = '';
+    setTimeout(function(){ mask.hidden = true; }, 200);
+    if(lastFocus) lastFocus.focus();
+  }
+  burger.addEventListener('click', openDrawer);
+  closeBtn.addEventListener('click', closeDrawer);
+  mask.addEventListener('click', closeDrawer);
+  drawer.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', closeDrawer);
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && drawer.classList.contains('open')) closeDrawer();
+  });
+
+  // 回到顶部
+  var toTop = document.getElementById('toTop');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > window.innerHeight * 0.9){ toTop.classList.add('show'); }
+    else { toTop.classList.remove('show'); }
+  }, {passive:true});
+  toTop.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+
+  // 搜索筛选
+  var form = document.getElementById('searchForm');
+  var input = document.getElementById('searchInput');
+  var noResult = document.getElementById('noResult');
+  var searchables = Array.prototype.slice.call(document.querySelectorAll('#featured .card, .feed li, .news-item, .cats .cat'));
+
+  function doSearch(){
+    var q = input.value.trim().toLowerCase();
+    if(!q){
+      searchables.forEach(function(el){ el.style.display = ''; });
+      noResult.classList.remove('show');
+      noResult.textContent = '';
+      return;
+    }
+    var hit = 0;
+    searchables.forEach(function(el){
+      var txt = el.textContent.toLowerCase();
+      var matched = txt.indexOf(q) !== -1;
+      el.style.display = matched ? '' : 'none';
+      if(matched) hit++;
+    });
+    if(hit === 0){
+      noResult.textContent = '未找到包含「' + input.value.trim() + '」的条目，可换用院所名称、学科词或课题类型再试。';
+      noResult.classList.add('show');
+    } else {
+      noResult.textContent = '共找到 ' + hit + ' 条与「' + input.value.trim() + '」相关的条目。';
+      noResult.classList.add('show');
+    }
+  }
+  if(form){
+    form.addEventListener('submit', function(e){ e.preventDefault(); doSearch(); });
+    input.addEventListener('input', doSearch);
+  }
+
+  // 频道高亮
+  var chanLinks = document.querySelectorAll('#channelNav a');
+  var sections = ['overview','featured','updates','cats','deep','guide','faq','comments','news','related','board','submit']
+    .map(function(id){ return document.getElementById(id); }).filter(Boolean);
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){
+          chanLinks.forEach(function(a){ a.classList.remove('cur'); });
+          var first = chanLinks[0];
+          if(first) first.classList.add('cur');
+        }
+      });
+    }, {rootMargin:'-40% 0px -55% 0px'});
+    sections.forEach(function(s){ io.observe(s); });
+  }
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "研究所导航入口",
+  "description": "汇集国家重点实验室、中科院院所、高校研究院与产业研究院的官网入口、研究方向与开放课题信息。",
+  "inLanguage": "zh-CN",
+  "dateModified": "2026-11-08"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "全国重点实验室的开放课题，评审主要看什么？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "看三样：申请人近三年的代表作与课题方向是否连续、拟用设备与实验室现有装置是否匹配、经费预算是否合理。材料科学方向的实验室尤其看重样品体系是否已有初步数据，纯方案设计通过率偏低。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "中科院院所的联合培养研究生，学籍和学位归谁？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "学位由合作高校授予，学籍保留在原高校，中科院院所提供导师、课题与实验条件。毕业要求按高校标准执行，但论文工作在中科院完成。入站前需签三方协议，明确署名与成果归属。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "大科学装置的用户课题，一年能申请几次？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "多数装置按机时轮次受理，一年两到四轮。怀柔综合极端条件实验装置 2026 年安排四轮，合肥先进光源首批只开放一轮。同一申请人同一轮只能提交一项，上一轮未结题的不能再申请。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "国家重点实验室重组后，原来的实验室名称还能用吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "2022 年重组后，多数原国家重点实验室已更名为全国重点实验室，旧名称在论文致谢和项目申报中不再被认可。投稿或申报前应到科技部公开名单核对现名，写错名称可能导致形式审查退回。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "企业研究院的访问学者，和高校院所比有什么不同？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "差别在数据与设备。华为 2012 实验室、阿里达摩院这类机构提供的是真实业务数据和算力，但对外访问名额少，且成果发表需经内部审核，周期通常 1 到 3 个月。高校院所发表自由度高，设备和数据反而不如企业新。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "同一个方向有两家机构，怎么比较哪家更适合合作？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "比三项：近三年该方向的国家自然科学基金立项数、大型设备开放机时、开放课题的结题率。结题率一般不公开，可通过已发表论文的致谢部分反推，致谢中出现该实验室名称的论文数量，比任何简介都直接。"
+      }
+    }
+  ]
+}
+</script>
+
+</body>
+                                                                              </html>
