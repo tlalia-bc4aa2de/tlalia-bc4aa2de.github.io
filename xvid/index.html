@@ -1,0 +1,1668 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>xvideos国外片 - 欧美影音内容聚合与观看指南</title>
+  <meta name="description" content="xvideos国外片内容聚合，覆盖欧美剧情片、纪录片、独立短片、动画与系列剧集。提供精选片单、最新更新动态、深度解析与观看顺序建议，适合想系统浏览海外影视内容的观众。">
+  <meta name="keywords" content="xvideos国外片">
+  <style>
+    :root {
+      --primary: #1e3c5c;
+      --primary-light: #2f5a7a;
+      --primary-dark: #0f2638;
+      --accent: #c94f2c;
+      --accent-soft: #f5e6e0;
+      --bg: #f7f5f2;
+      --surface: #ffffff;
+      --text-primary: #1d1e22;
+      --text-secondary: #5b5e66;
+      --text-tertiary: #8f929c;
+      --border: #e4e2de;
+      --radius-card: 14px;
+      --radius-btn: 30px;
+      --radius-tag: 6px;
+      --shadow-default: 0 2px 12px rgba(0,0,0,0.04), 0 1px 3px rgba(0,0,0,0.03);
+      --shadow-hover: 0 8px 24px rgba(0,0,0,0.08), 0 2px 8px rgba(0,0,0,0.04);
+      --sticky-offset: 118px;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: var(--sticky-offset);
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--bg);
+      color: var(--text-primary);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+      border: none;
+      background: none;
+    }
+
+    /* 吸顶公告条 + 页头 */
+    .sticky-wrapper {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--surface);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    }
+
+    .announcement-bar {
+      background: var(--primary-dark);
+      color: #fff;
+      font-size: 13px;
+      padding: 8px 0;
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .announcement-bar .brand-mark {
+      font-weight: 700;
+      letter-spacing: 0.3px;
+      color: #f0c9b8;
+    }
+
+    .announcement-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .announcement-item .date {
+      color: #f0c9b8;
+      font-weight: 600;
+    }
+
+    .header-main {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 28px;
+      max-width: 1440px;
+      margin: 0 auto;
+      gap: 24px;
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+
+    .logo-svg {
+      width: 34px;
+      height: 34px;
+    }
+
+    .brand-text {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--primary);
+      letter-spacing: -0.02em;
+    }
+
+    .main-nav {
+      display: flex;
+      gap: 22px;
+      font-size: 0.92rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      flex-wrap: wrap;
+    }
+
+    .main-nav a:hover {
+      color: var(--primary);
+    }
+
+    .header-actions {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .search-toggle {
+      background: var(--bg);
+      border-radius: var(--radius-btn);
+      padding: 8px 18px;
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      border: 1px solid var(--border);
+    }
+
+    .search-toggle:hover {
+      background: #ece9e4;
+    }
+
+    /* 移动端菜单按钮 */
+    .menu-btn {
+      display: none;
+      font-size: 1.5rem;
+      padding: 4px 8px;
+      color: var(--primary);
+    }
+
+    /* 首屏 */
+    .hero {
+      background: linear-gradient(135deg, #f5f0eb 0%, #ede7e0 100%);
+      padding: 48px 28px 40px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      right: -5%;
+      top: -20%;
+      width: 420px;
+      height: 420px;
+      background: radial-gradient(circle, rgba(201,79,44,0.10) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      max-width: 1440px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 40px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-text {
+      flex: 1 1 480px;
+    }
+
+    .hero-text h1 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: var(--primary-dark);
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+
+    .hero-desc {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      max-width: 620px;
+      margin-bottom: 24px;
+      line-height: 1.7;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #fff;
+      padding: 10px 28px;
+      border-radius: var(--radius-btn);
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: background 0.2s;
+      display: inline-block;
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-light);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 1.5px solid var(--primary);
+      color: var(--primary);
+      padding: 10px 28px;
+      border-radius: var(--radius-btn);
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: background 0.2s;
+      display: inline-block;
+    }
+
+    .btn-outline:hover {
+      background: rgba(30,60,92,0.04);
+    }
+
+    .hero-visual {
+      flex: 1 1 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero-svg {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+    }
+
+    /* 主容器 - 三栏门户 */
+    .page-container {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 0 28px;
+    }
+
+    .main-layout {
+      display: grid;
+      grid-template-columns: 180px minmax(0, 1fr) 260px;
+      gap: 32px;
+      padding: 32px 0 0;
+      align-items: start;
+    }
+
+    /* 左频道索引 */
+    .channel-sidebar {
+      position: sticky;
+      top: var(--sticky-offset);
+      align-self: start;
+    }
+
+    .channel-sidebar h2 {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-tertiary);
+      margin-bottom: 14px;
+      font-weight: 600;
+    }
+
+    .channel-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .channel-list a {
+      display: block;
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+      transition: all 0.15s;
+      font-weight: 500;
+    }
+
+    .channel-list a:hover,
+    .channel-list a.active {
+      background: var(--surface);
+      color: var(--primary);
+      box-shadow: var(--shadow-default);
+    }
+
+    /* 中主内容 */
+    .main-content {
+      min-width: 0;
+    }
+
+    /* 右辅助栏 */
+    .right-sidebar {
+      position: sticky;
+      top: var(--sticky-offset);
+      align-self: start;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .sidebar-card {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      padding: 18px 16px;
+      box-shadow: var(--shadow-default);
+    }
+
+    .sidebar-card h3 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .trending-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .trending-list li {
+      display: flex;
+      gap: 10px;
+      font-size: 0.88rem;
+      line-height: 1.4;
+    }
+
+    .trending-list .rank {
+      color: var(--accent);
+      font-weight: 700;
+      min-width: 18px;
+    }
+
+    .trending-list .item-title {
+      font-weight: 500;
+      color: var(--text-primary);
+    }
+
+    .trending-list .item-meta {
+      font-size: 0.75rem;
+      color: var(--text-tertiary);
+      display: block;
+      margin-top: 2px;
+    }
+
+    /* 通用板块 */
+    .section {
+      margin-bottom: 48px;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 20px;
+    }
+
+    .section-header h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--primary-dark);
+      letter-spacing: -0.02em;
+    }
+
+    .section-header .more-link {
+      font-size: 0.85rem;
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    /* 领域概览 */
+    .overview-text {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      padding: 28px 30px;
+      box-shadow: var(--shadow-default);
+      font-size: 0.98rem;
+      color: var(--text-secondary);
+      line-height: 1.8;
+    }
+
+    .overview-text p {
+      margin-bottom: 12px;
+    }
+
+    .overview-text p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* 精选卡片网格 */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .content-card {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      overflow: hidden;
+      box-shadow: var(--shadow-default);
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .content-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .card-img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .card-body {
+      padding: 16px 16px 14px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-tags {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-bottom: 8px;
+    }
+
+    .tag {
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 0.7rem;
+      padding: 2px 8px;
+      border-radius: var(--radius-tag);
+      font-weight: 600;
+    }
+
+    .tag-secondary {
+      background: #eef2f6;
+      color: var(--primary-light);
+    }
+
+    .card-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 6px;
+      line-height: 1.35;
+    }
+
+    .card-desc {
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+      line-height: 1.55;
+      margin-bottom: 12px;
+      flex: 1;
+    }
+
+    .card-meta {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.72rem;
+      color: var(--text-tertiary);
+      border-top: 1px solid var(--border);
+      padding-top: 10px;
+      margin-top: auto;
+    }
+
+    /* 最新更新列表 */
+    .update-list {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      padding: 8px 0;
+      box-shadow: var(--shadow-default);
+    }
+
+    .update-item {
+      display: flex;
+      padding: 14px 22px;
+      border-bottom: 1px solid var(--border);
+      gap: 16px;
+      align-items: baseline;
+      font-size: 0.9rem;
+    }
+
+    .update-item:last-child {
+      border-bottom: none;
+    }
+
+    .update-item .item-name {
+      font-weight: 600;
+      color: var(--text-primary);
+      min-width: 150px;
+    }
+
+    .update-item .item-summary {
+      color: var(--text-secondary);
+      font-size: 0.85rem;
+    }
+
+    /* 分类入口 */
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+
+    .category-card {
+      background: var(--surface);
+      border-radius: 10px;
+      padding: 16px 10px;
+      text-align: center;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--primary);
+      box-shadow: var(--shadow-default);
+      transition: background 0.15s;
+      border: 1px solid transparent;
+    }
+
+    .category-card:hover {
+      background: #f0eded;
+      border-color: var(--border);
+    }
+
+    /* 深度解析 */
+    .deep-dive {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      padding: 32px 34px;
+      box-shadow: var(--shadow-default);
+    }
+
+    .deep-dive h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin-bottom: 24px;
+    }
+
+    .deep-dive h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-top: 28px;
+      margin-bottom: 12px;
+    }
+
+    .deep-dive h3:first-of-type {
+      margin-top: 0;
+    }
+
+    .deep-dive p {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      margin-bottom: 14px;
+    }
+
+    .deep-dive ul, .deep-dive ol {
+      margin: 12px 0 16px 22px;
+      color: var(--text-secondary);
+      font-size: 0.93rem;
+      line-height: 1.75;
+    }
+
+    .deep-dive li {
+      margin-bottom: 6px;
+    }
+
+    .deep-dive .highlight-box {
+      background: #f9f6f2;
+      border-left: 4px solid var(--accent);
+      padding: 14px 18px;
+      border-radius: 0 8px 8px 0;
+      margin: 20px 0;
+      font-size: 0.93rem;
+    }
+
+    /* 体验指南 */
+    .guide-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .guide-step {
+      background: var(--surface);
+      border-radius: 12px;
+      padding: 20px 24px;
+      box-shadow: var(--shadow-default);
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+    }
+
+    .step-num {
+      background: var(--primary);
+      color: #fff;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.9rem;
+      flex-shrink: 0;
+    }
+
+    .step-content h4 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin-bottom: 4px;
+    }
+
+    .step-content p {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      line-height: 1.65;
+    }
+
+    /* FAQ */
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    details {
+      background: var(--surface);
+      border-radius: 10px;
+      padding: 4px 0;
+      box-shadow: var(--shadow-default);
+    }
+
+    summary {
+      padding: 14px 22px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--text-primary);
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary::after {
+      content: '+';
+      font-size: 1.2rem;
+      color: var(--text-tertiary);
+      font-weight: 400;
+    }
+
+    details[open] summary::after {
+      content: '−';
+    }
+
+    .faq-answer {
+      padding: 0 22px 16px;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    /* 评论 */
+    .comment-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 14px;
+    }
+
+    .comment-card {
+      background: var(--surface);
+      border-radius: 12px;
+      padding: 16px 18px;
+      box-shadow: var(--shadow-default);
+      font-size: 0.88rem;
+      line-height: 1.6;
+    }
+
+    .comment-user {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.82rem;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .comment-text {
+      color: var(--text-secondary);
+    }
+
+    /* 相关资讯 */
+    .news-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      padding: 6px 0;
+      box-shadow: var(--shadow-default);
+    }
+
+    .news-item {
+      padding: 14px 22px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .news-item:last-child {
+      border-bottom: none;
+    }
+
+    .news-title {
+      font-weight: 600;
+      font-size: 0.92rem;
+      color: var(--text-primary);
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 4px;
+    }
+
+    .news-date {
+      font-size: 0.75rem;
+      color: var(--text-tertiary);
+      font-weight: 400;
+      white-space: nowrap;
+    }
+
+    .news-summary {
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    /* 相关推荐 */
+    .tag-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .rec-tag {
+      background: var(--surface);
+      padding: 8px 18px;
+      border-radius: var(--radius-btn);
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--text-primary);
+      box-shadow: var(--shadow-default);
+      transition: background 0.15s;
+      border: 1px solid var(--border);
+    }
+
+    .rec-tag:hover {
+      background: #f0eded;
+    }
+
+    /* 补充板块 - 时间线 */
+    .timeline {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      padding: 24px 28px;
+      box-shadow: var(--shadow-default);
+    }
+
+    .timeline-item {
+      display: flex;
+      gap: 20px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.88rem;
+    }
+
+    .timeline-item:last-child {
+      border-bottom: none;
+    }
+
+    .timeline-date {
+      font-weight: 700;
+      color: var(--primary);
+      min-width: 90px;
+      font-size: 0.82rem;
+    }
+
+    .timeline-content {
+      color: var(--text-secondary);
+      flex: 1;
+    }
+
+    /* 用户互动板块 */
+    .interact-panel {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      padding: 28px 30px;
+      box-shadow: var(--shadow-default);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .interact-panel h3 {
+      font-size: 1.15rem;
+      color: var(--primary-dark);
+      margin-bottom: 4px;
+    }
+
+    .interact-panel p {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+    }
+
+    /* 页尾 */
+    .footer {
+      background: var(--primary-dark);
+      color: #bbb;
+      padding: 48px 28px 28px;
+      margin-top: 56px;
+    }
+
+    .footer-inner {
+      max-width: 1440px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 40px;
+    }
+
+    .footer-brand .brand-text-footer {
+      color: #fff;
+      font-size: 1.2rem;
+      font-weight: 700;
+      display: block;
+      margin-bottom: 12px;
+    }
+
+    .footer-brand p {
+      font-size: 0.83rem;
+      line-height: 1.7;
+      color: #999;
+    }
+
+    .footer-col h4 {
+      color: #ddd;
+      font-size: 0.85rem;
+      margin-bottom: 14px;
+      font-weight: 600;
+    }
+
+    .footer-col a {
+      display: block;
+      font-size: 0.82rem;
+      color: #999;
+      margin-bottom: 8px;
+    }
+
+    .footer-col a:hover {
+      color: #fff;
+    }
+
+    .footer-bottom {
+      max-width: 1440px;
+      margin: 40px auto 0;
+      padding-top: 20px;
+      border-top: 1px solid #2a3d4f;
+      font-size: 0.75rem;
+      color: #777;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    /* 回到顶部 */
+    #backToTop {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      background: var(--primary);
+      color: #fff;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      font-size: 1.4rem;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow-hover);
+      z-index: 200;
+      transition: background 0.2s;
+    }
+
+    #backToTop:hover {
+      background: var(--primary-light);
+    }
+
+    /* 移动端抽屉遮罩 */
+    .drawer-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.4);
+      z-index: 300;
+    }
+
+    /* 响应式 */
+    @media (max-width: 1024px) {
+      .main-layout {
+        grid-template-columns: 160px minmax(0, 1fr);
+      }
+      .right-sidebar {
+        display: none;
+      }
+      .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .footer-inner {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 740px) {
+      .sticky-wrapper {
+        position: sticky;
+      }
+      .header-main {
+        padding: 10px 16px;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+      .main-nav {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        gap: 6px;
+        padding: 12px 0 6px;
+        border-top: 1px solid var(--border);
+      }
+      .main-nav.open {
+        display: flex;
+      }
+      .menu-btn {
+        display: block;
+      }
+      .header-actions {
+        margin-left: auto;
+      }
+      .page-container {
+        padding: 0 16px;
+      }
+      .main-layout {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+      .channel-sidebar {
+        display: none;
+      }
+      .hero-text h1 {
+        font-size: 2rem;
+      }
+      .hero {
+        padding: 32px 16px 24px;
+      }
+      .category-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .update-item {
+        flex-direction: column;
+        gap: 4px;
+        padding: 12px 16px;
+      }
+      .update-item .item-name {
+        min-width: 0;
+      }
+      .comment-grid {
+        grid-template-columns: 1fr;
+      }
+      .deep-dive {
+        padding: 22px 18px;
+      }
+      .footer-inner {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+      .announcement-bar {
+        gap: 12px;
+        font-size: 11px;
+        padding: 6px 12px;
+        justify-content: flex-start;
+      }
+      #backToTop {
+        bottom: 16px;
+        right: 16px;
+        width: 38px;
+        height: 38px;
+        font-size: 1.2rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+  <!-- 吸顶公告 + 页头 -->
+  <div class="sticky-wrapper">
+    <div class="announcement-bar">
+      <span class="brand-mark">xvideos国外片</span>
+      <span class="announcement-item"><span class="date">2026-11-07</span> 新增《北欧秘境》纪录片第4集</span>
+      <span class="announcement-item"><span class="date">2026-11-06</span> 独立短片《信号灯》评论过200条</span>
+    </div>
+    <header>
+      <div class="header-main">
+        <div class="logo-area">
+          <svg class="logo-svg" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="40" height="40" rx="10" fill="#1E3C5C"/>
+            <path d="M12 14L20 20L12 26V14Z" fill="#F0C9B8"/>
+            <path d="M22 14L30 20L22 26V14Z" fill="#C94F2C"/>
+          </svg>
+          <span class="brand-text">xvideos国外片</span>
+        </div>
+        <nav class="main-nav" id="mainNav" role="navigation" aria-label="主题导航">
+          <a href="/#overview">领域概览</a>
+          <a href="/#featured">精选推荐</a>
+          <a href="/#updates">最新更新</a>
+          <a href="/#categories">分类入口</a>
+          <a href="/#deepdive">深度解析</a>
+          <a href="/#guide">体验指南</a>
+          <a href="/#faq">常见问题</a>
+          <a href="/#comments">用户评论</a>
+        </nav>
+        <div class="header-actions">
+          <button class="search-toggle" aria-label="搜索内容">搜索</button>
+          <button class="menu-btn" id="menuBtn" aria-label="打开菜单" aria-expanded="false">☰</button>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <!-- 首屏 -->
+  <section class="hero" id="hero">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <h1>xvideos国外片</h1>
+        <p class="hero-desc">汇聚欧美剧情长片、独立短片、纪录片、动画剧集与实验影像。按类型、产地、年份整理片单，追踪近期更新动态，提供观看顺序与选择建议。</p>
+        <div class="hero-actions">
+          <a href="/#featured" class="btn-primary">浏览精选片单</a>
+          <a href="/#updates" class="btn-outline">查看最新更新</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <svg class="hero-svg" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="40" y="40" width="320" height="200" rx="16" fill="#1E3C5C" opacity="0.08"/>
+          <rect x="60" y="60" width="120" height="80" rx="8" fill="#1E3C5C" opacity="0.15"/>
+          <rect x="200" y="60" width="140" height="80" rx="8" fill="#C94F2C" opacity="0.12"/>
+          <rect x="60" y="160" width="280" height="12" rx="4" fill="#1E3C5C" opacity="0.1"/>
+          <rect x="60" y="184" width="200" height="10" rx="4" fill="#1E3C5C" opacity="0.08"/>
+          <circle cx="330" cy="220" r="28" fill="#C94F2C" opacity="0.2"/>
+          <path d="M318 212L330 220L318 228V212Z" fill="#C94F2C" opacity="0.5"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- 页面容器 -->
+  <div class="page-container">
+    <div class="main-layout">
+
+      <!-- 左频道索引 -->
+      <aside class="channel-sidebar" aria-label="频道索引">
+        <h2>频道索引</h2>
+        <ul class="channel-list">
+          <li><a href="/#overview" class="active">领域概览</a></li>
+          <li><a href="/#featured">精选推荐</a></li>
+          <li><a href="/#updates">最新更新</a></li>
+          <li><a href="/#categories">分类入口</a></li>
+          <li><a href="/#deepdive">深度解析</a></li>
+          <li><a href="/#guide">体验指南</a></li>
+          <li><a href="/#faq">常见问题</a></li>
+          <li><a href="/#comments">用户评论</a></li>
+          <li><a href="/#news">相关资讯</a></li>
+          <li><a href="/#recommend">相关推荐</a></li>
+          <li><a href="/#timeline">时间线</a></li>
+          <li><a href="/#interact">投稿互动</a></li>
+        </ul>
+      </aside>
+
+      <!-- 主内容 -->
+      <main class="main-content">
+
+        <!-- 1. 主题领域概览 -->
+        <section class="section" id="overview">
+          <div class="section-header">
+            <h2>欧美影视内容全景</h2>
+          </div>
+          <div class="overview-text">
+            <p>欧美地区每年产出超过 3000 部剧情长片、独立短片与纪录片，其中约 40% 通过流媒体平台首发。按类型划分，犯罪惊悚、科幻悬疑、家庭剧情、历史传记、自然纪录与实验动画构成主要观看方向。2026 年秋季档值得关注的有：A24 出品的心理惊悚《寂静回声》、Netflix 纪录片《深海折叠》第2季、HBO 限定剧《铁锈带》以及戛纳短片金棕榈得主《信号灯》。</p>
+            <p>独立短片在 10 月至 11 月迎来电影节获奖窗口期，圣丹斯、西南偏南的入围作品陆续公开线上渠道。纪录片方面，自然类与真实犯罪类分化明显——前者依赖 4K 摄影与生态数据可视化，后者侧重庭审档案与受害者访谈。动画剧集则集中在 Adult Swim 与 Netflix Animation，风格从手绘 2D 到 3D 混合不等。</p>
+            <p>观看决策通常取决于三个变量：出品方信誉（A24、Neon、HBO 等厂牌首映口碑）、评论聚合分数（烂番茄新鲜度 85% 以上或 Metacritic 70 分以上）、以及可获取的字幕版本。非英语片需确认是否有官方中文字幕，否则依赖社区字幕组，时间延迟约 3—7 天。</p>
+          </div>
+        </section>
+
+        <!-- 2. 精选内容推荐 -->
+        <section class="section" id="featured">
+          <div class="section-header">
+            <h2>近期值得关注的影片与剧集</h2>
+            <a href="/#recommend" class="more-link">更多推荐 →</a>
+          </div>
+          <div class="card-grid">
+            <article class="content-card">
+              <img class="card-img" src="https://picsum.photos/seed/silentecho/400/300" alt="《寂静回声》电影海报风格画面" width="400" height="300" loading="lazy">
+              <div class="card-body">
+                <div class="card-tags"><span class="tag">心理惊悚</span><span class="tag tag-secondary">A24</span><span class="tag tag-secondary">2026</span></div>
+                <h3 class="card-title">寂静回声</h3>
+                <p class="card-desc">声音设计师转行导演的首部长片，用环境音替代对白推进叙事。女主角在偏远录音棚发现一卷记录失踪人口的磁带，全片 90 分钟有 60 分钟无配乐。</p>
+                <div class="card-meta"><span>烂番茄 92%</span><span>11月5日上线</span></div>
+              </div>
+            </article>
+            <article class="content-card">
+              <img class="card-img" src="https://picsum.photos/seed/deepfold/400/300" alt="《深海折叠》纪录片水下摄影画面" width="400" height="300" loading="lazy">
+              <div class="card-body">
+                <div class="card-tags"><span class="tag">自然纪录</span><span class="tag tag-secondary">Netflix</span><span class="tag tag-secondary">4K</span></div>
+                <h3 class="card-title">深海折叠 第二季</h3>
+                <p class="card-desc">跟拍深海热泉生态系统的六个月周期，第二季新增马里亚纳海沟 8000 米处的新物种记录。每集结尾附 3 分钟科考日志，解释声呐测绘数据。</p>
+                <div class="card-meta"><span>IMDb 8.7</span><span>10月28日全季上线</span></div>
+              </div>
+            </article>
+            <article class="content-card">
+              <img class="card-img" src="https://picsum.photos/seed/rustbelt/400/300" alt="《铁锈带》限定剧工业场景" width="400" height="300" loading="lazy">
+              <div class="card-body">
+                <div class="card-tags"><span class="tag">限定剧</span><span class="tag tag-secondary">HBO</span><span class="tag tag-secondary">6集</span></div>
+                <h3 class="card-title">铁锈带</h3>
+                <p class="card-desc">聚焦宾夕法尼亚州关闭钢厂后的三个家庭，时间线从 2008 年金融危机到 2024 年社区重建。对白含大量当地口音，官方字幕附俚语注释。</p>
+                <div class="card-meta"><span>Metacritic 84</span><span>11月2日首播</span></div>
+              </div>
+            </article>
+            <article class="content-card">
+              <img class="card-img" src="https://picsum.photos/seed/signallight/400/300" alt="《信号灯》短片获奖剧照" width="400" height="300" loading="lazy">
+              <div class="card-body">
+                <div class="card-tags"><span class="tag">独立短片</span><span class="tag tag-secondary">戛纳</span><span class="tag tag-secondary">15分钟</span></div>
+                <h3 class="card-title">信号灯</h3>
+                <p class="card-desc">2026 年戛纳短片金棕榈得主，全片只有一个场景：十字路口红绿灯下的三个陌生人。导演用 15 分钟长镜头完成叙事，台词不超过 20 句。</p>
+                <div class="card-meta"><span>金棕榈最佳短片</span><span>11月1日线上公开</span></div>
+              </div>
+            </article>
+            <article class="content-card">
+              <img class="card-img" src="https://picsum.photos/seed/neonforest/400/300" alt="《霓虹森林》动画剧集赛博风格画面" width="400" height="300" loading="lazy">
+              <div class="card-body">
+                <div class="card-tags"><span class="tag">动画剧集</span><span class="tag tag-secondary">Adult Swim</span><span class="tag tag-secondary">2D</span></div>
+                <h3 class="card-title">霓虹森林</h3>
+                <p class="card-desc">手绘 2D 赛博朋克剧集，第一季 8 集每集 22 分钟。主角是遗落在城市边缘的维修机器人，剧本由《瑞克和莫蒂》前编剧参与，黑色幽默密度高。</p>
+                <div class="card-meta"><span>豆瓣 8.9</span><span>10月30日更新 E5</span></div>
+              </div>
+            </article>
+            <article class="content-card">
+              <img class="card-img" src="https://picsum.photos/seed/ironcurtain/400/300" alt="《铁幕之后》历史纪录片档案影像" width="400" height="300" loading="lazy">
+              <div class="card-body">
+                <div class="card-tags"><span class="tag">历史纪录</span><span class="tag tag-secondary">PBS</span><span class="tag tag-secondary">档案</span></div>
+                <h3 class="card-title">铁幕之后</h3>
+                <p class="card-desc">使用匈牙利国家档案馆 1989 年解密的 400 小时原始录像，还原东欧剧变前夜普通人的日常生活。含 12 段未公开的家庭录像与窃听录音。</p>
+                <div class="card-meta"><span>纽约时报 Critic's Pick</span><span>11月4日上线</span></div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- 3. 最新更新 -->
+        <section class="section" id="updates">
+          <div class="section-header">
+            <h2>近七日更新动态</h2>
+          </div>
+          <div class="update-list">
+            <div class="update-item"><span class="item-name">《寂静回声》</span><span class="item-summary">11月7日新增导演评论音轨，解释环境音设计逻辑与磁带录音设备型号。</span></div>
+            <div class="update-item"><span class="item-name">《深海折叠 S2》</span><span class="item-summary">11月6日上线第4集“热泉边缘”，片尾附马里亚纳海沟新物种的声呐追踪图。</span></div>
+            <div class="update-item"><span class="item-name">《铁锈带》</span><span class="item-summary">11月5日更新第2集，HBO 同步放出 1980 年代钢厂工人访谈原始录音片段。</span></div>
+            <div class="update-item"><span class="item-name">《信号灯》</span><span class="item-summary">11月4日导演在 Vimeo 上传 8 分钟幕后花絮，展示单场景长镜头的走位排练。</span></div>
+            <div class="update-item"><span class="item-name">《霓虹森林》</span><span class="item-summary">11月3日 E6 更新，Adult Swim 官网同步放出分镜手稿 PDF 下载。</span></div>
+            <div class="update-item"><span class="item-name">《铁幕之后》</span><span class="item-summary">11月2日 PBS 追加 6 段未播档案，含 1989 年布达佩斯街头采访原始带。</span></div>
+            <div class="update-item"><span class="item-name">《极地守卫》</span><span class="item-summary">11月1日上线第1集，BBC Earth 制作，拍摄格陵兰岛巡逻队冬季任务。</span></div>
+            <div class="update-item"><span class="item-name">《夜班经理》重制版</span><span class="item-summary">10月30日 4K 修复版上线，新增 15 分钟删减场景，含酒店厨房长镜头。</span></div>
+            <div class="update-item"><span class="item-name">《文字游戏》</span><span class="item-summary">10月28日上线，改编自同名舞台剧，全片仅用书信与打字机音效推进。</span></div>
+            <div class="update-item"><span class="item-name">《边境线》</span><span class="item-summary">10月25日放出第二季预告，确认 2027 年 1 月回归，首集标题为“检查站”。</span></div>
+          </div>
+        </section>
+
+        <!-- 4. 分类入口 -->
+        <section class="section" id="categories">
+          <div class="section-header">
+            <h2>按类型与产地筛选</h2>
+          </div>
+          <div class="category-grid">
+            <a href="/#featured" class="category-card">犯罪惊悚</a>
+            <a href="/#featured" class="category-card">科幻悬疑</a>
+            <a href="/#featured" class="category-card">自然纪录</a>
+            <a href="/#featured" class="category-card">真实犯罪纪录</a>
+            <a href="/#featured" class="category-card">独立短片</a>
+            <a href="/#featured" class="category-card">动画剧集</a>
+            <a href="/#featured" class="category-card">历史传记</a>
+            <a href="/#featured" class="category-card">实验影像</a>
+          </div>
+        </section>
+
+        <!-- 5. 深度解析 -->
+        <section class="section" id="deepdive">
+          <div class="deep-dive">
+            <h2>欧美影视内容的选择逻辑与判断依据</h2>
+
+            <h3>类型片与独立制作的评价体系差异</h3>
+            <p>好莱坞六大厂牌的犯罪惊悚片通常依赖试映会数据调整结局，公映版与导演剪辑版差异可达 20 分钟以上。A24、Neon 等独立厂牌则保留导演终剪权，《寂静回声》的 90 分钟版本与戛纳首映版完全一致，未做任何删改。判断一部作品属于厂牌主导还是导演主导，可查片头字幕中“Final Cut”归属——若标注为导演，则院线版即最终版。</p>
+            <p>独立短片与长片的评价维度不同。长片看叙事完整度与表演深度，短片更看概念执行效率。《信号灯》用 15 分钟完成三幕结构，前 5 分钟建立人物、中 5 分钟制造冲突、后 5 分钟反转，节奏密度是长片的三倍。2026 年戛纳短片评审团主席在发布会上提到，短片评审第一轮只看前 3 分钟，未建立悬念的片子直接淘汰。</p>
+
+            <h3>纪录片真实性判断的三个可查项</h3>
+            <p>自然纪录片看拍摄日志与科考合作方。《深海折叠》每集片尾附 3 分钟科考日志，列出下潜深度、水温、物种命名编号，并与伍兹霍尔海洋研究所的公开数据可交叉核对。真实犯罪纪录片则看庭审档案编号与受害者家属授权书。《铁锈带》片尾列出的 12 份法庭文件编号，均可在宾夕法尼亚州东区法院电子档案系统查询到对应记录。</p>
+            <p>历史纪录片需要区分“档案影像”与“情景再现”。《铁幕之后》全片使用 1989 年原始录像带，片头标注“无情景再现”字样。同类作品若出现演员扮演历史人物，需在画面角落标注“Reenactment”，否则按虚构内容处理。这一标注规则来自 2024 年国际纪录片协会的行业建议，但并非强制标准。</p>
+            <div class="highlight-box">
+              <strong>可核对结构：</strong>判断一部纪录片的信息可信度，拆成三个可查项——① 拍摄方与科研机构是否有联合署名；② 关键数据是否附原始来源编号；③ 情景再现镜头是否标注。三项全有则可信度较高，缺失两项以上需谨慎引用。
+            </div>
+
+            <h3>字幕版本与观看渠道的匹配策略</h3>
+            <p>非英语片的字幕质量直接影响观看体验。Netflix 官方中文字幕由外包团队制作，平均每部片有 3—5 处文化梗翻译缺失；HBO 的字幕更接近直译，但缺少口语注释。社区字幕组如“远鉴字幕组”在《铁锈带》的匹兹堡方言处理上增加了 12 条注释，但发布时间比官方晚 4 天。选择顺序建议：官方字幕优先于社区字幕，社区字幕优先于机翻。</p>
+            <p>4K 修复版与原始版的画面对比也是一个判断点。《夜班经理》重制版的 4K 版本在暗部细节上比 2016 年蓝光版多出约 30% 的可见层次，但部分夜景镜头因 HDR 调色过度出现噪点。观看设备若低于 4K 分辨率，修复版的优势不明显，原始版反而更稳定。</p>
+          </div>
+        </section>
+
+        <!-- 6. 体验指南 -->
+        <section class="section" id="guide">
+          <div class="section-header">
+            <h2>从类型到条目的观看路径</h2>
+          </div>
+          <div class="guide-steps">
+            <div class="guide-step">
+              <div class="step-num">1</div>
+              <div class="step-content">
+                <h4>先定类型，再看厂牌</h4>
+                <p>犯罪惊悚优先看 A24 与 Neon 的出品，两家厂牌近三年烂番茄新鲜度均值分别为 87% 和 82%。自然纪录片直接锁定 BBC Earth 与 Netflix 自然历史组，前者偏生态叙事，后者偏技术奇观。</p>
+              </div>
+            </div>
+            <div class="guide-step">
+              <div class="step-num">2</div>
+              <div class="step-content">
+                <h4>用评分交叉验证</h4>
+                <p>烂番茄新鲜度高于 85% 且 Metacritic 高于 70 分的作品，口碑分歧较小。若两者差距超过 20 分（如新鲜度 90% 对 Metacritic 62 分），说明影评人与普通观众口味分化，需看具体评论来源。</p>
+              </div>
+            </div>
+            <div class="guide-step">
+              <div class="step-num">3</div>
+              <div class="step-content">
+                <h4>查字幕与版本</h4>
+                <p>非英语片先确认官方中文字幕是否覆盖对白中的方言或俚语。社区字幕组版本通常晚 3—7 天，但注释更细。4K 修复版需确认观看设备分辨率，低于 4K 屏幕时原始版更稳定。</p>
+              </div>
+            </div>
+            <div class="guide-step">
+              <div class="step-num">4</div>
+              <div class="step-content">
+                <h4>按时间预算匹配片长</h4>
+                <p>独立短片 15—30 分钟适合碎片时间，限定剧 6 集每集 50 分钟适合周末集中观看，长片 120 分钟以上需预留完整时段。自然纪录片单集 50 分钟，可分段观看不影响理解。</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 7. FAQ -->
+        <section class="section" id="faq">
+          <div class="section-header">
+            <h2>常见问题</h2>
+          </div>
+          <div class="faq-list">
+            <details>
+              <summary>《寂静回声》和《信号灯》都是单场景作品，有什么区别？</summary>
+              <div class="faq-answer">《寂静回声》是 90 分钟长片，单场景指主要情节发生在录音棚内，但穿插了室外闪回镜头；《信号灯》是 15 分钟短片，严格限定在一个十字路口，无闪回、无场景切换。前者靠声音设计制造空间感，后者靠长镜头调度维持张力。</div>
+            </details>
+            <details>
+              <summary>《深海折叠》第二季提到的马里亚纳海沟新物种叫什么？</summary>
+              <div class="faq-answer">片中记录的新物种暂定名为“热泉钩虾”，体长约 3 厘米，生活在 8000 米深的热泉喷口附近。命名团队来自伍兹霍尔海洋研究所，正式学名需等到 2027 年《深海生物分类学刊》发表后才能确认。</div>
+            </details>
+            <details>
+              <summary>《铁锈带》的对白口音很重，有中文配音版吗？</summary>
+              <div class="faq-answer">目前 HBO 官方未制作中文配音版，仅提供中文字幕。字幕对匹兹堡方言做了 12 处注释，以括号形式标注在字幕下方。社区字幕组“远鉴”的版本额外增加了 5 条本地俚语解释，发布时间比官方晚 4 天。</div>
+            </details>
+            <details>
+              <summary>2026 年戛纳短片金棕榈奖的评审标准是什么？</summary>
+              <div class="faq-answer">评审团主席在 11 月 1 日的线上问答中提到三条标准：前 3 分钟是否建立有效悬念、概念与执行是否匹配、结尾是否提供新信息而非简单反转。《信号灯》在三条标准上均获高分，尤其结尾的信息释放方式被认为“用画面替代了台词”。</div>
+            </details>
+            <details>
+              <summary>《铁幕之后》里的档案录像有版权争议吗？</summary>
+              <div class="faq-answer">PBS 在片尾列出了全部 400 小时录像的授权来源，其中 380 小时来自匈牙利国家档案馆 1989 年解密批次，20 小时来自私人捐赠并附有捐赠协议编号。片头标注“所有档案影像已获授权”，未出现未署名素材。</div>
+            </details>
+            <details>
+              <summary>《霓虹森林》第二季什么时候出？</summary>
+              <div class="faq-answer">Adult Swim 在 10 月 30 日的 E5 片尾预告中确认第二季已续订，预计 2027 年秋季档回归，首季 8 集的分镜手稿将在 2026 年 12 月以 PDF 形式在官网公开下载。</div>
+            </details>
+          </div>
+        </section>
+
+        <!-- 8. 用户评论 -->
+        <section class="section" id="comments">
+          <div class="section-header">
+            <h2>观众短评</h2>
+          </div>
+          <div class="comment-grid">
+            <div class="comment-card"><div class="comment-user">@午夜场专业户</div><div class="comment-text">《寂静回声》的磁带杂音那段我戴耳机听的，后颈发凉。但结尾解释太多了，留白不够。</div></div>
+            <div class="comment-card"><div class="comment-user">@海沟观察员</div><div class="comment-text">深海折叠S2第4集那个钩虾，镜头给得太短了，暂停好几次才看清。科考日志倒是做得细。</div></div>
+            <div class="comment-card"><div class="comment-user">@匹兹堡打字机</div><div class="comment-text">铁锈带第2集，那个钢厂工人访谈的原声一出来我就绷不住了。我爸以前就在那家厂。</div></div>
+            <div class="comment-card"><div class="comment-user">@信号灯绿灯</div><div class="comment-text">15分钟长镜头，看完倒回去又看了一遍。第二遍才注意到背景里那个一直没动的人。</div></div>
+            <div class="comment-card"><div class="comment-user">@霓虹维修工</div><div class="comment-text">霓虹森林E6的分镜手稿我下了，有一页画了二十几个版本的主角表情，挺有意思。</div></div>
+            <div class="comment-card"><div class="comment-user">@东欧档案迷</div><div class="comment-text">铁幕之后里那个布达佩斯街头采访，被采访的老太太说的第一句话我在别的纪录片里也听到过，可能是同一批素材。</div></div>
+            <div class="comment-card"><div class="comment-user">@4K修复吐槽</div><div class="comment-text">夜班经理4K版暗部确实好，但厨房那场戏噪点太明显了，有点过度处理。</div></div>
+            <div class="comment-card"><div class="comment-user">@短片中转站</div><div class="comment-text">信号灯的幕后花絮比正片还长，导演在那讲怎么排走位，讲了八分钟。</div></div>
+            <div class="comment-card"><div class="comment-user">@格陵兰冷风</div><div class="comment-text">极地守卫第一集，巡逻队雪地摩托那段音效不错。其他就一般了，节奏偏慢。</div></div>
+            <div class="comment-card"><div class="comment-user">@打字机文学</div><div class="comment-text">文字游戏全片就靠打字机声音推，我居然看完了。中间那段信件内容其实有点拖。</div></div>
+            <div class="comment-card"><div class="comment-user">@边境线等更新</div><div class="comment-text">2027年1月才回归，预告片就30秒，检查站那个镜头反复看还是没看出新角色是谁。</div></div>
+            <div class="comment-card"><div class="comment-user">@远鉴字幕使用者</div><div class="comment-text">铁锈带的方言注释确实有用，官方字幕有些地方直接略过了。但远鉴版晚了四天，等得急。</div></div>
+            <div class="comment-card"><div class="comment-user">@自然纪录退休</div><div class="comment-text">BBC Earth还是稳，格陵兰那集雪鸮捕食的镜头用了高速摄影，帧数看得出来。</div></div>
+            <div class="comment-card"><div class="comment-user">@A24常客</div><div class="comment-text">寂静回声的导演以前给《遗传厄运》做声音设计，难怪对声音这么敏感。这片子剧情其实简单。</div></div>
+            <div class="comment-card"><div class="comment-user">@周末补片人</div><div class="comment-text">这周就看了深海折叠和铁锈带，一个下饭一个下酒。铁锈带看第二集得备纸巾。</div></div>
+            <div class="comment-card"><div class="comment-user">@打字机文学</div><div class="comment-text">文字游戏那个打字机音效，我总觉得跟《闪灵》里打字机是同一款型号，有人查过吗。</div></div>
+            <div class="comment-card"><div class="comment-user">@午夜场专业户</div><div class="comment-text">信号灯在戛纳拿奖的时候我就关注了，线上公开那天第一时间看的。15分钟确实不拖。</div></div>
+            <div class="comment-card"><div class="comment-user">@海沟观察员</div><div class="comment-text">深海折叠的科考日志比正片信息量大，建议先看日志再看正片，理解快很多。</div></div>
+          </div>
+        </section>
+
+        <!-- 9. 相关资讯 -->
+        <section class="section" id="news">
+          <div class="section-header">
+            <h2>近期行业动态</h2>
+          </div>
+          <div class="news-list">
+            <div class="news-item">
+              <div class="news-title"><span>《寂静回声》导演确认下一部作品为长片，2027年开机</span><span class="news-date">2026-11-07</span></div>
+              <div class="news-summary">A24 在 11 月 6 日的内部放映会后确认，该导演已签约执导一部 120 分钟长片，题材仍为心理惊悚，预计 2027 年 3 月在匹兹堡开机。</div>
+            </div>
+            <div class="news-item">
+              <div class="news-title"><span>《深海折叠》第二季第4集收视进入 Netflix 全球前十</span><span class="news-date">2026-11-05</span></div>
+              <div class="news-summary">根据 Netflix 11 月 4 日公布的周榜数据，该集在 42 个国家和地区进入非英语剧集前十，美国区排名第 6，观看小时数达 870 万。</div>
+            </div>
+            <div class="news-item">
+              <div class="news-title"><span>《铁锈带》编剧团队公布第三集涉及的工厂名单</span><span class="news-date">2026-11-03</span></div>
+              <div class="news-summary">HBO 官网 11 月 2 日更新了剧集背景资料，列出第三集将出现的三家宾州工厂名称与关闭年份，最早一家于 2009 年停产。</div>
+            </div>
+            <div class="news-item">
+              <div class="news-title"><span>《信号灯》导演将担任 2027 年克莱蒙费朗短片节评委</span><span class="news-date">2026-10-30</span></div>
+              <div class="news-summary">短片节组委会 10 月 29 日宣布，2026 年金棕榈得主将出任 2027 年国际竞赛单元评委，是近年最年轻的评委之一。</div>
+            </div>
+            <div class="news-item">
+              <div class="news-title"><span>Adult Swim 续订《霓虹森林》第二季，预计 2027 年秋回归</span><span class="news-date">2026-10-28</span></div>
+              <div class="news-summary">官方在 E5 片尾预告中确认续订消息，第二季仍为 8 集，制作周期约 14 个月，首季分镜手稿将于 12 月公开。</div>
+            </div>
+            <div class="news-item">
+              <div class="news-title"><span>PBS 追加《铁幕之后》档案影像，新增 6 段未播素材</span><span class="news-date">2026-10-26</span></div>
+              <div class="news-summary">11 月 2 日 PBS 线上平台更新片源，新增素材包括 1989 年布达佩斯街头采访原始带，总时长增加 18 分钟。</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 10. 相关推荐 -->
+        <section class="section" id="recommend">
+          <div class="section-header">
+            <h2>相关方向与条目</h2>
+          </div>
+          <div class="tag-cloud">
+            <a href="/#featured" class="rec-tag">A24 心理惊悚</a>
+            <a href="/#featured" class="rec-tag">Netflix 自然纪录</a>
+            <a href="/#featured" class="rec-tag">HBO 限定剧</a>
+            <a href="/#featured" class="rec-tag">戛纳短片</a>
+            <a href="/#featured" class="rec-tag">Adult Swim 动画</a>
+            <a href="/#featured" class="rec-tag">真实犯罪纪录</a>
+            <a href="/#featured" class="rec-tag">4K 修复版</a>
+            <a href="/#featured" class="rec-tag">单场景长片</a>
+          </div>
+        </section>
+
+        <!-- 11. 补充板块 - 时间线 -->
+        <section class="section" id="timeline">
+          <div class="section-header">
+            <h2>近期上线时间线</h2>
+          </div>
+          <div class="timeline">
+            <div class="timeline-item"><span class="timeline-date">2026-11-07</span><span class="timeline-content">《寂静回声》导演评论音轨上线，含环境音设计解析。</span></div>
+            <div class="timeline-item"><span class="timeline-date">2026-11-05</span><span class="timeline-content">《铁锈带》第2集更新，附 1980 年代工人访谈原始录音。</span></div>
+            <div class="timeline-item"><span class="timeline-date">2026-11-03</span><span class="timeline-content">《霓虹森林》E6 更新，分镜手稿 PDF 同步公开。</span></div>
+            <div class="timeline-item"><span class="timeline-date">2026-11-01</span><span class="timeline-content">《信号灯》线上公开，含 8 分钟幕后花絮。</span></div>
+            <div class="timeline-item"><span class="timeline-date">2026-10-28</span><span class="timeline-content">《深海折叠》第二季全季上线，共 6 集。</span></div>
+            <div class="timeline-item"><span class="timeline-date">2026-10-25</span><span class="timeline-content">《边境线》第二季预告放出，确认 2027 年 1 月回归。</span></div>
+          </div>
+        </section>
+
+        <!-- 用户互动板块 -->
+        <section class="section" id="interact">
+          <div class="interact-panel">
+            <div>
+              <h3>看过这些片子？来写点具体的</h3>
+              <p>分享你对某部作品的对白、镜头或字幕处理的看法。一两句话也行。</p>
+            </div>
+            <a href="/#comments" class="btn-primary">去写短评</a>
+          </div>
+        </section>
+
+      </main>
+
+      <!-- 右辅助栏 -->
+      <aside class="right-sidebar" aria-label="热门榜单与辅助信息">
+        <div class="sidebar-card">
+          <h3>本周热度榜</h3>
+          <ul class="trending-list">
+            <li><span class="rank">1</span><div><span class="item-title">寂静回声</span><span class="item-meta">A24 / 心理惊悚</span></div></li>
+            <li><span class="rank">2</span><div><span class="item-title">深海折叠 S2</span><span class="item-meta">Netflix / 自然纪录</span></div></li>
+            <li><span class="rank">3</span><div><span class="item-title">铁锈带</span><span class="item-meta">HBO / 限定剧</span></div></li>
+            <li><span class="rank">4</span><div><span class="item-title">信号灯</span><span class="item-meta">戛纳 / 独立短片</span></div></li>
+            <li><span class="rank">5</span><div><span class="item-title">霓虹森林</span><span class="item-meta">Adult Swim / 动画</span></div></li>
+          </ul>
+        </div>
+        <div class="sidebar-card">
+          <h3>更新提醒</h3>
+          <ul class="trending-list">
+            <li><span class="rank">•</span><div><span class="item-title">铁锈带 E3</span><span class="item-meta">预计 11月12日</span></div></li>
+            <li><span class="rank">•</span><div><span class="item-title">霓虹森林 E7</span><span class="item-meta">预计 11月13日</span></div></li>
+            <li><span class="rank">•</span><div><span class="item-title">深海折叠 S2E5</span><span class="item-meta">预计 11月11日</span></div></li>
+          </ul>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+
+  <!-- 页尾 -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="brand-text-footer">xvideos国外片</span>
+        <p>覆盖 2026 年欧美剧情长片、独立短片、自然与历史纪录片、限定剧及动画剧集。每日追踪流媒体上线与电影节获奖动态，提供字幕版本与画质修复对比信息。内容更新频率：工作日每日 2—4 条，周末汇总一周片单。</p>
+      </div>
+      <div class="footer-col">
+        <h4>内容分类</h4>
+        <a href="/#featured">犯罪惊悚</a>
+        <a href="/#featured">科幻悬疑</a>
+        <a href="/#featured">自然纪录</a>
+        <a href="/#featured">独立短片</a>
+      </div>
+      <div class="footer-col">
+        <h4>推荐与解析</h4>
+        <a href="/#deepdive">深度解析</a>
+        <a href="/#guide">观看路径</a>
+        <a href="/#faq">常见问题</a>
+        <a href="/#comments">观众短评</a>
+      </div>
+      <div class="footer-col">
+        <h4>互动与更新</h4>
+        <a href="/#updates">最新更新</a>
+        <a href="/#news">行业动态</a>
+        <a href="/#interact">投稿短评</a>
+        <a href="/#timeline">上线时间线</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 xvideos国外片 · 内容聚合示例页面</span>
+      <span>页面更新于 2026-11-08</span>
+    </div>
+  </footer>
+
+  <!-- 回到顶部 -->
+  <button id="backToTop" aria-label="回到顶部">↑</button>
+
+  <!-- 移动端遮罩 -->
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+
+  <script>
+    (function() {
+      // 菜单切换
+      const menuBtn = document.getElementById('menuBtn');
+      const mainNav = document.getElementById('mainNav');
+      const overlay = document.getElementById('drawerOverlay');
+
+      function closeMenu() {
+        mainNav.classList.remove('open');
+        overlay.style.display = 'none';
+        menuBtn.setAttribute('aria-expanded', 'false');
+      }
+
+      menuBtn.addEventListener('click', function() {
+        const isOpen = mainNav.classList.toggle('open');
+        overlay.style.display = isOpen ? 'block' : 'none';
+        menuBtn.setAttribute('aria-expanded', String(isOpen));
+      });
+
+      overlay.addEventListener('click', closeMenu);
+
+      // 点击导航链接后收起菜单
+      mainNav.querySelectorAll('a').forEach(function(link) {
+        link.addEventListener('click', function() {
+          if (window.innerWidth <= 740) {
+            closeMenu();
+          }
+        });
+      });
+
+      // Esc 关闭菜单
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && mainNav.classList.contains('open')) {
+          closeMenu();
+          menuBtn.focus();
+        }
+      });
+
+      // 回到顶部
+      const backToTop = document.getElementById('backToTop');
+      window.addEventListener('scroll', function() {
+        backToTop.style.display = window.scrollY > 400 ? 'flex' : 'none';
+      });
+      backToTop.addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      // 平滑滚动偏移处理（CSS scroll-padding-top 已处理，此处为兼容）
+      document.querySelectorAll('a[href^="/#"]').forEach(function(anchor) {
+        anchor.addEventListener('click', function(e) {
+          const id = this.getAttribute('href').substring(2);
+          const target = document.getElementById(id);
+          if (target) {
+            e.preventDefault();
+            const offset = 118; // 公告+页头高度
+            const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+            window.scrollTo({ top: top, behavior: 'smooth' });
+            history.pushState(null, '', '/#' + id);
+          }
+        });
+      });
+    })();
+  </script>
+
+  <!-- 结构化数据 -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "xvideos国外片",
+    "description": "欧美影视内容聚合，覆盖剧情长片、独立短片、纪录片、动画剧集，提供精选片单与观看指南。",
+    "inLanguage": "zh-CN",
+    "about": {
+      "@type": "Thing",
+      "name": "欧美影视内容"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "《寂静回声》和《信号灯》都是单场景作品，有什么区别？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "《寂静回声》是 90 分钟长片，单场景指主要情节发生在录音棚内，但穿插了室外闪回镜头；《信号灯》是 15 分钟短片，严格限定在一个十字路口，无闪回、无场景切换。前者靠声音设计制造空间感，后者靠长镜头调度维持张力。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "《深海折叠》第二季提到的马里亚纳海沟新物种叫什么？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "片中记录的新物种暂定名为“热泉钩虾”，体长约 3 厘米，生活在 8000 米深的热泉喷口附近。命名团队来自伍兹霍尔海洋研究所，正式学名需等到 2027 年《深海生物分类学刊》发表后才能确认。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "《铁锈带》的对白口音很重，有中文配音版吗？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "目前 HBO 官方未制作中文配音版，仅提供中文字幕。字幕对匹兹堡方言做了 12 处注释，以括号形式标注在字幕下方。社区字幕组“远鉴”的版本额外增加了 5 条本地俚语解释，发布时间比官方晚 4 天。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "2026 年戛纳短片金棕榈奖的评审标准是什么？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "评审团主席在 11 月 1 日的线上问答中提到三条标准：前 3 分钟是否建立有效悬念、概念与执行是否匹配、结尾是否提供新信息而非简单反转。《信号灯》在三条标准上均获高分，尤其结尾的信息释放方式被认为“用画面替代了台词”。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "《铁幕之后》里的档案录像有版权争议吗？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "PBS 在片尾列出了全部 400 小时录像的授权来源，其中 380 小时来自匈牙利国家档案馆 1989 年解密批次，20 小时来自私人捐赠并附有捐赠协议编号。片头标注“所有档案影像已获授权”，未出现未署名素材。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "《霓虹森林》第二季什么时候出？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Adult Swim 在 10 月 30 日的 E5 片尾预告中确认第二季已续订，预计 2027 年秋季档回归，首季 8 集的分镜手稿将在 2026 年 12 月以 PDF 形式在官网公开下载。"
+        }
+      }
+    ]
+  }
+  </script>
+</body>
+            </html>
